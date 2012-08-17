@@ -1,0 +1,17 @@
+language: python
+python:
+  - 2.7
+
+install:
+  - $(which echo) -e "[buildout]\nextends = buildout.d/travis.cfg" > buildout.cfg
+  - python bootstrap.py
+  - bin/buildout
+
+script:
+  - ./pre-commit-check.sh
+ 
+notifications:
+  irc:
+    - "irc.freenode.org#niteoweb"
+  email:
+    - maintenance@niteoweb.com
