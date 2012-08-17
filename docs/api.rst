@@ -1,18 +1,13 @@
-===
-API
-===
+====================
+Source documentation
+====================
 
 TODO: fill this one up when you have actual code in
 
-Miscellaneous
-=============
+Browser
+=======
 
-.. automodule:: collective.todoapp
-    :members:
-
-----
-
-.. automodule:: collective.todoapp.interfaces
+.. automodule:: collective.todoapp.browser.todo
     :members:
 
 
