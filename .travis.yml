@@ -12,6 +12,6 @@ script:
  
 notifications:
   irc:
-    - "irc.freenode.org#niteoweb"
+    - "irc.freenode.org#sprint"
   email:
-    - maintenance@niteoweb.com
+    - nejc.zupan@gmail.com
