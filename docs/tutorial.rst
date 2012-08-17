@@ -109,7 +109,7 @@ Now it's time to reap the rewards of all of your effort. Let's put all of our TO
 
 #. From the root, add a new folder called TODO.
 
-   .. image:: https://raw.github.com/collective/collective.todoapp/master/docs/images/add_forlder_menu.jpg
+   .. image:: https://raw.github.com/collective/collective.todoapp/master/docs/images/add_folder_menu.jpg
       :width: 400px
 
    .. image:: https://raw.github.com/collective/collective.todoapp/master/docs/images/save_todo_folder.jpg
@@ -128,13 +128,55 @@ Now it's time to reap the rewards of all of your effort. Let's put all of our TO
    .. image:: https://raw.github.com/collective/collective.todoapp/master/docs/images/todo_item.jpg
       :width: 400px
 
+   You may be wondering about earlier, when we asked you to make sure that the "short name" for the todo item was called "title". The time has come to let you in on a little secret. Calling the short name either "title" or "description" will automatically add that text to the livesearch menu. WHAT?!? I know! When life gives you lemonade, spike it with whisky and enjoy liberally! You can now search for your TODO items in Live Search
+
+   .. image:: https://raw.github.com/collective/collective.todoapp/master/docs/images/live_search_title.jpg
+      :width: 400px
+
 But wait a minute... This todo item is marked "Private", and that doesn't really make sense. It's a good thing Plone has an easy solution for that. In the next section, we will go over the basics of that magical, mystical word: workflow. 
 
 Part 2: Updating the Workflow
 =============================
+The TODO Item we added in the last section is marked as private because by default all new Plone content types are assigned a complex publication workflow. I know what you are thinking; Publication whodie whatie grble gobble??!?! Just like before, let's bypass trying to explain what that means and just fix it. Relax, enjoy, and finish the tutorial!
+
+If you aren't interested in workflow, or already know all about this stuff, skip straight to Part 3!
+
+TODO items really have 2 states that we are interested in: incomplete and complete. Let's make that happen.
+
+#. Head over to the ZMI at http://localhost:8080/Plone/manage_main
+#. In the ZMI, open the portal_workflow tool
+
+   .. image:: https://raw.github.com/collective/collective.todoapp/master/docs/images/manage_portal_workflow.jpg
+      :width: 400px
+
+#. On this page, we see all of the types in our portal "mapped" to a workflow. Our new type, "TODO Item", is mapped to "(Default)". You can see right below that the default is "Simple Publication Workflow". This is just too complex for our little TODO Item.
+
+   .. image:: https://raw.github.com/collective/collective.todoapp/master/docs/images/default_workflow.jpg
+      :width: 400px
+
+#. So let's create a new one that suites our needs perfectly! Click the "contents" tab at the top of the page to get a listing of all the available workflows
+
+   .. image:: https://raw.github.com/collective/collective.todoapp/master/docs/images/portal_workflow_contents.jpg
+      :width: 400px
+
+   You can poke around here all you like, but the details of each one of these workflows is better left to another tutorial. When in doubt, you can always ome back to these workflows to see examples of how things can be done. Onwards and upwards!
+
+#. Let's create a new workflow for our TODO Items and call it "todo_item_workflow" 
+
+   .. image:: https://raw.github.com/collective/collective.todoapp/master/docs/images/save_workflow.jpg
+      :width: 400px
+
+   .. image:: https://raw.github.com/collective/collective.todoapp/master/docs/images/add_too_workflow.jpg
+      :width: 400px
+
+#. You will be spit back out and the workflow contents page. Click the workflow to start editing
+
+   .. image:: https://raw.github.com/collective/collective.todoapp/master/docs/images/edit_todo_workflow.jpg
+      :width: 400px
+
+#. Workflow is something that takes time to get used to. The best analogy in our case is to a car. The car engine has to simple states: on and off
 
 
-Switch to 1 step, then move on to complicated schtuff
 
 Part 3: Redistributing Your Work
 ================================
