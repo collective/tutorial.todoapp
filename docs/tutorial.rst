@@ -103,10 +103,37 @@ Next we need to create a new content type, which will be our TODO.
    .. image:: https://raw.github.com/collective/collective.todoapp/master/docs/images/final_todo_fields_config.jpg
       :width: 400px
 
-#. Guess what? You are done! Well, with this part anyways. Test our adding your new content type from the home page. XXX: show this here
+Testing and INtegrating the TODO Item Type
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Now it's time to reap the rewards of all of your effort. Let's put all of our TODO items in one particular folder so that we can have collections of items throughout the site. For this tutorial, we will be putting everything in the root of the site so it's easy to debug.
+
+#. From the root, add a new folder called TODO.
+
+   .. image:: https://raw.github.com/collective/collective.todoapp/master/docs/images/add_forlder_menu.jpg
+      :width: 400px
+
+   .. image:: https://raw.github.com/collective/collective.todoapp/master/docs/images/save_todo_folder.jpg
+      :width: 400px
+
+#. Add a new todo item to the new TODO list folder
+
+   .. image:: https://raw.github.com/collective/collective.todoapp/master/docs/images/add_todo_item.jpg
+      :width: 400px
+
+   .. image:: https://raw.github.com/collective/collective.todoapp/master/docs/images/save_todo_item.jpg
+      :width: 400px
+
+#. Celebrate! 
+      
+   .. image:: https://raw.github.com/collective/collective.todoapp/master/docs/images/todo_item.jpg
+      :width: 400px
+
+But wait a minute... This todo item is marked "Private", and that doesn't really make sense. It's a good thing Plone has an easy solution for that. In the next section, we will go over the basics of that magical, mystical word: workflow. 
 
 Part 2: Updating the Workflow
 =============================
+
+
 Switch to 1 step, then move on to complicated schtuff
 
 Part 3: Redistributing Your Work
