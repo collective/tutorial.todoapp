@@ -1,6 +1,0 @@
-<layers>
-  <layer
-    name="collective.todoapp"
-    interface="collective.todoapp.interfaces.ITodoAppLayer"
-  />
-</layers>

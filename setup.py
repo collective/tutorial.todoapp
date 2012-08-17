@@ -45,7 +45,6 @@ setup(
         'plone.app.caching',
         'plone.app.theming',
         'setuptools',
-        'z3c.jbot',
     ],
     extras_require={
         'test': [
