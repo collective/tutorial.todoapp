@@ -21,7 +21,11 @@
 
         <tbody>
           <tr tal:repeat="item context/@@folderListing">
-            <td tal:content="item/Title">Get milk!</td>
+            <td>
+              <a tal:attributes="href item/getURL" tal:content="item/Title">
+                Get milk!
+              </a>
+            </td>
             <td tal:content="item/review_state">Jane Smith</td>
             <td tal:content="python: toLocalizedTime(item.ModificationDate(), long_format=1)">2012/08/17 13:37</td>
           </tr>
