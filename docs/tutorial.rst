@@ -22,8 +22,7 @@ Create a New Plone Site
 ^^^^^^^^^^^^^^^^^^^^^^^
 If you already have a plone site you want to work with, you can skip this part!
 
-To set up a Plone site::
-
+To set up a Plone site...
 #. Log in as a zope administrator, and head over to the ZMI at  http://localhost:8080/manage_main. Click “Add Plone Site”
 .. figure:: https://raw.github.com/zupo/collective.todoapp/master/docs/images/create_plone_site.jpg
 #. Change the name and id if you wish, but for this tutorial we will assume the name of the site is “Plone” and is located at http://localhost:8080/Plone
@@ -32,8 +31,7 @@ To set up a Plone site::
 
 TODO: add folder for TODOs
 
-Next we need to create a new content type, which will be our TODO::
-
+Next we need to create a new content type, which will be our TODO.
 #. Navigate to site setup as shown below, or just enter http://localhost:8080/Plone/@@overview-controlpanel . This is where you can configure Plone for happy fun time.
 #. Now comes the fun part. We want to create our own type through-the-web (TTW). This type will be a todo item. Let’s click manage our Dexterity Content Types (or go directly to http://localhost:8080/Plone/@@dexterity-types).
 #. Create a Todo List Item by clicking “Add New Content Type”
