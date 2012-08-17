@@ -7,12 +7,31 @@
       i18n:domain="collective.todoapp">
 <body>
 
-    <metal:content-core fill-slot="content-core">
-        <metal:content-core define-macro="content-core">
+  <metal:content-core fill-slot="content-core">
+    <metal:content-core define-macro="content-core">
 
-            TODO
+      <table class="listing" summary="Todo list"
+          tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime;">
 
-        </metal:content-core>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Status</th>
+            <th>Last modified</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr tal:repeat="item context/@@folderListing">
+            <td tal:content="item/Title">Get milk!</td>
+            <td tal:content="item/review_state">Jane Smith</td>
+            <td tal:content="python: toLocalizedTime(item.ModificationDate(), long_format=1)">2012/08/17 13:37</td>
+          </tr>
+        </tbody>
+
+      </table>
+
+      </metal:content-core>
     </metal:content-core>
 
 </body>
