@@ -1,8 +1,7 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:browser="http://namespaces.zope.org/browser"
-    xmlns:plone="http://namespaces.plone.org/plone"
-    i18n_domain="collective.todoapp">
+    xmlns:plone="http://namespaces.plone.org/plone">
 
     <!-- Publish static files -->
     <browser:resourceDirectory

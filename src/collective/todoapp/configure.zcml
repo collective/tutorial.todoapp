@@ -3,9 +3,7 @@
     xmlns:cmf="http://namespaces.zope.org/cmf"
     xmlns:five="http://namespaces.zope.org/five"
     xmlns:grok="http://namespaces.zope.org/grok"
-    xmlns:i18n="http://namespaces.zope.org/i18n"
-    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
-    i18n_domain="collective.todoapp">
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup">
 
     <!-- Zope2 initialization -->
     <five:registerPackage package="." initialize=".initialize" />
