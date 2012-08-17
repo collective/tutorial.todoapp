@@ -23,6 +23,7 @@ Create a New Plone Site
 If you already have a plone site you want to work with, you can skip this part!
 
 To set up a Plone site...
+
 #. Log in as a zope administrator, and head over to the ZMI at  http://localhost:8080/manage_main. Click “Add Plone Site”
 .. figure:: https://raw.github.com/zupo/collective.todoapp/master/docs/images/create_plone_site.jpg
 #. Change the name and id if you wish, but for this tutorial we will assume the name of the site is “Plone” and is located at http://localhost:8080/Plone
