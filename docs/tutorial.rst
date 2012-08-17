@@ -37,10 +37,12 @@ To set up a Plone site:
 #. Under “Add-ons”, make sure to check “Dexterity Content Types” and then click “Create Plone Site"
 
   .. figure:: https://raw.github.com/zupo/collective.todoapp/master/docs/images/create_plone_site.jpg
+     :scale: 50 %
 
 #. Sit back, relax, and finish the tutorial
 
-  .. figure:: https://raw.github.com/zupo/collective.todoapp/master/docs/images/welcome_to_plone.jpg
+   .. figure:: https://raw.github.com/zupo/collective.todoapp/master/docs/images/welcome_to_plone.jpg
+      :scale: 50 %
 
 TODO: add folder for TODOs
 
