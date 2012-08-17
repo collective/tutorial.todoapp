@@ -1,5 +1,6 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:cmf="http://namespaces.zope.org/cmf"
     xmlns:five="http://namespaces.zope.org/five"
     xmlns:grok="http://namespaces.zope.org/grok"
@@ -16,6 +17,17 @@
 
     <!-- Register all components defined with grok -->
     <grok:grok package="." />
+
+    <!-- TODO: This should not be needed. It should either be done by default
+        as a convention or at least to have a grok method for it. -->
+    <include package="plone.app.contentmenu" />
+    <browser:menuItem
+        for="Products.ATContentTypes.interface.IATFolder"
+        menu="plone_displayviews"
+        title="Todo view"
+        action="@@todo"
+        description="Todo listing view"
+        />
 
     <!-- Register the installation GenericSetup extension profile -->
     <genericsetup:registerProfile
