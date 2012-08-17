@@ -20,7 +20,7 @@ long_description = \
 setup(
     name='collective.todoapp',
     version=version,
-    description="Enter description of what this project is all about.",
+    description="A simple ToDo app tutorial for Plone.",
     long_description=long_description,
     # Get more from http://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
