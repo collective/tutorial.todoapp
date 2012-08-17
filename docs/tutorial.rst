@@ -29,22 +29,22 @@ To set up a Plone site:
 #. Log in as a zope administrator, and head over to the ZMI at  http://localhost:8080/manage_main. Click “Add Plone Site”
 
    .. image:: https://raw.github.com/collective/collective.todoapp/master/docs/images/add_plone_site.jpg
-      :width: 150 px
+      :width: 400px
 
 #. Change the name and id if you wish, but for this tutorial we will assume the name of the site is “Plone” and is located at http://localhost:8080/Plone
 
    .. image:: https://raw.github.com/collective/collective.todoapp/master/docs/images/dexterity_extension.jpg
-      :width: 150 px
+      :width: 400px
 
 #. Under “Add-ons”, make sure to check “Dexterity Content Types” and then click “Create Plone Site"
 
    .. image:: https://raw.github.com/collective/collective.todoapp/master/docs/images/create_plone_site.jpg
-      :width: 150 px
+      :width: 400px
 
 #. Sit back, relax, and finish the tutorial
 
    .. image:: https://raw.github.com/collective/collective.todoapp/master/docs/images/welcome_to_plone.jpg
-      :width: 150 px
+      :width: 400px
 
 TODO: add folder for TODOs
 
@@ -56,53 +56,52 @@ Next we need to create a new content type, which will be our TODO.
 #. Navigate to site setup as shown below, or just enter http://localhost:8080/Plone/@@overview-controlpanel . This is where you can configure Plone for happy fun time.
 
    .. image:: https://raw.github.com/collective/collective.todoapp/master/docs/images/site_setup.jpg
-      :width: 150 px
+      :width: 400px
 
 #. Now comes the fun part. We want to create our own type "through-the-web", aka TTW. This type will be a todo item. Let’s click manage our Dexterity Content Types (or go directly to http://localhost:8080/Plone/@@dexterity-types).
 
    .. image:: https://raw.github.com/collective/collective.todoapp/master/docs/images/plone_configuration_panel.jpg
-      :width: 150 px
+      :width: 400px
 
 #. Create a Todo List Item by clicking “Add New Content Type”
 
-
    .. image:: https://raw.github.com/collective/collective.todoapp/master/docs/images/add_content_type.jpg
-      :width: 150 px
+      :width: 400px
 
 #. Fill in the fields as seen below and then click “Add” 
 
    .. image:: https://raw.github.com/collective/collective.todoapp/master/docs/images/add_todo_content_type.jpg
-      :width: 150 px
+      :width: 400px
 
 #. Now you will see that there is a new type to play with. Let’s adjust a few things. Click the name of the new type to edit. 
 
    .. image:: https://raw.github.com/collective/collective.todoapp/master/docs/images/edit_todo_item.jpg
-      :width: 150 px
+      :width: 400px
 
 #. There are two important things we need to do here: we need to adjust some behaviors, and add some fields. Let’s look at the behaviors first.
 
    .. image:: https://raw.github.com/collective/collective.todoapp/master/docs/images/todo_item_behaviors.jpg
-      :width: 150 px
+      :width: 400px
 
 #. By default, all plone types have dublin core metadata enabled (you may know it as “title” and “description”. We don’t need this for our uber simple TODO list item. (Additionally, there is something really weird to start since title and description aren’t displayed but they are actually there...). Uncheck “Dublin Core metadata” and then click save.
 
    .. image:: https://raw.github.com/collective/collective.todoapp/master/docs/images/behaviors_config.jpg
-      :width: 150 px
+      :width: 400px
 
 #. Next we need to add some fields. Because this type is so simple, we will just add one field but feel free to go CRAZY. Start by clicking “Add new field...”
 
    .. image:: https://raw.github.com/collective/collective.todoapp/master/docs/images/add_new_field.jpg
-      :width: 150 px
+      :width: 400px
 
 #. Add a field called TODO (or anything you want). Most important is that the short id is “title”. By using this key short name, we make sure that all todos are searchable from smart search. Update the field as seen below and click add.
 
    .. image:: https://raw.github.com/collective/collective.todoapp/master/docs/images/add_todo_field.jpg
-      :width: 150 px
+      :width: 400px
 
 #. You will see that a new field has been added to your content type. If you are feeling adventuresome, click on the settings tab next to the field to set other properties, or just see what’s available.
 
    .. image:: https://raw.github.com/collective/collective.todoapp/master/docs/images/final_todo_fields_config.jpg
-      :width: 150 px
+      :width: 400px
 
 #. Guess what? You are done! Well, with this part anyways. Test our adding your new content type from the home page. XXX: show this here
 
