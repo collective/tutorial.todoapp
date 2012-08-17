@@ -29,6 +29,7 @@ To set up a Plone site:
 #. Log in as a zope administrator, and head over to the ZMI at  http://localhost:8080/manage_main. Click “Add Plone Site”
 
    .. figure:: https://raw.github.com/zupo/collective.todoapp/master/docs/images/add_plone_site.jpg
+      :scale: 50 %
 
 #. Change the name and id if you wish, but for this tutorial we will assume the name of the site is “Plone” and is located at http://localhost:8080/Plone
 
@@ -46,6 +47,9 @@ To set up a Plone site:
 
 TODO: add folder for TODOs
 
+
+Create a New Content Type
+^^^^^^^^^^^^^^^^^^^^^^^^^
 Next we need to create a new content type, which will be our TODO.
 
 #. Navigate to site setup as shown below, or just enter http://localhost:8080/Plone/@@overview-controlpanel . This is where you can configure Plone for happy fun time.
