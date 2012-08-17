@@ -4,6 +4,7 @@ Plone TODO List
 It's a fact - Plone has a lot of complicated features. That doesn't mean Plone is hard for everything! This is a simple tutorial that anyone can follow to get a simple TODO list running inside of a Plone application. Would you want to deploy this hearty appication server for just a TODO list? Probably not. You can however learn several simple, fast concepts that will get you most of the way there. Feeling like you don't understand something completely or the terminology is getting to you? Sit back, relax, and finish the tutorial. If in the end things still aren't clear, please give feedback and we'll look at what we could do better.
 
 In this tutorial you will:
+
 * Learn how to create content types using Dexterity 
 * Create and apply basic workflows
 * Convert customizations to your plone portal which can be consistenly recreated across multiple sites
@@ -11,6 +12,7 @@ In this tutorial you will:
 * Learn how to create custom listings of your new content types
 
 Assumptions:
+
 * You have Plone running on port 8080 succesfully.
 * That's it!
 
