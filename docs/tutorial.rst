@@ -44,7 +44,7 @@ To set up a Plone site:
 #. Sit back, relax, and finish the tutorial
 
    .. figure:: https://raw.github.com/collective/collective.todoapp/master/docs/images/welcome_to_plone.jpg
-      :scale: 50 %
+      :width: 200 px
 
 TODO: add folder for TODOs
 
