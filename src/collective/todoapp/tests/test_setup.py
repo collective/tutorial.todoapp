@@ -30,13 +30,6 @@ class TestInstall(IntegrationTestCase):
         title = self.portal.getProperty('title')
         self.assertEquals("Todo App Tutorial", title)
 
-    # browserlayer.xml
-    def test_browserlayer(self):
-        """Test that ITodoAppLayer is registered."""
-        from collective.todoapp.interfaces import ITodoAppLayer
-        from plone.browserlayer import utils
-        self.failUnless(ITodoAppLayer in utils.registered_layers())
-
 
 def test_suite():
     """This sets up a test suite that actually runs the tests in the class
