@@ -7,6 +7,7 @@ Developer documentation
 .. toctree::
     :maxdepth: 2
 
+    tutorial.rst
     api.rst
     glossary.rst
 
