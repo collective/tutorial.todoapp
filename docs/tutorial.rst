@@ -32,13 +32,15 @@ To set up a Plone site:
 
 #. Change the name and id if you wish, but for this tutorial we will assume the name of the site is “Plone” and is located at http://localhost:8080/Plone
 
-   .. figure:: https://raw.github.com/zupo/collective.todoapp/master/docs/images/add_plone_site.jpg
+   .. figure:: https://raw.github.com/zupo/collective.todoapp/master/docs/images/dexterity_extension.jpg
 
 #. Under “Add-ons”, make sure to check “Dexterity Content Types” and then click “Create Plone Site"
 
   .. figure:: https://raw.github.com/zupo/collective.todoapp/master/docs/images/create_plone_site.jpg
 
 #. Sit back, relax, and finish the tutorial
+
+  .. figure:: https://raw.github.com/zupo/collective.todoapp/master/docs/images/welcome_to_plone.jpg
 
 TODO: add folder for TODOs
 
