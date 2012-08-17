@@ -28,10 +28,16 @@ To set up a Plone site:
 
 #. Log in as a zope administrator, and head over to the ZMI at  http://localhost:8080/manage_main. Click “Add Plone Site”
 
-.. figure:: https://raw.github.com/zupo/collective.todoapp/master/docs/images/create_plone_site.jpg
+   .. figure:: https://raw.github.com/zupo/collective.todoapp/master/docs/images/add_plone_site.jpg
 
 #. Change the name and id if you wish, but for this tutorial we will assume the name of the site is “Plone” and is located at http://localhost:8080/Plone
+
+   .. figure:: https://raw.github.com/zupo/collective.todoapp/master/docs/images/add_plone_site.jpg
+
 #. Under “Add-ons”, make sure to check “Dexterity Content Types” and then click “Create Plone Site"
+
+  .. figure:: https://raw.github.com/zupo/collective.todoapp/master/docs/images/create_plone_site.jpg
+
 #. Sit back, relax, and finish the tutorial
 
 TODO: add folder for TODOs
