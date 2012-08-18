@@ -57,11 +57,13 @@ class TestInstall(IntegrationTestCase):
 
     # types/todo_item.xml
     def test_todo_item_installed(self):
+        """"Test that Todo Item content type is listed in portal_types."""
         types = api.portal.get_tool('portal_types')
         self.assertIn('todo_item', types.objectIds())
 
     # workflows/todo_item_workflow/definition.xml
     def test_todo_item_workflow_installed(self):
+        """"Test that todo_item_workflow is listed in portal_workflow."""
         workflow = api.portal.get_tool('portal_workflow')
         self.assertIn('todo_item_workflow', workflow.objectIds())
 
