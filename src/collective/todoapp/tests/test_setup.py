@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """Setup/installation tests for this package."""
 
-from plone import api
 from collective.todoapp.tests.base import IntegrationTestCase
+from plone import api
 
 import unittest2 as unittest
 
