@@ -30,6 +30,8 @@
         />
 
     <!-- Register the installation GenericSetup extension profile -->
+    <!-- TODO: this could be simplified to just one line:
+        <genericsetup:registerDefaultProfile /> -->
     <genericsetup:registerProfile
         name="default"
         title="collective.todoapp"
