@@ -44,6 +44,7 @@ setup(
         'Plone',
         'plone.api',
         'plone.app.caching',
+        'plone.app.dexterity',
         'plone.app.theming',
         'setuptools',
     ],
