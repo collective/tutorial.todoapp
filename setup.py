@@ -42,6 +42,7 @@ setup(
         'five.pt',
         'Pillow',
         'Plone',
+        'plone.api',
         'plone.app.caching',
         'plone.app.theming',
         'setuptools',
