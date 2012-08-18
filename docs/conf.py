@@ -34,7 +34,7 @@ master_doc = 'index'
 # General information about the project.
 from datetime import datetime
 project = u'collective.todoapp'
-copyright = u'%s, NiteoWeb Ltd.' % datetime.now().year
+copyright = u'%s, Caipirina Sprinters' % datetime.now().year
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
