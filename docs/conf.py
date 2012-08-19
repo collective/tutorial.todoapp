@@ -34,7 +34,7 @@ master_doc = 'index'
 # General information about the project.
 from datetime import datetime
 project = u'collective.todoapp'
-copyright = u'%s, NiteoWeb Ltd.' % datetime.now().year
+copyright = u'%s, Caipirina Sprinters' % datetime.now().year
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -82,6 +82,15 @@ pygments_style = 'sphinx'
 
 
 # -- Options for HTML output --------------------------------------------------
+
+# Use-case: we want to display a warning message that is only visible on GitHub
+# and not on ReadTheDocs. We achieve this by adding a custom CSS that hides
+# .. line-block:: in Sphinx but still makes it visible on GitHub because GitHub
+# does not load this custom CSS. line-block was chosen because it's deprecated
+# and shouldn't be used anymore anyhow
+def setup(app):
+    app.add_stylesheet('lineblock.css')
+
 
 # The theme to use for HTML and HTML Help pages.  Major themes that come with
 # Sphinx are currently 'default' and 'sphinxdoc'.
@@ -165,13 +174,12 @@ htmlhelp_basename = 'collectivetodoappdoc'
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual])
-latex_documents = [
-  ('index',
-   'collectivetodoapp.tex',
-  u'collective.todoapp Documentation',
-  u'', 'manual'
-  ),
-]
+latex_documents = [(
+    'index',
+    'collectivetodoapp.tex',
+    u'collective.todoapp Documentation',
+    u'', 'manual'
+), ]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.

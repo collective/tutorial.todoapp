@@ -5,8 +5,8 @@ from five import grok
 from Products.ATContentTypes.interface import IATFolder
 
 # Search for templates in the current directory.
-# Hopefully line won't be needed in the future as I hope that we can tell grok
-# to look in the current dir by default.
+# Hopefully this line won't be needed in the future as I hope that we can tell
+# grok to look in the current dir by default.
 grok.templatedir('.')
 
 
