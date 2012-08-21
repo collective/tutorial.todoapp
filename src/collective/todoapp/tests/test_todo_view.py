@@ -20,9 +20,6 @@ class TestView(IntegrationTestCase):
         # Set @@todo as default display view for folder
         self.folder.setLayout("todo")
 
-        # TODO: we need to do it but I don't really know why? Help plz!
-        self.request['ACTUAL_URL'] = self.folder.absolute_url() + '/@@todo'
-
         # get the view
         self.view = api.content.get_view(
             name='todo',
