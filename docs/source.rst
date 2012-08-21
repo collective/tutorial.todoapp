@@ -9,10 +9,9 @@
 Source documentation
 ====================
 
-TODO: fill this one up when you have actual code in
 
-Browser
-=======
+BrowserViews
+============
 
 .. automodule:: collective.todoapp.browser.todo
     :members:
@@ -27,4 +26,14 @@ Tests
 ----
 
 .. automodule:: collective.todoapp.tests.test_setup
+    :members:
+
+----
+
+.. automodule:: collective.todoapp.tests.test_todo_item
+    :members:
+
+----
+
+.. automodule:: collective.todoapp.tests.test_todo_view
     :members:

@@ -8,19 +8,29 @@
 .. include:: ../README.rst
 
 
-Developer documentation
-=======================
+The Tutorial
+============
 
 .. toctree::
     :maxdepth: 2
 
-    tutorial.rst
-    api.rst
+    chapter_0.rst
+    chapter_1.rst
+    chapter_2.rst
+    chapter_3.rst
     glossary.rst
 
 
-.. include:: HISTORY.rst
-.. include:: LICENSE.rst
+Contributing to the tutorial
+============================
+
+.. toctree::
+    :maxdepth: 2
+
+    contribute.rst
+    source.rst
+    HISTORY.rst
+
 
 Indices and tables
 ==================

@@ -5,10 +5,21 @@
     working references and proper formatting.
 
 
-Definitions of basic terms
-==========================
+Glossary
+========
 
 .. glossary::
 
-    First Item
-        Explain first item and add more.
+    TTW
+        Abbreviation Through-The-Web, meaning doing something through the
+        browser, without the need to have anything else installed locally on the
+        computer.
+
+    Content-type
+        TODO
+
+    Dexterity
+        TODO
+
+    Workflow
+        TODO
