@@ -16,3 +16,4 @@ lib
 local
 parts
 var
+src/plone.api
