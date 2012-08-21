@@ -24,7 +24,7 @@ Plone Todo list application tutorial
 
     It’s a fact - Plone has a lot of complicated features. That doesn’t mean
     Plone is hard for everything! This is a simple tutorial that anyone can
-    follow to get a simple Todo list applicaiton running inside of Plone.
+    follow to get a simple Todo list application running inside of Plone.
     Would you want to deploy Plone for just a Todo list in real life? Probably
     not. You can however learn several simple, fast concepts that will get you
     most of the way there. Feeling like you don’t understand something
