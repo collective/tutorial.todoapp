@@ -34,9 +34,9 @@
         <genericsetup:registerDefaultProfile /> -->
     <genericsetup:registerProfile
         name="default"
-        title="collective.todoapp"
+        title="tutorial.todoapp"
         directory="profiles/default"
-        description='Extension profile for collective.todoapp.'
+        description='Extension profile for tutorial.todoapp.'
         provides="Products.GenericSetup.interfaces.EXTENSION"
         />
 

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Test @@todo BrowserView."""
 
-from collective.todoapp.tests.base import IntegrationTestCase
+from tutorial.todoapp.tests.base import IntegrationTestCase
 from DateTime import DateTime
 from plone import api
 

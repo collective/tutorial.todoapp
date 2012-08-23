@@ -1,2 +1,2 @@
-graft src/collective
+graft src/tutorial
 include *.cfg *.rst *.in

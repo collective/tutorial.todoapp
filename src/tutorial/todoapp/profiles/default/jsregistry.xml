@@ -8,5 +8,5 @@
     enabled="True"
     expression=""
     inline="False"
-    id="++resource++collective.todoapp/todoapp.js" />
+    id="++resource++tutorial.todoapp/todoapp.js" />
 </object>

@@ -3,14 +3,14 @@ Plone Todo list application tutorial
 ====================================
 
 :Framework: `Plone 4.2 <http://plone.org>`_
-:Bug tracker: https://github.com/collective/collective.todoapp/issues
-:Source: https://github.com/collective/collective.todoapp
-:Documentation: http://collectivetodoapp.readthedocs.org/
+:Bug tracker: https://github.com/collective/tutorial.todoapp/issues
+:Source: https://github.com/collective/tutorial.todoapp
+:Documentation: http://tutorialtodoapp.readthedocs.org/
 :Code status:
 
-    .. image:: http://travis-ci.org/collective/collective.todoapp.png
+    .. image:: http://travis-ci.org/collective/tutorial.todoapp.png
        :align: left
-       :target: http://travis-ci.org/collective/collective.todoapp
+       :target: http://travis-ci.org/collective/tutorial.todoapp
 
 .. sidebar:: You will learn to:
 

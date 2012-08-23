@@ -1,29 +1,29 @@
 # -*- coding: utf-8 -*-
 """Setup/installation tests for this package."""
 
-from collective.todoapp.tests.base import IntegrationTestCase
+from tutorial.todoapp.tests.base import IntegrationTestCase
 from plone import api
 
 import unittest2 as unittest
 
 
 class TestInstall(IntegrationTestCase):
-    """Test installation of collective.todoapp into Plone."""
+    """Test installation of tutorial.todoapp into Plone."""
 
     def setUp(self):
         """Custom shared utility setup for tests."""
         self.portal = self.layer['portal']
 
     def test_product_installed(self):
-        """Test if collective.todoapp is installed in portal_quickinstaller."""
+        """Test if tutorial.todoapp is installed in portal_quickinstaller."""
         installer = api.portal.get_tool('portal_quickinstaller')
-        self.assertTrue(installer.isProductInstalled('collective.todoapp'))
+        self.assertTrue(installer.isProductInstalled('tutorial.todoapp'))
 
     def test_uninstall(self):
-        """Test if collective.todoapp is cleanly uninstalled."""
+        """Test if tutorial.todoapp is cleanly uninstalled."""
         installer = api.portal.get_tool('portal_quickinstaller')
-        installer.uninstallProducts(['collective.todoapp'])
-        self.assertFalse(installer.isProductInstalled('collective.todoapp'))
+        installer.uninstallProducts(['tutorial.todoapp'])
+        self.assertFalse(installer.isProductInstalled('tutorial.todoapp'))
 
     # metadata.xml
     def test_dependencies_installed(self):

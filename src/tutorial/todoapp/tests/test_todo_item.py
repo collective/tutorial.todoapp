@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Test Todo Item content type."""
 
-from collective.todoapp.tests.base import IntegrationTestCase
+from tutorial.todoapp.tests.base import IntegrationTestCase
 from plone import api
 
 import unittest2 as unittest

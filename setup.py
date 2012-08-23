@@ -18,7 +18,7 @@ long_description = \
     read('docs', 'LICENSE.rst')
 
 setup(
-    name='collective.todoapp',
+    name='tutorial.todoapp',
     version=version,
     description="A simple ToDo app tutorial for Plone.",
     long_description=long_description,
@@ -30,10 +30,10 @@ setup(
     keywords='Plone Python',
     author='Caipirina Sprinters',
     author_email='plone-users@lists.sourceforge.net',
-    url='http://githib.com/collective/collective.todoapp',
+    url='http://githib.com/collective/tutorial.todoapp',
     license='BSD',
     packages=find_packages('src', exclude=['ez_setup']),
-    namespace_packages=['collective'],
+    namespace_packages=['tutorial'],
     package_dir={'': 'src'},
     include_package_data=True,
     zip_safe=False,

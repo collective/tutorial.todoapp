@@ -23,14 +23,14 @@ class TodoAppLayer(PloneSandboxLayer):
     def setUpZope(self, app, configurationContext):
         """Set up Zope."""
         # Load ZCML
-        import collective.todoapp
-        self.loadZCML(package=collective.todoapp)
-        z2.installProduct(app, 'collective.todoapp')
+        import tutorial.todoapp
+        self.loadZCML(package=tutorial.todoapp)
+        z2.installProduct(app, 'tutorial.todoapp')
 
     def setUpPloneSite(self, portal):
         """Set up Plone."""
         # Install into Plone site using portal_setup
-        applyProfile(portal, 'collective.todoapp:default')
+        applyProfile(portal, 'tutorial.todoapp:default')
 
         # Login and create a folder we're gonna use for testing
         setRoles(portal, TEST_USER_ID, ['Manager'])
@@ -43,7 +43,7 @@ class TodoAppLayer(PloneSandboxLayer):
 
     def tearDownZope(self, app):
         """Tear down Zope."""
-        z2.uninstallProduct(app, 'collective.todoapp')
+        z2.uninstallProduct(app, 'tutorial.todoapp')
 
 
 FIXTURE = TodoAppLayer()
