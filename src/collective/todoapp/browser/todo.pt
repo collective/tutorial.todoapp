@@ -18,6 +18,7 @@
 
         <thead>
           <tr>
+            <th class="nosort">&nbsp;</th>
             <th>Title</th>
             <th>Status</th>
             <th>Last modified</th>
@@ -26,6 +27,18 @@
 
         <tbody>
           <tr tal:repeat="item context/@@folderListing">
+            <td>
+              <a href="#"
+                 tal:attributes="href string:${item/getURL}/content_status_modify?workflow_action=complete"
+                 tal:condition="python: item.review_state() == 'open'">
+                <img tal:attributes="src string:${context/@@plone_portal_state/portal_url }/++resource++collective.todoapp/open.png" />
+              </a>
+              <a href="#"
+                 tal:attributes="href string:${item/getURL}/content_status_modify?workflow_action=reopen"
+                 tal:condition="python: item.review_state() == 'completed'">
+                <img tal:attributes="src string:${context/@@plone_portal_state/portal_url}/++resource++collective.todoapp/completed.png" />
+              </a>
+            </td>
             <td>
               <a tal:attributes="href item/getURL" tal:content="item/Title">
                 Get milk!
