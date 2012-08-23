@@ -23,6 +23,7 @@ Since this is a tutorial on how to be a develop, there will always be a little b
 #. Using git, checkout the base buildout and code for this tutorial. Run bootstrap .py with Python 2.6 or higher, and then run buildout. There are usually problems on mac and linux with the pre-installed versions of python. If you run into issues, please see ``http://collective-docs.plone.org/en/latest/getstarted/installation.html``::
 
     > git clone git://github.com/collective/tutorial.todoapp.git
+    > git co chapter1
     > virtualenv --no-site-packages tutorial.todoapp
     > cd tutorial.todoapp
     > ./bin/python2.6 bootstrap.py --distribute

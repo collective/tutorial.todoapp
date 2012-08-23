@@ -214,6 +214,12 @@ Todo Items really have 2 states that we are interested in: `open` and
    .. image:: images/workflow_base_view.jpg
       :width: 400px
 
+#. Delete the currently listed state
+
+   .. image:: images/cleanup_states.jpg
+      :width: 400px
+
+
 #. Add two states with the ids "open" and "completed".
 
    .. image:: images/add_open.jpg
@@ -297,5 +303,9 @@ Todo Items really have 2 states that we are interested in: `open` and
    .. image:: images/map_to_workflow.jpg
       :width: 400px
 
-#. Could the time have arrived? Time to test? YES! Go to your TODO Items folder and add a new TODO Item. Validate that the workflow works::: XXX: addd screenshot HERE!
+#. Could the time have arrived? Time to test? YES! Go to your TODO Items folder and add a new TODO Item. Validate that the workflow works as expected. By toggling between the states.
 
+   .. image:: images/works.jpg
+      :width: 400px
+
+Congrats! You have now passed Plone Workflow 101. Next we will transition from editing through the web (TTW) to developing. With plone.api, it's as easy as pie.
