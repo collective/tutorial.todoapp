@@ -75,6 +75,16 @@ class TestInstall(IntegrationTestCase):
             if portal_type in ('todo_item', ):
                 self.assertEquals(('todo_item_workflow',), chain)
 
+    # jsregistry.xml
+    def test_js_registered(self):
+        """Test if todoapp.js JavaScript file is registered in
+        portal_javascript.
+        """
+        resources = self.portal.portal_javascripts.getResources()
+        ids = [r.getId() for r in resources]
+
+        self.assertIn('++resource++tutorial.todoapp/todoapp.js', ids)
+
 
 def test_suite():
     """This sets up a test suite that actually runs the tests in the class
