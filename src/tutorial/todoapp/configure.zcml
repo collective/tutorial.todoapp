@@ -11,12 +11,6 @@
     <!-- Register all components defined with grok -->
     <grok:grok package="." />
 
-    <!-- Publish static files -->
-    <browser:resourceDirectory
-      name="tutorial.todoapp"
-      directory="static"
-      />
-
     <!-- Register the installation GenericSetup extension profile -->
     <!-- TODO: this could be simplified to just one line:
         <genericsetup:registerDefaultProfile /> -->
