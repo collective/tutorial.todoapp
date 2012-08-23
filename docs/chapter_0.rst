@@ -11,7 +11,5 @@ Prelude
 
 Assumptions:
 
-* You have Plone running on port 8080 succesfully.
-* That's it!
-
-TODO: add pointers to how to get Plone running.
+* You have a Plone site running on port 8080 succesfully. If you do not have a Plone site running already, please see http://collective-docs.plone.org/en/latest/getstarted/installation.html. Also see http://collective-docs.plone.org/en/latest/getstarted/index.html for more information on getting started with Plone development
+* For this tutorial, we assume you have set up the default Plone site at http://localhost:8080/Plone. If you have NOT done that, please check out the quick HOWTO at XXX:link to add_plone_site.rst here
