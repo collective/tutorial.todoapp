@@ -9,7 +9,7 @@
 Assumptions
 ===========
 
-* You have a Plone site running on port 8080 succesfully. If you do not have a Plone site running already, please see http://collective-docs.plone.org/en/latest/getstarted/installation.html. Also see http://collective-docs.plone.org/en/latest/getstarted/index.html for more information on getting started with Plone development
+* You have a Plone site running on port 8080 succesfully. If you do not have a Plone site running already, please see ``http://collective-docs.plone.org/en/latest/getstarted/installation.html``. Also see ``http://collective-docs.plone.org/en/latest/getstarted/index.html`` for more information on getting started with Plone development
 * You have git  properly installed and vaguely know how to use it
 * You are working with Python 2.6 or 2.7, and have already installed setuptools and virtualenv
 * Sorry windows users, but you'll have to traslate as usual from n*x to Windows-ese

@@ -161,7 +161,7 @@ Todo Items really have 2 states that we are interested in: `open` and
    .. image:: images/manage_portal_workflow.jpg
       :width: 400px
 
-#. On this page, we see all content-types in our portal `mapped` to a workflow.
+   On this page, we see all content-types in our portal `mapped` to a workflow.
    Our new type, Todo Item, is mapped to ``(Default)``. You can see right below
    that the default is ``Simple Publication Workflow``. This is just too complex
    for our little Todo Item.
@@ -182,17 +182,27 @@ Todo Items really have 2 states that we are interested in: `open` and
    Onwards and upwards!
 
 #. Let's create a new workflow for our Todo Items and call it
-   ``todo_item_workflow``.
+   ``todo_item_workflow``. We will make a new workflow by copying and customizing one of the workflows that are already there. Copy simple_pubication_workflow
 
-   .. image:: images/save_workflow.jpg
+   .. image:: images/copy_workflow.jpg
       :width: 400px
 
-   .. image:: images/add_too_workflow.jpg
+#. Rename the copied workflow to 'todo_item_workflow'
+
+   .. image:: images/rename_workflow.jpg
+      :width: 400px
+
+   .. image:: images/save_rename_workflow.jpg
       :width: 400px
 
 #. You will be spit back out and the workflow contents page. Click the workflow to start editing
 
    .. image:: images/edit_todo_workflow.jpg
+      :width: 400px
+
+#. Let's update the name of the workflow so we don't double take later on
+
+   .. image:: images/retitle_workflow.jpg
       :width: 400px
 
 
