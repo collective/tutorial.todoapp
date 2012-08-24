@@ -18,7 +18,6 @@ The Tutorial
     chapter_1.rst
     chapter_2.rst
     chapter_3.rst
-    glossary.rst
 
 
 Contributing to the tutorial
