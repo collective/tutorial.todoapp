@@ -43,9 +43,9 @@ Package skeleton
 ================
 
 Let's start by creating a package skeleton. Since writing things up from scratch
-kinda sucks, use this tutorial as your skeleton::
+kinda sucks, use this tutorial as your skeleton:
 
-    .. code-block:: bash
+.. code-block:: bash
 
     ~$ git clone git@github.com:collective/tutorial.todoapp.git
     ~$ cd tutorial.todoapp
@@ -81,10 +81,51 @@ The package you have on your filesystem is already configured to give you a
 test-runner so you can immediately go and run it -- obviously you have no tests,
 but at least you try if your test runner works.
 
-    .. code-block:: bash
+.. code-block:: bash
 
-        tutorial.todoapp$ bin/test
-        Total: 0 tests, 0 failures, 0 errors in 0.000 seconds.
+    tutorial.todoapp$ bin/test
+    Total: 0 tests, 0 failures, 0 errors in 0.000 seconds.
 
-Good, the next thing to do is to add tests.
+Good, the next thing to do is to add tests. Go to `tutorial.todoapp repo on
+GitHub <https://github.com/collective/tutorial.todoapp/>`_
+and copy/paste (or download) all files in the ``tests`` folder to your lcoal
+``src/tutorial/todoapp/tests`` folder:
 
+- **base.py**
+
+  This module contains code that bootstraps your test environment: start up
+  Zope, add a Plone site, install your package, etc. Code in here is mostly
+  boilerplate so for now just use it and mind what exactly it does underneath.
+
+- **test_setup.py**
+
+  This module contains tests that check if your package was successfully
+  installed and configured. Tests in here are concerned with XML files you have
+  in the ``profiles/default`` folder.
+
+- **test_todo_item.py**
+
+  And finally a module that contains tests for your custom content-type.
+
+We will not go into details of what each test does as we believe the test code
+and its comments are in theirselves informative and we will rather encourage you
+to go through all tests, try to understand what they do, maybe change something
+and see what happens, etc.
+
+Remember that you run tests with ``bin/test`` and you should get an output that
+looks somewhat like this:
+
+.. code-block:: bash
+
+    tutorial.todoapp$ bin/test
+    [...snip...]
+    Set up tutorial.todoapp.tests.base.TodoAppLayer:Integration in 0.000 seconds.
+    Running:
+
+    Ran 11 tests with 0 failures and 0 errors in 9.782 seconds.
+    Tearing down left over layers:
+    Tear down tutorial.todoapp.tests.base.TodoAppLayer:Integration in 0.000 seconds.
+    Tear down tutorial.todoapp.tests.base.TodoAppLayer in 0.004 seconds.
+    Tear down plone.app.testing.layers.PloneFixture in 0.164 seconds.
+    Tear down plone.testing.z2.Startup in 0.012 seconds.
+    Tear down plone.testing.zca.LayerCleanup in 0.004 seconds.

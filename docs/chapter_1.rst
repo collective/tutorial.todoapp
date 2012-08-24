@@ -9,7 +9,6 @@
 Chapter 1: Through-The-Web
 ==========================
 
-
 Getting Started with Content Types
 ==================================
 

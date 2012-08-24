@@ -5,16 +5,23 @@
     have working references and proper formatting.
 
 
-===================
-Chapter 3: Listings
-===================
+======================
+Chapter 3: Custom View
+======================
 
-Simple Listing
-==============
+Simple BrowserView for listing Todo Items, using Grok, with tests.
 
-Simple BrowserView for listing Todos, using Grok, with tests.
+View class
+==========
 
-Fancy Listing
+View template
 =============
 
-TODO: add static resources, portal_js registration, go fancy with jQuery, AJAX n' stuff, with tests (probably not JS)
+Tests
+=====
+
+Static resources
+================
+
+Icons n' stuff.
+
