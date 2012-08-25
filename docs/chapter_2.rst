@@ -105,13 +105,27 @@ In the portal_setup tool, click on the export tab.
 
 There are a LOT of things that you can export here, but that is for a different 
 tutorial. For now, find export item #28 called ``Workflow Tool``, check the box 
-to the left.
+to the left. Then scroll all the way to the bottom and ``Export selected steps``.
 
    .. image:: images/check_workflow.jpg
       :width: 400px
 
-Then scroll all the way to the bottom and ``Export selected steps``
+Just like the Dexterity content type, you will want to untar the downloaded 
+folder, and move into your default profile folder. 
 
+In that download you should have a file called ``workflows.xml`` and a folder
+called ``workflows`` like below. You will move both of them to the default 
+profile.
+
+   .. image:: images/export_workflow_example.jpg
+      :width: 400px
+
+
+   .. code-block:: bash
+
+    tutorial.todoapp/src/tutorial/todoapp/profiles/default
+
+And you are done! Congratulations on the birth of your new product!
 
 
 Tests
