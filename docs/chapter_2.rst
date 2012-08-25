@@ -160,6 +160,9 @@ the tests with git:
    git checkout master tests
    cd tests
 
+Note that these test cases include test for functionality that you haven't added 
+yet, so don't be surprised if they fail on first run!
+
 In this folder there will be many new files:
 
 - **base.py**
