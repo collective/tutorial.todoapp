@@ -31,12 +31,6 @@ class TestInstall(IntegrationTestCase):
         installer = api.portal.get_tool('portal_quickinstaller')
         self.assertTrue(installer.isProductInstalled('plone.app.dexterity'))
 
-    # properties.xml
-    def test_portal_title(self):
-        """Test if portal title was correctly updated."""
-        title = self.portal.getProperty('title')
-        self.assertEquals("Todo App Tutorial", title)
-
     # types/Folder.xml
     def test_folder_available_layouts(self):
         """Test that our custom display layout (@@todo) is available on folders
