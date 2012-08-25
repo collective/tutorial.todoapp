@@ -36,7 +36,7 @@ class TestWorkflowServices(IntegrationTestCase):
 
     def test_reopen_todo_item_workflow(self):
         api.content.transition(self.todo, transition='complete')
-        
+
         self.request.form['transition'] = 'reopen'
         view = api.content.get_view(
             name='update_workflow',
