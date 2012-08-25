@@ -156,9 +156,7 @@ the tests with git:
 
 .. code-block:: bash
    
-   cd src/tutorial/todoapp
-   git checkout master tests
-   cd tests
+   git checkout master src/tutorial/todoapp/tests
 
 Note that these test cases include test for functionality that you haven't added 
 yet, so don't be surprised if they fail on first run!

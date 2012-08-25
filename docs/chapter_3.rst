@@ -15,15 +15,24 @@ of Todo Items.
 View class
 ==========
 
-Let's start by adding the view class. Go to `tutorial.todoapp repo on
+Let's start by adding the view class. You can go to `tutorial.todoapp repo on
 GitHub <https://github.com/collective/tutorial.todoapp/>`_ and copy over code
-from ``src/tutorial/todoapp/browser/todo.py`` to your local computer.
+from ``src/tutorial/todoapp/browser/todo.py`` to your local computer or just 
+use git:
+
+.. code-block:: bash
+   
+   git checkout master src/tutorial/todoapp/browser
 
 We also need to tell Plone to display this view in the `display` drop-down menu
 for Folders so we will later be able to set our view as a default display view
-for our Todo folder. Do that by adding the ``Folder.xml`` file to
-``src/tutorial/todoapp/profiles/default/types`` folder (get contents of the file
-on GitHub in the same path).
+for our Todo folder. Let's do that by using git to get a version of ``Folder.xml``
+and put it in ``src/tutorial/todoapp/profiles/default/types``.
+
+.. code-block:: bash
+   
+   git checkout master src/tutorial/todoapp/profiles/default/types/Folder.xml
+
 
 View template
 =============
@@ -63,8 +72,24 @@ available on a standard URL:
 Try it out
 ==========
 
-TODO: screenshots here!
-#. reinstall the product (because XML changed)
+Because the XML configuration of our product has change, we need to 
+reinstall the product. This is accomplished by ``deactivating`` and ``reactivating``
+the product. Navigate to the add-ons manager or go directly to ``http://localhost:8080/Plone/@@overview-controlpanel``.
+
+   .. image:: images/find_addons.jpg
+      :width: 400px
+
+Deactivate the tutorial.todoapp product, and then reactivate it.
+
+   .. image:: images/deactivate.jpg
+      :width: 400px
+
+   .. image:: images/reactivate.jpg
+      :width: 400px
+
+Every time you make a change to the xml files, by exporting or manual edit, you 
+must reactivate the product.
+
 #. go to the folder with todo items
 #. select 'todo' as default view
 #. celebrate!
