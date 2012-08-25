@@ -43,17 +43,7 @@ Package skeleton
 ================
 
 Let's start by creating a package skeleton. Since writing things up from scratch
-kinda sucks, use this tutorial as your skeleton:
-
-.. code-block:: bash
-
-    ~$ git clone git@github.com:collective/tutorial.todoapp.git
-    ~$ cd tutorial.todoapp
-    tutorial.todoapp$ git checkout chapter1
-
-What you just did there was `clone` the tutorial.todoapp repository from GitHub
-and then moved into the ``chapter1`` branch. This branch contains a bare-bones
-skeleton package on top of which you can follow the instructions below.
+kinda sucks, use this tutorial as your skeleton.
 
 
 Exporting configuration
@@ -90,12 +80,38 @@ it. Sit back, relax, and finish the tutorial. You will move the files into
     tutorial.todoapp/src/tutorial/todoapp/profiles/default
 
 Anytime you perform some sort of configuration export from Plone to a custom
-product, you will put the XML files in the profiles/default folder
+product, you will put the XML files in the profiles/default folder. Every time 
+you make changes to your types, you should re-export and save into the same 
+location. Now, when the next person installs the add-on, they wil have the 
+type already there!
 
 Exporting todo_item_workflow
 ----------------------------
 
-TODO: Liz does her clickety-clickety fun timez screenshots here!
+Exporting a workflow is very similar to exporting a Dexterity type. It just takes
+a little bit more navigating and a trip to the ZMI. To export the workflow, 
+navigate to the root of the ZMI by gong to ``http://localhost:8080/Plone/manage_main``.
+From there, head into the portal setup tool:
+
+   .. image:: images/enter_portal_setup.jpg
+      :width: 400px
+
+WARNING: The following User Interface is not recommended for children under 18. 
+
+In the portal_setup tool, click on the export tab.
+
+   .. image:: images/setup_export.jpg
+      :width: 400px
+
+There are a LOT of things that you can export here, but that is for a different 
+tutorial. For now, find export item #28 called ``Workflow Tool``, check the box 
+to the left.
+
+   .. image:: images/check_workflow.jpg
+      :width: 400px
+
+Then scroll all the way to the bottom and ``Export selected steps``
+
 
 
 Tests
