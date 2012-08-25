@@ -120,6 +120,7 @@ profile.
    .. image:: images/export_workflow_example.jpg
       :width: 400px
 
+Place all of these files in your profile at
 
    .. code-block:: bash
 
@@ -144,10 +145,22 @@ but at least you try if your test runner works.
     tutorial.todoapp$ bin/test
     Total: 0 tests, 0 failures, 0 errors in 0.000 seconds.
 
+Note: you do *NOT* need to stop your Plone instance in order to run tests. They
+will peacfully co-exist.
+
 Good, the next thing to do is to add tests. Go to `tutorial.todoapp repo on
 GitHub <https://github.com/collective/tutorial.todoapp/>`_
 and copy/paste (or download) all files from the ``src/tutorial/todoapp/tests``
-folder to your local ``src/tutorial/todoapp/tests`` folder:
+folder to your local ``src/tutorial/todoapp/tests`` folder. You can also get 
+the tests with git:
+
+.. code-block:: bash
+   
+   cd src/tutorial/todoapp
+   git checkout master tests
+   cd tests
+
+In this folder there will be many new files:
 
 - **base.py**
 
