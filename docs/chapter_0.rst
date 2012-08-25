@@ -43,10 +43,10 @@ Since this is a tutorial on how to be a develop, there will always be a little b
    .. image:: images/dexterity_extension.jpg
       :width: 400px
 
-#. Under `Add-ons`, make sure to check ``Dexterity Content Types`` and then
-   click ``Create Plone Site``.
+#. Under `Add-ons`, make sure to check ``Dexterity Content Types`` and ``tutorial.todoapp``
+   then click ``Create Plone Site``.
 
-   .. image:: images/create_plone_site.jpg
+   .. image:: images/install_todo.jpg
       :width: 400px
 
 #. There, your Plone site is created and you can continue with the tutorial.
