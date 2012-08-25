@@ -12,7 +12,7 @@
         No Todo Items added yet, add some!
       </p>
 
-      <table class="listing" summary="Todo list"
+      <table class="listing" summary="Todo list" id="todo-summary"
           tal:condition="context/@@folderListing"
           tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime;">
 
@@ -26,26 +26,31 @@
         </thead>
 
         <tbody>
-          <tr tal:repeat="item context/@@folderListing">
-            <td>
+          <tr tal:repeat="item context/@@folderListing"
+              tal:attributes="id  item/id">
+            <td tal:attributes="class  string:todo-visual-status ${item/review_state}">
               <a href="#"
-                 tal:attributes="href string:${item/getURL}/content_status_modify?workflow_action=complete"
+                 tal:attributes="href string:${item/getURL}/update_workflow?transition=complete"
                  tal:condition="python: item.review_state() == 'open'">
                 <img tal:attributes="src string:${context/@@plone_portal_state/portal_url }/++resource++tutorial.todoapp/open.png" />
               </a>
               <a href="#"
-                 tal:attributes="href string:${item/getURL}/content_status_modify?workflow_action=reopen"
+                 tal:attributes="href string:${item/getURL}/update_workflow?transition=reopen"
                  tal:condition="python: item.review_state() == 'completed'">
                 <img tal:attributes="src string:${context/@@plone_portal_state/portal_url}/++resource++tutorial.todoapp/completed.png" />
               </a>
             </td>
-            <td>
+            <td class="todo-title">
               <a tal:attributes="href item/getURL" tal:content="item/Title">
                 Get milk!
               </a>
             </td>
-            <td tal:content="item/review_state">Jane Smith</td>
-            <td tal:content="python: toLocalizedTime(item.ModificationDate(), long_format=1)">2012/08/17 13:37</td>
+            <td tal:content="item/review_state"
+                class="todo-state"
+                >Jane Smith</td>
+            <td class="todo-modified"
+               tal:content="python: toLocalizedTime(item.ModificationDate(), 
+                            long_format=1)">2012/08/17 13:37</td>
           </tr>
         </tbody>
 
