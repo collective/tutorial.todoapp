@@ -25,7 +25,7 @@ Since this is a tutorial on how to be a develop, there will always be a little b
     > git clone git://github.com/collective/tutorial.todoapp.git
     > virtualenv --no-site-packages tutorial.todoapp
     > cd tutorial.todoapp
-    > git co chapter1
+    > git checkout chapter1
     > ./bin/python2.6 bootstrap.py --distribute
     > ./bin/buildout
 
