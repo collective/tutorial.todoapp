@@ -48,9 +48,10 @@ class WorkflowTransition(grok.View):
                 # being serialized as json...
                 results['message'] = "%s" % e
 
-            results['results'] = { 'state': api.content.get_state(self.context),
-                                   'transitions': self.get_possible_transitions(self.context),
-                                  }
+            results['results'] = {
+                'state': api.content.get_state(self.context),
+                'transitions': self.get_possible_transitions(self.context),
+            }
 
         # set the right header for request and response
         self.request.response.setHeader('Content-Type',
