@@ -47,7 +47,7 @@ class TestView(IntegrationTestCase):
             title=u"Try Brulé!",
         )
 
-        # fix the modification date to a known value so we can test it's
+        # set the modification date to a known value so we can test its
         # presence in the view output
         date = DateTime('2012/08/20')
         self.folder['try-brule'].setModificationDate(date)

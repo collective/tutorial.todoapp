@@ -88,8 +88,8 @@ but at least you try if your test runner works.
 
 Good, the next thing to do is to add tests. Go to `tutorial.todoapp repo on
 GitHub <https://github.com/collective/tutorial.todoapp/>`_
-and copy/paste (or download) all files in the ``tests`` folder to your lcoal
-``src/tutorial/todoapp/tests`` folder:
+and copy/paste (or download) all files from the ``src/tutorial/todoapp/tests``
+folder to your local ``src/tutorial/todoapp/tests`` folder:
 
 - **base.py**
 
@@ -108,7 +108,7 @@ and copy/paste (or download) all files in the ``tests`` folder to your lcoal
   And finally a module that contains tests for your custom content-type.
 
 We will not go into details of what each test does as we believe the test code
-and its comments are in theirselves informative and we will rather encourage you
+and its comments are in themselves informative and we will rather encourage you
 to go through all tests, try to understand what they do, maybe change something
 and see what happens, etc.
 
