@@ -62,7 +62,35 @@ Exporting configuration
 Exporting Todo Item content-type
 --------------------------------
 
-TODO: Liz does her clickety-clickety fun timez screenshots here also!
+Navigate back to the dexterity content type panel or go directly to 
+``http://localhost:8080/Plone/@@dexterity-types``
+
+Check the TODO item and then click on export type profile to download the 
+type. If you don't check anything, it won't do anything and there is currently
+no error message so don't be surprised.
+
+   .. image:: images/export_todo.jpg
+      :width: 400px
+
+This will start a download to you machine. Navigate to that directory and 
+unzip the contents of that directory. Here is an example of what this will 
+look like:
+  
+   .. image:: images/dexterity_export.jpg
+      :width: 400px
+
+We need to take types.xml and the types folder, and save it in our base product.
+You can use your finder or explorer to drag and drop, or use the command line.
+I'll use command line as an example but feel free to improvise. You want to move 
+the files into your default product profile. What's a profile? Don't worry about 
+it. Sit back, relax, and finish the tutorial. You will move the files into
+
+.. code-block:: bash
+
+    tutorial.todoapp/src/tutorial/todoapp/profiles/default
+
+Anytime you perform some sort of configuration export from Plone to a custom
+product, you will put the XML files in the profiles/default folder
 
 Exporting todo_item_workflow
 ----------------------------
