@@ -183,6 +183,8 @@ Todo Items really have 2 states that we are interested in: `open` and
 #. Let's create a new workflow for our Todo Items and call it
    ``todo_item_workflow``. We will make a new workflow by copying and customizing one of the workflows that are already there. Copy simple_pubication_workflow
 
+   TODO: Break this into several different images to be more clear.
+
    .. image:: images/copy_workflow.jpg
       :width: 400px
 
@@ -242,20 +244,26 @@ Todo Items really have 2 states that we are interested in: `open` and
    .. image:: images/edit_complete.jpg
       :width: 400px
 
-#. First add a title so you remember later what this does. Description is optional but adding one will help you keep your thoughts clear and remind future you what now you is thinking. The destination state should be set to "completed". We also want to make sure that only people with mega permissions, or the owner itself, can change the state so we add "Modify portal content" to the Permissions box.
+#. First add a title so you remember later what this does. Description is optional but adding one will help you keep your thoughts clear and remind future you what now you is thinking. The destination state should be set to ``completed``. We also want to make sure that only people with mega permissions, or the owner itself, can change the state so we add ``Modify portal content`` to the Permissions box.
 
-   All this means nothing if we don't give the user a chance to change the state. Next to "Display in actions box", we can set the title for  what will be displayed in the workflow drop down box of the item (where "Pending", "Reject" et al where earlier). Let's call it "Complete". Last but not least, we need to add the url that the action points to. I could make this tutorial 100 years long and explain why you have to do this, but accept that it has to be done, relax, and follow this formula::
+   All this means nothing if we don't give the user a chance to change the state. Next to ``Display in actions box``, we can set the title for  what will be displayed in the workflow drop down box of the item (where Pending, Reject, etc where earlier). Let's call it ``Complete``. Last but not least, we need to add the url that the action points to. I could make this tutorial 100 years long and explain why you have to do this, but accept that it has to be done, relax, and follow this formula:
 
-   URL = %(content_url)s/content_status_modify?workflow_action=X
+   .. code-block:: bash
 
-   such that X is the id of the transition. Got it? Good.
+       URL = %(content_url)s/content_status_modify?workflow_action=X
+
+   where X is the id of the transition. So for this case, in the URL box, you will add
+
+   .. code-block:: bash
+
+       %(content_url)s/content_status_modify?workflow_action=complete
 
    .. image:: images/complete_details.jpg
       :width: 400px
 
    Double check everything and click "Save".
 
-#. ZOMG if your brain isn't hurting yet it will be soon. Go back to the transitions listing.
+#. If your brain isn't hurting yet it will be soon. Go back to the transitions listing.
 
    .. image:: images/youre_welcome.jpg
       :width: 400px
