@@ -131,6 +131,6 @@ First add the following snippet to ``test_setup``:
         self.assertIn('todo', layout_ids)
 
 
-Then add a new test module: ``test_todo_view.py``. Get it from GitHub, put it
-in your ``tests`` folder and run tests. Then fiddle around with it to see what
-it does.
+If you haven't already downloaded it, add a new test module: ``test_todo_view.py``. 
+Downloadt it from GitHub, put and it in your ``tests`` folder and run tests. Feel free to 
+fiddle around with it to see what it does. 

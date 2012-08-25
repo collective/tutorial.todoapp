@@ -34,13 +34,16 @@ class WorkflowTransition(grok.View):
     grok.name('update_workflow')
 
     def render(self):
+        # the submitted form variables are stored in the request object
         transition = self.request.form.get('transition', '')
         results = {'results': None,
                    'success': False,
                    'message': ''
                    }
+
         if transition:
             try:
+                # set the new state by running a transition
                 api.content.transition(self.context, transition=transition)
                 results['success'] = True
             except WorkflowException, e:
@@ -53,7 +56,7 @@ class WorkflowTransition(grok.View):
                 'transitions': self.get_possible_transitions(self.context),
             }
 
-        # set the right header for request and response
+        # set the right header for sending a JSON response
         self.request.response.setHeader('Content-Type',
                                         'application/json; charset=utf-8')
         return json.dumps(results)
