@@ -41,19 +41,19 @@ Static resources
 The template displays different icons for different workflow states of your
 Todo Items. We need to add these icons to your package:
 
-    #. Download ``open.png`` and ``completed.png`` from GitHub (they are in
-       ``src/tutorial/todoapp/browser/static``) into a new folder on your local
-       computer: ``src/tutorial/todoapp/browser/static``.
-    #. Tell Zope that this ``static`` folder contains static resources (icons,
-       CCS files, JavaScript files, etc.) by adding the following lines to
-       ``src/tutorial/todoapp/browser/configure.zcml``:
+#. Download ``open.png`` and ``completed.png`` from GitHub (they are in
+   ``src/tutorial/todoapp/browser/static``) into a new folder on your local
+   computer: ``src/tutorial/todoapp/browser/static``.
+#. Tell Zope that this ``static`` folder contains static resources (icons,
+   CCS files, JavaScript files, etc.) by adding the following lines to
+   ``src/tutorial/todoapp/browser/configure.zcml``:
 
-       .. code-block:: xml
+   .. code-block:: xml
 
-           <!-- Publish static files -->
-           <browser:resourceDirectory
-               name="tutorial.todoapp"
-               directory="static" />
+       <!-- Publish static files -->
+       <browser:resourceDirectory
+           name="tutorial.todoapp"
+           directory="static" />
 
 After restarting your Zope server, files in your ``static`` folder will be
 available on a standard URL:
@@ -76,6 +76,29 @@ Tests
 Cool, so you have verified that your code works through the browser and it's
 time to add tests to make sure your code keeps on working in the future.
 
-This chapter comes with only one test file: ``test_todo_view.py``. Get it from
-GitHub, put it in your ``tests`` folder and run tests. Then fiddle around with
-it to see what it does.
+First add the following snippet to ``test_setup``:
+
+.. code-block:: python
+
+    # types/Folder.xml
+    def test_folder_available_layouts(self):
+        """Test that our custom display layout (@@todo) is available on folders
+        and that the default ones are also still there.
+        """
+        layouts = self.portal.folder.getAvailableLayouts()
+        layout_ids = [id for id, title in layouts]
+
+        # default layouts
+        self.assertIn('folder_listing', layout_ids)
+        self.assertIn('folder_summary_view', layout_ids)
+        self.assertIn('folder_tabular_view', layout_ids)
+        self.assertIn('atct_album_view', layout_ids)
+        self.assertIn('folder_full_view', layout_ids)
+
+        # our custom one
+        self.assertIn('todo', layout_ids)
+
+
+Then add a new test module: ``test_todo_view.py``. Get it from GitHub, put it
+in your ``tests`` folder and run tests. Then fiddle around with it to see what
+it does.
