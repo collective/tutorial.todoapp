@@ -87,12 +87,19 @@ Deactivate the tutorial.todoapp product, and then reactivate it.
    .. image:: images/reactivate.jpg
       :width: 400px
 
-Every time you make a change to the xml files, by exporting or manual edit, you 
-must reactivate the product.
+Note that every time you make a change to the xml files, by exporting or manual edit, you 
+must reactivate the product for the changes to take effect!
 
-#. go to the folder with todo items
-#. select 'todo' as default view
-#. celebrate!
+Now, we apply the new view to the folder holding our todo items. Navigate to the folder you 
+created in chapter 1, and update the display.
+
+   .. image:: images/select_todo_view.jpg
+      :width: 400px
+
+Celebrate!
+
+   .. image:: images/custom_view.jpg
+      :width: 400px
 
 
 Tests
