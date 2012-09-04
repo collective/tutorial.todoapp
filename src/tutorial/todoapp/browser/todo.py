@@ -63,7 +63,6 @@ class WorkflowTransition(grok.View):
         Return the posible transitions for an item. This should
         eventually get out of this tutorial, since its NASTY.
         """
-        from Products.CMFCore.utils import getToolByName
-        workflow_tool = getToolByName(self.context, "portal_workflow")
+        workflow_tool = api.portal.get_tool('portal_workflow')
         items = workflow_tool.getTransitionsFor(item)
         return [item['id'] for item in items]
