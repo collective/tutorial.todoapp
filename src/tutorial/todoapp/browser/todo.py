@@ -6,7 +6,6 @@ from Products.ATContentTypes.interface import IATFolder
 from plone.dexterity.content import Item
 import json
 from plone import api
-from Products.CMFCore.WorkflowCore import WorkflowException
 
 
 # Search for templates in the current directory.
@@ -46,9 +45,7 @@ class WorkflowTransition(grok.View):
                 # set the new state by running a transition
                 api.content.transition(self.context, transition=transition)
                 results['success'] = True
-            except WorkflowException, e:
-                # apprently workflow exceptions don't take kindly to
-                # being serialized as json...
+            except api.exc.InvalidParameterError, e:
                 results['message'] = "%s" % e
 
             results['results'] = {

@@ -27,16 +27,12 @@ class TestView(IntegrationTestCase):
             request=self.request
         )
 
-    # this will fail until plone.api 1.0a2 is released
-    @unittest.expectedFailure
     def test_no_todo_items(self):
         """Test HTML output when there are no Todo Items."""
         output = self.view()
         self.assertIn('No Todo Items added yet, add some!', output)
         self.assertNotIn('<table class="listing"', output)
 
-    # this will fail until plone.api 1.0a2 is released
-    @unittest.expectedFailure
     def test_listing_table(self):
         """Test HTML listing table output."""
 
