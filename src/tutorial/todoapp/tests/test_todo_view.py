@@ -60,10 +60,10 @@ class TestView(IntegrationTestCase):
         self.assertIn(u'>Try Brul\xe9!</a>', output)
 
         # workflow state
-        self.assertIn('<td>open</td>', output)
+        self.assertIn('<td class="todo-visual-status open">', output)
 
         # modification date
-        self.assertIn('<td>Aug 20, 2012 12:00 AM</td>', self.view())
+        self.assertIn('todo-modified">Aug 20, 2012 12:00 AM</td>', self.view())
 
 
 def test_suite():
