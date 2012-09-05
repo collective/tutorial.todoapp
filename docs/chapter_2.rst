@@ -201,3 +201,12 @@ looks somewhat like this:
     Tear down plone.app.testing.layers.PloneFixture in 0.164 seconds.
     Tear down plone.testing.z2.Startup in 0.012 seconds.
     Tear down plone.testing.zca.LayerCleanup in 0.004 seconds.
+
+
+Troubleshooting
+===============
+
+If something goes wrong you can always go to GitHub and see how the `code
+for chapter 2 <https://github.com/collective/tutorial.todoapp/tree/chapter2>`_
+should look like and compare this to what you have on your local machine.
+
