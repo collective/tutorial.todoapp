@@ -22,7 +22,7 @@ use git:
 
 .. code-block:: bash
 
-   $ git branch --track chapter2 origin/chapter2  # tell git what chapter2 is
+   $ git branch --track chapter3 origin/chapter3  # tell git what chapter2 is
    $ git checkout chapter3 src/tutorial/todoapp/browser/todo.py
 
 We also need to tell Plone to display this view in the `display` drop-down menu
@@ -67,7 +67,8 @@ Todo Items. We need to add these icons to your package:
 
 #. Tell Zope that this ``static`` folder contains static resources (icons,
    CCS files, JavaScript files, etc.) by adding the following lines to
-   ``src/tutorial/todoapp/browser/configure.zcml``:
+   ``src/tutorial/todoapp/browser/configure.zcml`` inside the ``<configure``
+   tag:
 
    .. code-block:: xml
 
@@ -152,4 +153,12 @@ As always, you can use git to get the file.
    .. code-block:: bash
 
       $ git checkout chapter3 src/tutorial/todoapp/tests/test_todo_view.py
+
+
+Troubleshooting
+===============
+
+If something goes wrong you can always go to GitHub and see how the `code
+for chapter 3 <https://github.com/collective/tutorial.todoapp/tree/chapter3>`_
+should look like and compare this to what you have on your local machine.
 
