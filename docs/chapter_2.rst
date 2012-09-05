@@ -52,27 +52,27 @@ Exporting configuration
 Exporting Todo Item content-type
 --------------------------------
 
-Navigate back to the dexterity content type panel or go directly to 
+Navigate back to the dexterity content type panel or go directly to
 ``http://localhost:8080/Plone/@@dexterity-types``
 
-Check the TODO item and then click on export type profile to download the 
+Check the TODO item and then click on export type profile to download the
 type. If you don't check anything, it won't do anything and there is currently
 no error message so don't be surprised.
 
    .. image:: images/export_todo.jpg
       :width: 400px
 
-This will start a download to you machine. Navigate to that directory and 
-unzip the contents of that directory. Here is an example of what this will 
+This will start a download to you machine. Navigate to that directory and
+unzip the contents of that directory. Here is an example of what this will
 look like:
-  
+
    .. image:: images/dexterity_export.jpg
       :width: 400px
 
 We need to take types.xml and the types folder, and save it in our base product.
 You can use your finder or explorer to drag and drop, or use the command line.
-I'll use command line as an example but feel free to improvise. You want to move 
-the files into your default product profile. What's a profile? Don't worry about 
+I'll use command line as an example but feel free to improvise. You want to move
+the files into your default product profile. What's a profile? Don't worry about
 it. Sit back, relax, and finish the tutorial. You will move the files into
 
 .. code-block:: bash
@@ -80,41 +80,41 @@ it. Sit back, relax, and finish the tutorial. You will move the files into
     tutorial.todoapp/src/tutorial/todoapp/profiles/default
 
 Anytime you perform some sort of configuration export from Plone to a custom
-product, you will put the XML files in the profiles/default folder. Every time 
-you make changes to your types, you should re-export and save into the same 
-location. Now, when the next person installs the add-on, they wil have the 
+product, you will put the XML files in the profiles/default folder. Every time
+you make changes to your types, you should re-export and save into the same
+location. Now, when the next person installs the add-on, they wil have the
 type already there!
 
 Exporting todo_item_workflow
 ----------------------------
 
 Exporting a workflow is very similar to exporting a Dexterity type. It just takes
-a little bit more navigating and a trip to the ZMI. To export the workflow, 
+a little bit more navigating and a trip to the ZMI. To export the workflow,
 navigate to the root of the ZMI by gong to ``http://localhost:8080/Plone/manage_main``.
 From there, head into the portal setup tool:
 
    .. image:: images/enter_portal_setup.jpg
       :width: 400px
 
-WARNING: The following User Interface is not recommended for children under 18. 
+WARNING: The following User Interface is not recommended for children under 18.
 
 In the portal_setup tool, click on the export tab.
 
    .. image:: images/setup_export.jpg
       :width: 400px
 
-There are a LOT of things that you can export here, but that is for a different 
-tutorial. For now, find export item #28 called ``Workflow Tool``, check the box 
+There are a LOT of things that you can export here, but that is for a different
+tutorial. For now, find export item #28 called ``Workflow Tool``, check the box
 to the left. Then scroll all the way to the bottom and ``Export selected steps``.
 
    .. image:: images/check_workflow.jpg
       :width: 400px
 
-Just like the Dexterity content type, you will want to untar the downloaded 
-folder, and move into your default profile folder. 
+Just like the Dexterity content type, you will want to untar the downloaded
+folder, and move into your default profile folder.
 
 In that download you should have a file called ``workflows.xml`` and a folder
-called ``workflows`` like below. You will move both of them to the default 
+called ``workflows`` like below. You will move both of them to the default
 profile.
 
    .. image:: images/export_workflow_example.jpg
