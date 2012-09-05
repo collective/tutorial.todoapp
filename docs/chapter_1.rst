@@ -53,7 +53,7 @@ list. This will be a type with one field, that which needs to be done.
       :width: 400px
 
 #. Now you will see that there is a new type to play with. Let’s adjust a few
-  things. Click the name of the new type to edit.
+   things. Click the name of the new type to edit.
 
    .. image:: images/edit_todo_item.jpg
       :width: 400px
@@ -64,17 +64,17 @@ list. This will be a type with one field, that which needs to be done.
    .. image:: images/todo_item_behaviors.jpg
       :width: 400px
 
-#. By default, all Plone content-types have Dublin Core metadata enabled (you
-   may know it as ``title`` and ``description``. We don’t need this for our
-   über simple Todo list item. Uncheck ``Dublin Core metadata`` and then click
-   ``Save``.
+#. By default, all Plone content-types have `Dublin Core
+   <http://en.wikipedia.org/wiki/Dublin_Core>` metadata enabled (you may know it
+   as ``title`` and ``description``. We don’t need this for our über simple Todo
+   list item. Uncheck ``Dublin Core metadata`` and then click ``Save``.
 
    .. image:: images/behaviors_config.jpg
       :width: 400px
 
 #. Next we need to add some fields. Because this type is so simple, we will
-   add just one field, but feel free to go CRAZY. Start by clicking
-   ``Add new field...``.
+   add just one field, but feel free to go CRAZY. Start by going back to the
+   ``Fields`` tab and clicking ``Add new field...``.
 
    .. image:: images/add_new_field.jpg
       :width: 400px
