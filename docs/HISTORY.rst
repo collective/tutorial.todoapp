@@ -5,6 +5,10 @@ Changelog
 0.1 (unreleased)
 ----------------
 
+- Acted as guinea pigs and went through the entire tutorial slowly and
+  thoroughly.
+  [matejc, plamut]
+
 - The @@todo BrowserView for listing Todo Items.
   [zupo]
 
