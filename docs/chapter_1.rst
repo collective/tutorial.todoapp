@@ -25,7 +25,8 @@ away, sit back, relax, and finish the tutorial.
 Create a New Content Type
 -------------------------
 
-First we need to create a new content type to represent an item on our Todo list. This will be a type with one field, that which needs to be done.
+First we need to create a new content type to represent an item on our Todo
+list. This will be a type with one field, that which needs to be done.
 
 #. Navigate to `site setup` as shown below, or just enter
    ``http://localhost:8080/Plone/@@overview-controlpanel`` in your browser. This
@@ -181,14 +182,14 @@ Todo Items really have 2 states that we are interested in: `open` and
    Onwards and upwards!
 
 #. Let's create a new workflow for our Todo Items and call it
-   ``todo_item_workflow``. We will make a new workflow by copying and customizing one of the workflows that are already there. Copy simple_pubication_workflow
-
-   TODO: Break this into several different images to be more clear.
+   ``todo_item_workflow``. We will make a new workflow by copying and
+   customizing one of the workflows that are already there. Duplicate the
+   ``simple_publication_workflow``.
 
    .. image:: images/copy_workflow.jpg
       :width: 400px
 
-#. Rename the copied workflow to 'todo_item_workflow'
+#. Rename the copied workflow to ``todo_item_workflow``.
 
    .. image:: images/rename_workflow.jpg
       :width: 400px
@@ -196,32 +197,39 @@ Todo Items really have 2 states that we are interested in: `open` and
    .. image:: images/save_rename_workflow.jpg
       :width: 400px
 
-#. You will be spit back out and the workflow contents page. Click the workflow to start editing
+#. You will be spit back out and the workflow contents page. Click the workflow
+   to start editing.
 
    .. image:: images/edit_todo_workflow.jpg
       :width: 400px
 
-#. Let's update the name of the workflow so we don't double take later on
+#. Let's update the name of the workflow so we don't double take later on.
 
    .. image:: images/retitle_workflow.jpg
       :width: 400px
 
 
-#. Workflow is something that takes time to get used to if you have never encoutered the concept. The best analogy in our case is to a car. The car engine has two simple states: on and off. To transition from on to off and vice versa, it needs some action from the driver. The same for our TODO items. They have to states: incomplete and complete. In order to get them from Incomplete to Complete, the user needs to click something. Don't understand yet? Relax, sit back, and finish the tutorial.
+#. Workflow is something that takes time to get used to if you have never
+   encoutered the concept. The best analogy in our case is to a car. The car
+   engine has two simple states: `on` and `off`. To transition from on to off
+   and vice versa, it needs some action from the driver. The same for our TODO
+   items. They have to states: `open` and `complete`. In order to get them
+   from `Incomplete` to `Complete`, the user needs to click something. Don't
+   understand yet? Relax, sit back, and finish the tutorial.
 
-   Lets start by adding out base states. We will call them "open" and "complete". From the edit workflow screen, click on the "States" tab.
-
+   Lets start by adding out base states. We will call them `open` and
+   `complete`. From the edit workflow screen, click on the ``States`` tab.
 
    .. image:: images/workflow_base_view.jpg
       :width: 400px
 
-#. Delete the currently listed state
+#. Delete the currently listed state.
 
    .. image:: images/cleanup_states.jpg
       :width: 400px
 
 
-#. Add two states with the ids "open" and "completed".
+#. Add two states with the ids ``open`` and ``completed``.
 
    .. image:: images/add_open.jpg
       :width: 200px
@@ -229,30 +237,47 @@ Todo Items really have 2 states that we are interested in: `open` and
    .. image:: images/add_completed.jpg
       :width: 400px
 
-#. Next lets add the transitions. The transitions will take the TODO item from open to completed and vice versa (in case a user accidentally marks an item as complete. Click on the transitions tab.
+#. Next lets add the transitions. The transitions will take the TODO item from
+   `open` to `completed` and vice versa (in case a user accidentally marks an
+   item as complete. Click on the ``Transitions`` tab.
 
    .. image:: images/transitions_tab.jpg
       :width: 400px
 
-#. Add two transitions: complete, and reopen. When a user "complete"s a task, it will move into the "completed" state. When a user "reopens" a task, it will go back to the "open" state.
+#. Add two transitions: `complete` and `reopen`. When a user `completes` a task,
+   it will move into the `completed` state. When a user `reopens` a task, it
+   will go back to the `open` state.
 
    .. image:: images/add_transitions.jpg
       :width: 400px
 
-#. Let's add a few details to these new transitions. Let's start with complete. Click on "complete" to edit the transition.
+#. Let's add a few details to these new transitions. Let's start with
+   `complete`. Click on ``complete`` to edit the transition.
 
    .. image:: images/edit_complete.jpg
       :width: 400px
 
-#. First add a title so you remember later what this does. Description is optional but adding one will help you keep your thoughts clear and remind future you what now you is thinking. The destination state should be set to ``completed``. We also want to make sure that only people with mega permissions, or the owner itself, can change the state so we add ``Modify portal content`` to the Permissions box.
+#. First add a title so you remember later what this does. Description is
+   optional but adding one will help you keep your thoughts clear and remind
+   the `future you` what the `today you` is thinking. The destination state
+   should be set to ``completed``. We also want to make sure that only peopl
+   with mega permissions, or the owner itself, can change the state so we add
+   ``Modify portal content`` to the ``Permissions`` box.
 
-   All this means nothing if we don't give the user a chance to change the state. Next to ``Display in actions box``, we can set the title for  what will be displayed in the workflow drop down box of the item (where Pending, Reject, etc where earlier). Let's call it ``Complete``. Last but not least, we need to add the url that the action points to. I could make this tutorial 100 years long and explain why you have to do this, but accept that it has to be done, relax, and follow this formula:
+   All this means nothing if we don't give the user a chance to change the
+   state. Next to ``Display in actions box``, we can set the title for what will
+   be displayed in the workflow drop down box of the item (where `Pending`,
+   `Reject`, etc where earlier). Let's call it ``Complete``. Last but not least,
+   we need to add the url that the action points to. I could make this tutorial
+   100 years long and explain why you have to do this, but accept that it has to
+   be done, relax, and follow this formula:
 
    .. code-block:: bash
 
        URL = %(content_url)s/content_status_modify?workflow_action=X
 
-   where X is the id of the transition. So for this case, in the URL box, you will add
+   where `X` is the id of the transition. So for this case, in the URL box, you
+   will add
 
    .. code-block:: bash
 
@@ -261,9 +286,10 @@ Todo Items really have 2 states that we are interested in: `open` and
    .. image:: images/complete_details.jpg
       :width: 400px
 
-   Double check everything and click "Save".
+   Double check everything and click ``Save``.
 
-#. If your brain isn't hurting yet it will be soon. Go back to the transitions listing.
+#. If your brain isn't hurting yet it will be soon. Go back to the transitions
+   listing.
 
    .. image:: images/youre_welcome.jpg
       :width: 400px
@@ -272,12 +298,16 @@ Todo Items really have 2 states that we are interested in: `open` and
       :width: 400px
 
 
-#. Let's update the reopen transition and update in a similar manner. This time, the destination state is "open", and following the formula above, the URL is "%(content_url)s/content_status_modify?workflow_action=reopen".
+#. Let's update the `reopen` transition and update in a similar manner. This
+   time, the destination state is ``open``, and following the formula above, the
+   URL is ``%(content_url)s/content_status_modify?workflow_action=reopen``.
 
    .. image:: images/save_reopen.jpg
       :width: 400px
 
-#. Now we have 2 states and 2 transitions, but they aren't 100% linked together... yet. Go back to the workflow listing, click the states tab and then and click on "completed" to edit the state.
+#. Now we have 2 states and 2 transitions, but they aren't 100% linked
+   together... yet. Go back to the workflow listing, click the ``States`` tab
+   and then and click on ``completed`` to edit the state.
 
    .. image:: images/back_to_workflow.jpg
       :width: 400px
@@ -285,7 +315,11 @@ Todo Items really have 2 states that we are interested in: `open` and
    .. image:: images/edit_completed.jpg
       :width: 400px
 
-#. Add a title, since this is what users see in the top right corner of the TODO items, and then check "reopen" as a possible transition. This means that when a TODO item is completed, it will only allow the user to reopen it (and not re-complete it, for example). In the same respect, open the open transition, add a title, and mark "complete" as a possible transition.
+#. Add a title, since this is what users see in the top right corner of the
+   TODO items, and then check ``reopen`` as a possible transition. This means
+   that when a TODO item is completed, it will only allow the user to reopen it
+   (and not re-complete it, for example). In the same respect, open the open
+   transition, add a title, and mark ``complete`` as a possible transition.
 
    .. image:: images/save_completed.jpg
       :width: 400px
@@ -293,26 +327,37 @@ Todo Items really have 2 states that we are interested in: `open` and
    .. image:: images/save_open.jpg
       :width: 400px
 
-#. When we create a new TODO item, we need to tell Plone what the first state is. Go back to the workflow states listing, and make "open" the initial state.
+#. When we create a new TODO item, we need to tell Plone what the first state
+   is. Go back to the workflow states listing, and make ``open`` the initial
+   state.
 
    .. image:: images/initial_state.jpg
       :width: 400px
 
-#. And that's it! Almost... Last but not least, we need to assign our new workflow to our TODO item type. Go back to the main workflow screen.
+#. And that's it! Almost... Last but not least, we need to assign our new
+   workflow to our TODO item type. Go back to the main workflow screen.
 
    .. image:: images/home_base.jpg
       :width: 400px
 
-#. Instead of mapping to the "(Default)" workflow, we are going to map to the id of our new workflow, todo_item_workflow, and then click "Change".
+#. Instead of mapping to the ``(Default)`` workflow, we are going to map to the
+   id of our new workflow, ``todo_item_workflow``, and then click ``Change``.
 
-   If you already have TODO items in your site, you MUST click "Update Security Settings" to update the workflow for the items. Instead of going into gross detail about why this is the case, just sit back, relax, finish the tutorial, and remember to click this button any time you make changes (yes! you can continue to change and update your workflows!).
+   If you already have TODO items in your site, you MUST click ``Update Security
+   Settings`` to update the workflow for the items. Instead of going into gross
+   detail about why this is the case, just sit back, relax, finish the tutorial,
+   and remember to click this button any time you make changes (yes! you can
+   continue to change and update your workflows!).
 
    .. image:: images/map_to_workflow.jpg
       :width: 400px
 
-#. Could the time have arrived? Time to test? YES! Go to your TODO Items folder and add a new TODO Item. Validate that the workflow works as expected. By toggling between the states.
+#. Could the time have arrived? Time to try it out? YES! Go to your TODO Items
+   folder and add a new TODO Item. Validate that the workflow works as expected.
+   By toggling between the states.
 
    .. image:: images/works.jpg
       :width: 400px
 
-Congrats! You have now passed Plone Workflow 101. Next we will transition from editing through the web (TTW) to developing. With plone.api, it's as easy as pie.
+Congrats! You have now passed `Plone Workflow 101`. Next we will transition from
+developing through the web (TTW) to developing on the filesystem.
