@@ -151,14 +151,14 @@ will peacfully co-exist.
 Good, the next thing to do is to add tests. Go to `tutorial.todoapp repo on
 GitHub <https://github.com/collective/tutorial.todoapp/>`_
 and copy/paste (or download) all files from the ``src/tutorial/todoapp/tests``
-folder to your local ``src/tutorial/todoapp/tests`` folder. You can also get 
+folder to your local ``src/tutorial/todoapp/tests`` folder. You can also get
 the tests with git:
 
 .. code-block:: bash
-   
-   git checkout master src/tutorial/todoapp/tests
 
-Note that these test cases include test for functionality that you haven't added 
+   git checkout chapter2 src/tutorial/todoapp/tests
+
+Note that these test cases include test for functionality that you haven't added
 yet, so don't be surprised if they fail on first run!
 
 In this folder there will be many new files:
