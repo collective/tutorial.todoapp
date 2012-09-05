@@ -21,6 +21,12 @@ The way that Plone handles content is a little different than your average
 relational database driven framework, so if you don't understand something right
 away, sit back, relax, and finish the tutorial.
 
+Generally speaking, content-types are just that: types of content. By default,
+in Plone you get the News Item content-type, the Event content-type and so on.
+So if you add a content item that is of Event type, you are using the Event
+content-type. In our case, we will create a new content-type that will represent
+a Todo Item.
+
 
 Create a New Content Type
 -------------------------
@@ -143,11 +149,19 @@ next section, we will go over the basics of that magical, mystical word:
 Getting Started with Workflows
 ==============================
 
+So, workflows. What are they? They are a mechanizm to control the flow of a
+content item through varios states. Most commonly, and by default in Plone,
+you deal with a `publication` workflow. For example: A writer writes up a News
+Item and submits it for reviewal. Then the in-house reviewing team goes through
+the text and publishes the News Item so it is public for the entire world to
+see.
+
 The Todo Item we added in the last section is marked as ``private`` because by
-default all new Plone content types are assigned a complex publication workflow.
-I know what you are thinking: Publication whodie whatie grble gobble??!?! Just
-like before, let's bypass trying to explain what that means and just fix it.
-Relax, enjoy, and finish the tutorial!
+default all new Plone content types are assigned a complex publication workflow
+called ``simple_publication_workflow``. I know what you are thinking:
+simple publication whodie whatie grble gobble??!?! Just like before, let's
+bypass trying to explain what that means and just fix it. Relax, enjoy, and
+finish the tutorial!
 
 If you aren't interested in workflows, or already know all about this stuff,
 feel free to skip straight to the next chapter!
@@ -184,7 +198,7 @@ Todo Items really have 2 states that we are interested in: `open` and
 #. Let's create a new workflow for our Todo Items and call it
    ``todo_item_workflow``. We will make a new workflow by copying and
    customizing one of the workflows that are already there. Duplicate the
-   ``simple_publication_workflow``.
+   ``one_state_workflow``.
 
    .. image:: images/copy_workflow.jpg
       :width: 400px
@@ -213,7 +227,7 @@ Todo Items really have 2 states that we are interested in: `open` and
    encoutered the concept. The best analogy in our case is to a car. The car
    engine has two simple states: `on` and `off`. To transition from on to off
    and vice versa, it needs some action from the driver. The same for our TODO
-   items. They have to states: `open` and `complete`. In order to get them
+   items. They have two states: `open` and `complete`. In order to get them
    from `Incomplete` to `Complete`, the user needs to click something. Don't
    understand yet? Relax, sit back, and finish the tutorial.
 

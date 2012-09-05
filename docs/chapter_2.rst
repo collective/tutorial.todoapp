@@ -132,7 +132,7 @@ And you are done! Congratulations on the birth of your new product!
 Tests
 =====
 
-Alright, tests! Considered a pain and a nuissance by some but loved by all
+Alright, tests! Considered a pain and a nuisance by some but loved by all
 who do it. If you want your code to be solid and your site to be stable, tests
 are a great way to get there.
 
