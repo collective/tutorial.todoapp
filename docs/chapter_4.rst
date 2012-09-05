@@ -89,6 +89,8 @@ Furthermore, before taking the plunge to wire up JavaScript, go directly to the
 url and test the change. For example, if you have an item at
 ``http://localhost:8080/Plone/todo-list/go-to-the-bathroom``, you can test the
 view by appending the view name and GET variables to the end of the item's url.
+However, you first need to restart your Zope first, so your Python files get
+reloaded!
 
 .. code-block:: bash
 
@@ -119,8 +121,8 @@ working directory:
 
 .. code-block:: bash
 
-    git checkout master git src/tutorial/todoapp/browser/static/todoapp.js
-    git checkout master git src/tutorial/todoapp/profiles/default/jsregistry.xml
+    git checkout master src/tutorial/todoapp/browser/static/todoapp.js
+    git checkout master src/tutorial/todoapp/profiles/default/jsregistry.xml
 
 ``jsregistry.xml`` contains all configuration needed to tell Plone how it should
 register and use our JavaScript. It has a lot of options that are pretty self
@@ -132,9 +134,10 @@ explanatory (if you think like a machine).
 Trying it out!
 ==============
 
-Holy moley you made it! Reinstall the product, Do a hard reload in the web
-browser and check out your todo list. The todo items will toggle complete and
-incomplete without the page reloading. Sweet!
+Holy moley you made it! Restart Zope (to reload Python files), reactivate the
+product (to reimport XML files), do a hard reload in your web browser (to clear
+any caches) and check out your todo list. The todo items should toggle between
+complete and incomplete without the page reloading. Sweet!
 
 Tests
 =====
