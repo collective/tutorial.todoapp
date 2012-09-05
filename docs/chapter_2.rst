@@ -156,7 +156,8 @@ the tests with git:
 
 .. code-block:: bash
 
-   git checkout chapter2 src/tutorial/todoapp/tests
+   $ git branch --track chapter2 origin/chapter2  # tell git what chapter2 is
+   $ git checkout chapter2 src/tutorial/todoapp/tests  # get tests
 
 Note that these test cases include test for functionality that you haven't added
 yet, so don't be surprised if they fail on first run!

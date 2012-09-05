@@ -22,7 +22,8 @@ use git:
 
 .. code-block:: bash
 
-   git checkout chapter3 src/tutorial/todoapp/browser/todo.py
+   $ git branch --track chapter2 origin/chapter2  # tell git what chapter2 is
+   $ git checkout chapter3 src/tutorial/todoapp/browser/todo.py
 
 We also need to tell Plone to display this view in the `display` drop-down menu
 for Folders so we will later be able to set our view as a default display view
@@ -31,7 +32,7 @@ for our Todo folder. Let's do that by using git to get a version of
 
 .. code-block:: bash
 
-   git checkout chapter3 src/tutorial/todoapp/profiles/default/types/Folder.xml
+   $ git checkout chapter3 src/tutorial/todoapp/profiles/default/types/Folder.xml
 
 
 View template
@@ -44,7 +45,7 @@ again, use git.
 
 .. code-block:: bash
 
-   git checkout chapter3 src/tutorial/todoapp/browser/todo.pt
+    $ git checkout chapter3 src/tutorial/todoapp/browser/todo.pt
 
 The template uses ZPT syntax, `read more about it here
 <http://wiki.zope.org/ZPT/TutorialPart1>`_.
@@ -62,7 +63,7 @@ Todo Items. We need to add these icons to your package:
 
    .. code-block:: bash
 
-      git checkout chapter3 src/tutorial/todoapp/browser/static
+      $ git checkout chapter3 src/tutorial/todoapp/browser/static
 
 #. Tell Zope that this ``static`` folder contains static resources (icons,
    CCS files, JavaScript files, etc.) by adding the following lines to
@@ -150,5 +151,5 @@ As always, you can use git to get the file.
 
    .. code-block:: bash
 
-      git checkout chapter3 src/tutorial/todoapp/tests/test_todo_view.py
+      $ git checkout chapter3 src/tutorial/todoapp/tests/test_todo_view.py
 
