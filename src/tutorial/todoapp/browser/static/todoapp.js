@@ -30,18 +30,27 @@
     $(document).ready(function (e) {
         $("table#todo-summary td.todo-visual-status a").click(function (event) {
 
-            var target,
-                url,
-                error_msg;
+            var ajax_url,
+                error_msg,
+                template_url,
+                $target;
+
+            error_msg = "There was an error updating this item - please try again!";
 
             // stop the browser from submitting after we know all is well
             event.preventDefault();
-            target = $(this);
-            url = target.attr('href');
-            error_msg = "There was an error updating this item - please try again!";
+
+            // Build AJAX URL - we need to change URL from the template:
+            //     http://localhost:8080/Plone/todo/get-milk/content_status_modify?workflow_action=<transition_id>
+            // to URL for AJAX call:
+            //     http://localhost:8080/Plone/todo/get-milk/update_workflow?transition=<transition_id>
+            $target = $(this);
+            template_url = $target.attr("href");
+            ajax_url = template_url.replace("content_status_modify?workflow_action", "update_workflow?transition");
+
             $.ajax({
-                url: url,
-                method: 'GET',
+                url: ajax_url,
+                method: "GET",
                 success: function (data) {
 
                     var state,
@@ -50,10 +59,10 @@
                     if (data.success) {
                         state = data.results.state;
                         transition = data.results.transitions[0];
-                        update_todo(target.closest('tr').attr('id'), state, transition);
+                        update_todo($target.closest("tr").attr("id"), state, transition);
                     } else {
                         // This could be nicer in the future...
-                        alert(error_msg + data.messages);
+                        alert(error_msg + "\n\nError:\n" + data.messages);
                     }
                 },
                 error: function (data) {
