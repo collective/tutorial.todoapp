@@ -85,6 +85,21 @@ you make changes to your types, you should re-export and save into the same
 location. Now, when the next person installs the add-on, they wil have the
 type already there!
 
+Dependencies
+------------
+
+Before we continue we need to tell Plone that whenever we install
+`tutorial.todoapp` we want it to also pull in the Dexterity package, so our
+content type is working happily. We do that by adding the following lines to
+``profiles/default/metadata.xml``, inside the ``<metadata>`` tag.
+
+.. code-block:: xml
+
+    <dependencies>
+      <dependency>profile-plone.app.dexterity:default</dependency>
+    </dependencies>
+
+
 Exporting todo_item_workflow
 ----------------------------
 
@@ -146,7 +161,7 @@ but at least you try if your test runner works.
     Total: 0 tests, 0 failures, 0 errors in 0.000 seconds.
 
 Note: you do *NOT* need to stop your Plone instance in order to run tests. They
-will peacfully co-exist.
+will peacefully co-exist.
 
 Good, the next thing to do is to add tests. Go to `tutorial.todoapp repo on
 GitHub <https://github.com/collective/tutorial.todoapp/>`_
@@ -158,9 +173,6 @@ the tests with git:
 
    $ git branch --track chapter2 origin/chapter2  # tell git what chapter2 is
    $ git checkout chapter2 src/tutorial/todoapp/tests  # get tests
-
-Note that these test cases include test for functionality that you haven't added
-yet, so don't be surprised if they fail on first run!
 
 In this folder there will be many new files:
 
