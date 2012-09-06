@@ -2,11 +2,11 @@
 """A Folder view that lists Todo Items."""
 
 from five import grok
-from Products.ATContentTypes.interface import IATFolder
-from plone.dexterity.content import Item
-import json
 from plone import api
+from plone.dexterity.content import Item
+from Products.ATContentTypes.interface import IATFolder
 
+import json
 
 # Search for templates in the current directory.
 # Hopefully this line won't be needed in the future as I hope that we can tell
@@ -28,9 +28,9 @@ class WorkflowTransition(grok.View):
     transitions in that state
     """
 
-    grok.context(Item)
-    grok.require('zope2.View')
-    grok.name('update_workflow')
+    grok.context(Item)  # type of object on which this View is available
+    grok.require('zope2.View')  # what permission is needed for access
+    grok.name('update_workflow')  # on what URL will this view be available
 
     def render(self):
         # the submitted form variables are stored in the request object

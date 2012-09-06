@@ -30,12 +30,12 @@
               tal:attributes="id  item/id">
             <td tal:attributes="class  string:todo-visual-status ${item/review_state}">
               <a href="#"
-                 tal:attributes="href string:${item/getURL}/update_workflow?transition=complete"
+                 tal:attributes="href string:${item/getURL}/content_status_modify?workflow_action=complete"
                  tal:condition="python: item.review_state() == 'open'">
                 <img tal:attributes="src string:${context/@@plone_portal_state/portal_url }/++resource++tutorial.todoapp/open.png" />
               </a>
               <a href="#"
-                 tal:attributes="href string:${item/getURL}/update_workflow?transition=reopen"
+                 tal:attributes="href string:${item/getURL}/content_status_modify?workflow_action=reopen"
                  tal:condition="python: item.review_state() == 'completed'">
                 <img tal:attributes="src string:${context/@@plone_portal_state/portal_url}/++resource++tutorial.todoapp/completed.png" />
               </a>

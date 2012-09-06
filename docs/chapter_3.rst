@@ -17,21 +17,22 @@ View class
 
 Let's start by adding the view class. You can go to `tutorial.todoapp repo on
 GitHub <https://github.com/collective/tutorial.todoapp/>`_ and copy over code
-from ``src/tutorial/todoapp/browser/todo.py`` to your local computer or just 
+from ``src/tutorial/todoapp/browser/todo.py`` to your local computer or just
 use git:
 
 .. code-block:: bash
-   
-   git checkout master src/tutorial/todoapp/browser
+
+   $ git branch --track chapter3 origin/chapter3  # tell git what chapter2 is
+   $ git checkout chapter3 src/tutorial/todoapp/browser/todo.py
 
 We also need to tell Plone to display this view in the `display` drop-down menu
 for Folders so we will later be able to set our view as a default display view
-for our Todo folder. Let's do that by using git to get a version of ``Folder.xml``
-and put it in ``src/tutorial/todoapp/profiles/default/types``.
+for our Todo folder. Let's do that by using git to get a version of
+``Folder.xml`` and put it in ``src/tutorial/todoapp/profiles/default/types``.
 
 .. code-block:: bash
-   
-   git checkout master src/tutorial/todoapp/profiles/default/types/Folder.xml
+
+   $ git checkout chapter3 src/tutorial/todoapp/profiles/default/types/Folder.xml
 
 
 View template
@@ -39,7 +40,12 @@ View template
 
 Now that we have a class we can also add the template. Go to `tutorial.todoapp
 repo on GitHub <https://github.com/collective/tutorial.todoapp/>`_ and copy over
-code from ``src/tutorial/todoapp/browser/todo.pt`` to your local computer.
+code from ``src/tutorial/todoapp/browser/todo.pt`` to your local computer or,
+again, use git.
+
+.. code-block:: bash
+
+    $ git checkout chapter3 src/tutorial/todoapp/browser/todo.pt
 
 The template uses ZPT syntax, `read more about it here
 <http://wiki.zope.org/ZPT/TutorialPart1>`_.
@@ -52,10 +58,17 @@ Todo Items. We need to add these icons to your package:
 
 #. Download ``open.png`` and ``completed.png`` from GitHub (they are in
    ``src/tutorial/todoapp/browser/static``) into a new folder on your local
-   computer: ``src/tutorial/todoapp/browser/static``.
+   computer: ``src/tutorial/todoapp/browser/static``. You can use again git if
+   you don't like manual work.
+
+   .. code-block:: bash
+
+      $ git checkout chapter3 src/tutorial/todoapp/browser/static
+
 #. Tell Zope that this ``static`` folder contains static resources (icons,
    CCS files, JavaScript files, etc.) by adding the following lines to
-   ``src/tutorial/todoapp/browser/configure.zcml``:
+   ``src/tutorial/todoapp/browser/configure.zcml`` inside the ``<configure``
+   tag:
 
    .. code-block:: xml
 
@@ -72,7 +85,7 @@ available on a standard URL:
 Try it out
 ==========
 
-Because the XML configuration of our product has change, we need to 
+Because the XML configuration of our product has change, we need to
 reinstall the product. This is accomplished by ``deactivating`` and ``reactivating``
 the product. Navigate to the add-ons manager or go directly to ``http://localhost:8080/Plone/@@overview-controlpanel``.
 
@@ -87,10 +100,10 @@ Deactivate the tutorial.todoapp product, and then reactivate it.
    .. image:: images/reactivate.jpg
       :width: 400px
 
-Note that every time you make a change to the xml files, by exporting or manual edit, you 
+Note that every time you make a change to the xml files, by exporting or manual edit, you
 must reactivate the product for the changes to take effect!
 
-Now, we apply the new view to the folder holding our todo items. Navigate to the folder you 
+Now, we apply the new view to the folder holding our todo items. Navigate to the folder you
 created in chapter 1, and update the display.
 
    .. image:: images/select_todo_view.jpg
@@ -108,7 +121,8 @@ Tests
 Cool, so you have verified that your code works through the browser and it's
 time to add tests to make sure your code keeps on working in the future.
 
-First add the following snippet to ``test_setup``:
+First add the following snippet to ``test_setup`` to verify that your Folders
+have the ``todo`` view on the `Display` drop-down menu.
 
 .. code-block:: python
 
@@ -131,6 +145,20 @@ First add the following snippet to ``test_setup``:
         self.assertIn('todo', layout_ids)
 
 
-If you haven't already downloaded it, add a new test module: ``test_todo_view.py``. 
-Downloadt it from GitHub, put and it in your ``tests`` folder and run tests. Feel free to 
-fiddle around with it to see what it does. 
+If you haven't already downloaded it, add a new test module:
+``test_todo_view.py``. Download it from GitHub, put and it in your ``tests``
+folder and run tests. Feel free to fiddle around with it to see what it does.
+As always, you can use git to get the file.
+
+   .. code-block:: bash
+
+      $ git checkout chapter3 src/tutorial/todoapp/tests/test_todo_view.py
+
+
+Troubleshooting
+===============
+
+If something goes wrong you can always go to GitHub and see how the `code
+for chapter 3 <https://github.com/collective/tutorial.todoapp/tree/chapter3>`_
+should look like and compare this to what you have on your local machine.
+
