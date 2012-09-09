@@ -22,7 +22,7 @@ use git:
 
 .. code-block:: bash
 
-   $ git branch --track chapter3 origin/chapter3  # tell git what chapter2 is
+   $ git branch --track chapter3 origin/chapter3  # tell git what chapter 3 is
    $ git checkout chapter3 src/tutorial/todoapp/browser/todo.py
 
 We also need to tell Plone to display this view in the `display` drop-down menu
