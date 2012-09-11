@@ -60,7 +60,7 @@ Example
 =======
 
 In the following example we are releasing version 0.1 of `tutorial.todoapp`. The
-package has been prepared so that ``version.txt`` contains the version ``0.1``,
+package has been prepared so that ``setup.py`` contains the version ``0.1``,
 this change has been committed to git and all changes have been pushed
 upstream to GitHub:
 
