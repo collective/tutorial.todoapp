@@ -55,6 +55,7 @@ setup(
             'unittest2',
         ],
         'develop': [
+            'jarn.mkrelease',
             'pep8',
             'plone.app.debugtoolbar',
             'plone.reload',
@@ -63,6 +64,7 @@ setup(
             'Products.PDBDebugMode',
             'Products.PrintingMailHost',
             'setuptools-flakes',
+            'zest.releaser',
             'zptlint',
         ],
     },

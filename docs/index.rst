@@ -21,14 +21,16 @@ The Tutorial
     chapter_4.rst
 
 
-Contributing to the tutorial
-============================
+Developer Documentation
+=======================
+
+Information on how to contribute to this tutorial.
 
 .. toctree::
     :maxdepth: 2
 
-    contribute.rst
-    source.rst
+    conventions.rst
+    release.rst
     HISTORY.rst
 
 
