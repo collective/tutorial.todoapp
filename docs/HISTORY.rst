@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1 (unreleased)
+1.0 (2012-09-11)
 ----------------
 
 - Acted as guinea pigs and went through the entire tutorial slowly and
