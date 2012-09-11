@@ -9,6 +9,9 @@ Changelog
   thoroughly.
   [matejc, plamut]
 
+- AJAXifying the @@todo view.
+  [eleddy]
+
 - The @@todo BrowserView for listing Todo Items.
   [zupo]
 
