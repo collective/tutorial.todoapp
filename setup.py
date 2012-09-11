@@ -28,7 +28,7 @@ setup(
         "Programming Language :: Python",
     ],
     keywords='Plone Python',
-    author='Caipirina Sprinters',
+    author='Caipirinha Sprinters',
     author_email='plone-users@lists.sourceforge.net',
     url='http://githib.com/collective/tutorial.todoapp',
     license='BSD',
