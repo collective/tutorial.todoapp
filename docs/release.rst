@@ -19,8 +19,8 @@ Before every release make sure that:
 
 #. You have documented your changes in the ``HISTORY.rst`` file.
 
-#. You have modified the version identifier in the ``version.txt`` to reflect
-   the new release.
+#. You have modified the version identifier in ``setup.py`` to reflect the new
+   release.
 
 #. You have confirmed that the package description (generated from
    ``README.rst`` and others) renders correctly by running ``bin/longtest``.
