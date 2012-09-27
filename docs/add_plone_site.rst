@@ -1,3 +1,6 @@
+.. index::
+   single: Create a New Plone site
+
 =======================
 Create a New Plone Site
 =======================

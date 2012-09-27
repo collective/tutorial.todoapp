@@ -4,6 +4,9 @@
     http://tutorialtodoapp.readthedocs.org/en/latest/index.html so you have
     working references and proper formatting.
 
+.. index::
+   single: Tutorial table of contents
+
 
 .. include:: ../README.rst
 

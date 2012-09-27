@@ -5,6 +5,9 @@
     have working references and proper formatting.
 
 
+.. index::
+   single: Bling-bling ajax view
+
 ======================
 Chapter 4: Bling-bling
 ======================

@@ -5,6 +5,9 @@
     have working references and proper formatting.
 
 
+.. index::
+   single: Getting Started with Content Types
+
 ==========================
 Chapter 1: Through-The-Web
 ==========================

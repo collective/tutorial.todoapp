@@ -1,5 +1,8 @@
 .. _conventions:
 
+.. index::
+   single: Conventions
+
 ===========
 Conventions
 ===========

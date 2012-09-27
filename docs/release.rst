@@ -1,3 +1,6 @@
+.. index::
+   single: Releasing a new version
+
 .. _releasing_a_new_version:
 
 =======================
