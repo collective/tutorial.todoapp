@@ -5,6 +5,9 @@
     have working references and proper formatting.
 
 
+.. index::
+   single: Custom View
+
 ======================
 Chapter 3: Custom View
 ======================

@@ -1,3 +1,6 @@
+.. index::
+   single: License
+
 License (3-clause BSD)
 ======================
 

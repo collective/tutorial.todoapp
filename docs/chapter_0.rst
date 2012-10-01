@@ -5,6 +5,9 @@
     working references and proper formatting.
 
 
+.. index::
+   single: Tutorial setup
+
 ===========
 Assumptions
 ===========

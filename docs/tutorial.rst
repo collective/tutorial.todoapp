@@ -6,6 +6,9 @@
 
 
 
+.. index::
+   single: Redistributing your work
+
 
 Part 3: Redistributing Your Work
 ================================

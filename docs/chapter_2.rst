@@ -5,6 +5,9 @@
     have working references and proper formatting.
 
 
+.. index::
+   single: Filesystem package
+
 =============================
 Chapter 2: Filesystem package
 =============================
