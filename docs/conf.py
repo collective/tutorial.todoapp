@@ -189,3 +189,7 @@ latex_documents = [(
 
 # If false, no module index is generated.
 #latex_use_modindex = True
+
+# translations support
+locale_dirs = ["locale/"]
+language = 'en'

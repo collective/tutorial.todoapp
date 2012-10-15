@@ -1,0 +1,28 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012, Caipirinha Sprinters
+# This file is distributed under the same license as the tutorial.todoapp package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: tutorial.todoapp 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-15 15:01\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../contribute.rst:3
+# 51af7660156a4b6c9455c9521dcc9c41
+msgid "How to contribute to this tutorial?"
+msgstr ""
+
+#: ../contribute.rst:5
+# fc6accb4a757416aa668dc734da08445
+msgid "TODO"
+msgstr ""
+

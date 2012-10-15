@@ -1,0 +1,243 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012, Caipirinha Sprinters
+# This file is distributed under the same license as the tutorial.todoapp package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: tutorial.todoapp 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-15 15:01\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../chapter_2.rst:10
+# 9dfd9116ec734197b3b866a09655160f
+msgid "Chapter 2: Filesystem package"
+msgstr ""
+
+#: ../chapter_2.rst:12
+# 249dd32ea252467dbc64fc74df3f3e53
+msgid "Alright! In Chapter 1 you got your content-type and your workflow hooked up and running. You're now ready for the next step: pushing your changes to a filesystem-based package and into a version control system."
+msgstr ""
+
+#: ../chapter_2.rst:16
+# 9ae24ede081a45ef89d7b37d0cead9ef
+msgid "Now, why would you even want to do that? Here's a couple of reasons:"
+msgstr ""
+
+#: ../chapter_2.rst:19
+# da582c20d8204fa58aea32c67950030d
+msgid "**Tracking of changes**"
+msgstr ""
+
+#: ../chapter_2.rst:21
+# af855b7cdab64fe8bde34a432c5e1863
+msgid "The most obvious one: when you store the configuration of your content-type and your workflow in a VCS, you can track how they changed over time. It useful to be able to look back a few months and see how your files changed."
+msgstr ""
+
+#: ../chapter_2.rst:25
+# 7f88d13360994829b6177144d308879b
+msgid "**Distribution to other developers**"
+msgstr ""
+
+#: ../chapter_2.rst:27
+# 335a563213da4d56acca2d1ee63063da
+msgid "If you are working in a team you have two ways of distributing your work: either write up a guide on what needs to be clicked for someone to come to the state you are currently at (slow, manual and error-prone) OR you export your configuration and the other developer simply imports it (fast, consistent)."
+msgstr ""
+
+#: ../chapter_2.rst:33
+# 7becbe7343f346b19ee3f91cfcafa8bb
+msgid "**Tests**"
+msgstr ""
+
+#: ../chapter_2.rst:35
+# 9b06e518908a4bc081764242c5e5df0a
+msgid "Last, but the most important one, having your configuration exported to a filesystem package allows you to write tests for it. When your test runner spins up a Plone site to run tests again, it needs to have the same content-type and workflow that you configured TTW. And importing configuration is by far the easiest way to give him that."
+msgstr ""
+
+#: ../chapter_2.rst:43
+# 31932f8336b84757ac2793b7cb8c8efd
+msgid "Package skeleton"
+msgstr ""
+
+#: ../chapter_2.rst:45
+# ad153571bba34994acf5273dec23d6a0
+msgid "Let's start by creating a package skeleton. Since writing things up from scratch kinda sucks, use this tutorial as your skeleton."
+msgstr ""
+
+#: ../chapter_2.rst:50
+# 5394cc4a95164c4095ee820bb08c42da
+msgid "Exporting configuration"
+msgstr ""
+
+#: ../chapter_2.rst:53
+# d73d5f2723b24ed9b3b475942c65134c
+msgid "Exporting Todo Item content-type"
+msgstr ""
+
+#: ../chapter_2.rst:55
+# 742b1f132f1940a08f50692ac10e3ffb
+msgid "Navigate back to the dexterity content type panel or go directly to ``http://localhost:8080/Plone/@@dexterity-types``"
+msgstr ""
+
+#: ../chapter_2.rst:58
+# 5f0894fb23a74104b42167f70f417af4
+msgid "Check the TODO item and then click on export type profile to download the type. If you don't check anything, it won't do anything and there is currently no error message so don't be surprised."
+msgstr ""
+
+#: ../chapter_2.rst:65
+# 1d54b4d4f6c44031bca78bce0e675f27
+msgid "This will start a download to you machine. Navigate to that directory and unzip the contents of that directory. Here is an example of what this will look like:"
+msgstr ""
+
+#: ../chapter_2.rst:72
+# 5e88fcef2fa145208fb3c73ac9acac57
+msgid "We need to take types.xml and the types folder, and save it in our base product. You can use your finder or explorer to drag and drop, or use the command line. I'll use command line as an example but feel free to improvise. You want to move the files into your default product profile. What's a profile? Don't worry about it. Sit back, relax, and finish the tutorial. You will move the files into"
+msgstr ""
+
+#: ../chapter_2.rst:82
+# c476eb4fb93c40ee8cd86d6ba9ca3d0a
+msgid "Anytime you perform some sort of configuration export from Plone to a custom product, you will put the XML files in the profiles/default folder. Every time you make changes to your types, you should re-export and save into the same location. Now, when the next person installs the add-on, they wil have the type already there!"
+msgstr ""
+
+#: ../chapter_2.rst:89
+# 2208b4362c4b4afca9fcf3629a92eaad
+msgid "Dependencies"
+msgstr ""
+
+#: ../chapter_2.rst:91
+# 7abe9f2edeb3471ebd29024772b907c2
+msgid "Before we continue we need to tell Plone that whenever we install `tutorial.todoapp` we want it to also pull in the Dexterity package, so our content type is working happily. We do that by adding the following lines to ``profiles/default/metadata.xml``, inside the ``<metadata>`` tag."
+msgstr ""
+
+#: ../chapter_2.rst:104
+# bb116bcedcbc42f5bbcc84daeaebfebd
+msgid "Exporting todo_item_workflow"
+msgstr ""
+
+#: ../chapter_2.rst:106
+# a5bb61c451494da5929342c8be497613
+msgid "Exporting a workflow is very similar to exporting a Dexterity type. It just takes a little bit more navigating and a trip to the ZMI. To export the workflow, navigate to the root of the ZMI by gong to ``http://localhost:8080/Plone/manage_main``. From there, head into the portal setup tool:"
+msgstr ""
+
+#: ../chapter_2.rst:114
+# 409e5431dc41404f8d4de3d32d424d2b
+msgid "WARNING: The following User Interface is not recommended for children under 18."
+msgstr ""
+
+#: ../chapter_2.rst:116
+# 2a9daadcc89c42bcbd02ef670e06d0da
+msgid "In the portal_setup tool, click on the export tab."
+msgstr ""
+
+#: ../chapter_2.rst:121
+# 896c4497261d44ed8e61277e5e3ae77f
+msgid "There are a LOT of things that you can export here, but that is for a different tutorial. For now, find export item #28 called ``Workflow Tool``, check the box to the left. Then scroll all the way to the bottom and ``Export selected steps``."
+msgstr ""
+
+#: ../chapter_2.rst:128
+# bb3259b312fe44eaab25829752cd3d46
+msgid "Just like the Dexterity content type, you will want to untar the downloaded folder, and move into your default profile folder."
+msgstr ""
+
+#: ../chapter_2.rst:131
+# 71f6904485ee439ba431e424c167e80c
+msgid "In that download you should have a file called ``workflows.xml`` and a folder called ``workflows`` like below. You will move both of them to the default profile."
+msgstr ""
+
+#: ../chapter_2.rst:138
+# 6c44081aaf0046c3b44f735efcad2a8f
+msgid "Place all of these files in your profile at"
+msgstr ""
+
+#: ../chapter_2.rst:144
+# fcb6a2d6a14b4606aabb5a5c8760d491
+msgid "And you are done! Congratulations on the birth of your new product!"
+msgstr ""
+
+#: ../chapter_2.rst:148
+# 96489fe0c9d04dbab6c5a12e72c11829
+msgid "Tests"
+msgstr ""
+
+#: ../chapter_2.rst:150
+# 7b56a93f84f54edabdcbf898258dc50d
+msgid "Alright, tests! Considered a pain and a nuisance by some but loved by all who do it. If you want your code to be solid and your site to be stable, tests are a great way to get there."
+msgstr ""
+
+#: ../chapter_2.rst:154
+# 62bc7785edec40f78ddf10cf7b847ea3
+msgid "The package you have on your filesystem is already configured to give you a test-runner so you can immediately go and run it -- obviously you have no tests, but at least you try if your test runner works."
+msgstr ""
+
+#: ../chapter_2.rst:163
+# e527b40d70b5412286ba09b9253e50f0
+msgid "Note: you do *NOT* need to stop your Plone instance in order to run tests. They will peacefully co-exist."
+msgstr ""
+
+#: ../chapter_2.rst:166
+# e639a9b3525641e4ab63f5190b7d8bc9
+msgid "Good, the next thing to do is to add tests. Go to `tutorial.todoapp repo on GitHub <https://github.com/collective/tutorial.todoapp/>`_ and copy/paste (or download) all files from the ``src/tutorial/todoapp/tests`` folder to your local ``src/tutorial/todoapp/tests`` folder. You can also get the tests with git:"
+msgstr ""
+
+#: ../chapter_2.rst:177
+# 42d3ee720a0c48269188fb30dc62c5dc
+msgid "In this folder there will be many new files:"
+msgstr ""
+
+#: ../chapter_2.rst:179
+# a42d683ddb374637b331a73cf425d811
+msgid "**base.py**"
+msgstr ""
+
+#: ../chapter_2.rst:181
+# 91ee56c4562d4e6b955a8bec1edb783c
+msgid "This module contains code that bootstraps your test environment: start up Zope, add a Plone site, install your package, etc. Code in here is mostly boilerplate so for now just use it and mind what exactly it does underneath."
+msgstr ""
+
+#: ../chapter_2.rst:185
+# e3a29e389b9c438cbf6721e2513b8a12
+msgid "**test_setup.py**"
+msgstr ""
+
+#: ../chapter_2.rst:187
+# 53a78fdbba5347a4acb0e556b47c44be
+msgid "This module contains tests that check if your package was successfully installed and configured. Tests in here are concerned with XML files you have in the ``profiles/default`` folder."
+msgstr ""
+
+#: ../chapter_2.rst:191
+# 2c63425a5833452fad5c2166aed0d53e
+msgid "**test_todo_item.py**"
+msgstr ""
+
+#: ../chapter_2.rst:193
+# f202e856d009411f92d427d499418a46
+msgid "And finally a module that contains tests for your custom content-type."
+msgstr ""
+
+#: ../chapter_2.rst:195
+# 4141ef5dec1f453f8adb2c38816a0d5e
+msgid "We will not go into details of what each test does as we believe the test code and its comments are in themselves informative and we will rather encourage you to go through all tests, try to understand what they do, maybe change something and see what happens, etc."
+msgstr ""
+
+#: ../chapter_2.rst:200
+# e9cd0209b2b74a5f8edc369b5f9b1445
+msgid "Remember that you run tests with ``bin/test`` and you should get an output that looks somewhat like this:"
+msgstr ""
+
+#: ../chapter_2.rst:220
+# 6867ca854df64d87804d7bcad5c8ea5f
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../chapter_2.rst:222
+# 44dec3aa45794ca19a50cbb5520810ea
+msgid "If something goes wrong you can always go to GitHub and see how the `code for chapter 2 <https://github.com/collective/tutorial.todoapp/tree/chapter2>`_ should look like and compare this to what you have on your local machine."
+msgstr ""
+

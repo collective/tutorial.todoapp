@@ -1,0 +1,108 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012, Caipirinha Sprinters
+# This file is distributed under the same license as the tutorial.todoapp package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: tutorial.todoapp 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-15 15:01\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../README.rst:3
+# c0bd095bbef24261b8d35d96a3952c9b
+msgid "Plone Todo list application tutorial"
+msgstr ""
+
+#: ../../README.rst:5
+# 5e5362cf07934047958610567f206c19
+msgid "`Plone 4.2 <http://plone.org>`_"
+msgstr ""
+
+#: ../../README.rst:6
+# b325b89a6c424ce9a0fdee64e51e3523
+msgid "https://github.com/collective/tutorial.todoapp/issues"
+msgstr ""
+
+#: ../../README.rst:7
+# bddddd9302384da0bec1af0251ad628c
+msgid "https://github.com/collective/tutorial.todoapp"
+msgstr ""
+
+#: ../../README.rst:8
+# 90d5052ee83a419c862b1f04c655f7a7
+msgid "http://tutorialtodoapp.readthedocs.org/"
+msgstr ""
+
+#: ../../README.rst:17
+# 2382d5351e344dd093299f9ef8d30d1c
+msgid "create custom content-types Through-The-Web"
+msgstr ""
+
+#: ../../README.rst:18
+# ffc476f70378474583fb6bf23639e49d
+msgid "create and apply custom workflows"
+msgstr ""
+
+#: ../../README.rst:19
+# cd5890501eac4d84bbd270c5d438bffd
+msgid "create custom listings"
+msgstr ""
+
+#: ../../README.rst:20
+# 4331ce854e844ac39561636a3d9329cd
+msgid "dump your changes into a filesytem package to future-proof them"
+msgstr ""
+
+#: ../../README.rst:21
+# 1ebbc691fa474c7b863510646af6ca13
+msgid "write tests for your filesystem package"
+msgstr ""
+
+#: ../../README.rst:25
+# a208b5bc87d441f4a4c5ba6fc30ecb6e
+msgid "It’s a fact - Plone has a lot of complicated features. That doesn’t mean Plone is hard for everything! This is a simple tutorial that anyone can follow to get a simple Todo list application running inside of Plone. Would you want to deploy Plone for just a Todo list in real life? Probably not. You can however learn several simple, fast concepts that will get you most of the way there. Feeling like you don’t understand something completely or the terminology is getting to you? Sit back, relax, and finish the tutorial. If in the end things still aren’t clear, please give feedback and we’ll look at what we could do better."
+msgstr ""
+
+#: ../index.rst:12
+# 03ef7f54fabd490b9b884c62def52cae
+msgid "The Tutorial"
+msgstr ""
+
+#: ../index.rst:25
+# 54a4429b230241a69d68deb38276d460
+msgid "Developer Documentation"
+msgstr ""
+
+#: ../index.rst:27
+# 62b3e2926f014ad58070e2eb88f310bf
+msgid "Information on how to contribute to this tutorial."
+msgstr ""
+
+#: ../index.rst:38
+# eb2c46f5444c4024b13b9d76781a1846
+msgid "Indices and tables"
+msgstr ""
+
+#: ../index.rst:40
+# 71d085ed93484f31aacb2e70e4ad5cad
+msgid ":ref:`genindex`"
+msgstr ""
+
+#: ../index.rst:41
+# 6857627f37a74a8bb384b900d9ae8efd
+msgid ":ref:`modindex`"
+msgstr ""
+
+#: ../index.rst:42
+# ddc31063710b4cd1b1c2e963b57ebe62
+msgid ":ref:`search`"
+msgstr ""
+

@@ -1,0 +1,313 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012, Caipirinha Sprinters
+# This file is distributed under the same license as the tutorial.todoapp package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: tutorial.todoapp 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-15 15:01\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../chapter_1.rst:10
+# 67996815e8734c639a93fe7d8ba6a30c
+msgid "Chapter 1: Through-The-Web"
+msgstr ""
+
+#: ../chapter_1.rst:13
+# 219725f8c4204e17ae86a7f2af7816e0
+msgid "Getting Started with Content Types"
+msgstr ""
+
+#: ../chapter_1.rst:15
+# 93c53375da4140e0b8acd1a0a20cf5e3
+msgid "If you don't know what a content type is, don't worry! Sit back, relax, and do the tutorial! I'll save the mumbo jumbo definitions for another day. In this first part, we will make a Todo list without touching any code. It won't be fancy, but it will give you a good idea of how things work in Plone."
+msgstr ""
+
+#: ../chapter_1.rst:20
+# 6115575271e34a63a2c04eb1f7f48d07
+msgid "The way that Plone handles content is a little different than your average relational database driven framework, so if you don't understand something right away, sit back, relax, and finish the tutorial."
+msgstr ""
+
+#: ../chapter_1.rst:24
+# 94487ff6c02d4d77af33076e0fc546ec
+msgid "Generally speaking, content-types are just that: types of content. By default, in Plone you get the News Item content-type, the Event content-type and so on. So if you add a content item that is of Event type, you are using the Event content-type. In our case, we will create a new content-type that will represent a Todo Item."
+msgstr ""
+
+#: ../chapter_1.rst:32
+# 0782659f6fb14689b353747152c47b76
+msgid "Create a New Content Type"
+msgstr ""
+
+#: ../chapter_1.rst:34
+# e31b4b1eae7e45659f2893a48a1da37d
+msgid "First we need to create a new content type to represent an item on our Todo list. This will be a type with one field, that which needs to be done."
+msgstr ""
+
+#: ../chapter_1.rst:37
+# a7fa909acf394548b4606bb85616fa7e
+msgid "Navigate to `site setup` as shown below, or just enter ``http://localhost:8080/Plone/@@overview-controlpanel`` in your browser. This is where you can configure Plone for happy fun time."
+msgstr ""
+
+#: ../chapter_1.rst:44
+# 6a72a382fcec4dbcac96ece09582f5be
+msgid "Now comes the fun part. We want to create our own type `Through-The-Web` aka. `TTW`. This type will be a Todo Item. Let’s click `Dexterity Content Types` (or go directly to ``http://localhost:8080/Plone/@@dexterity-types``)."
+msgstr ""
+
+#: ../chapter_1.rst:51
+# 7ed0dd96fc0e405b9fea2b66f6578cd4
+msgid "Create a Todo List Item by clicking ``Add New Content Type``."
+msgstr ""
+
+#: ../chapter_1.rst:56
+# 2ac05fe3313c4d73abe8b6398c546cb0
+msgid "Fill in the fields as seen below and then click ``Add``."
+msgstr ""
+
+#: ../chapter_1.rst:61
+# e7ceba8173584259ad6d27f57fb4dc08
+msgid "Now you will see that there is a new type to play with. Let’s adjust a few things. Click the name of the new type to edit."
+msgstr ""
+
+#: ../chapter_1.rst:67
+# 04ed997731c64caab7eac4051a79c840
+msgid "There are two important things we need to do here: we need to adjust some `behaviors`, and add some `fields`. Let’s look at the behaviors first."
+msgstr ""
+
+#: ../chapter_1.rst:73
+# 4c802c81392c4df6a061423dad819b32
+msgid "By default, all Plone content-types have `Dublin Core <http://en.wikipedia.org/wiki/Dublin_Core>` metadata enabled (you may know it as ``title`` and ``description``. We don’t need this for our über simple Todo list item. Uncheck ``Dublin Core metadata`` and then click ``Save``."
+msgstr ""
+
+#: ../chapter_1.rst:81
+# 6762f830c03c4c9a93c7454f35c199a3
+msgid "Next we need to add some fields. Because this type is so simple, we will add just one field, but feel free to go CRAZY. Start by going back to the ``Fields`` tab and clicking ``Add new field...``."
+msgstr ""
+
+#: ../chapter_1.rst:88
+# 300e98e2cbf849198c908346b17b23cb
+msgid "Add a field called ``Todo``, or anything else you want. But! Note that it's very important that the `short name` is ``title``. By using this key short name, we make sure that all Todo Items are searchable from smart search. Update the field as seen below and click ``Add``."
+msgstr ""
+
+#: ../chapter_1.rst:96
+# dd9af4e1b65d4873893941300274788a
+msgid "You will see that a new field has been added to your content type. If you are feeling adventuresome, click on the settings tab next to the field to set other properties, or just see what’s available."
+msgstr ""
+
+#: ../chapter_1.rst:105
+# 26ca728a92c44b9da367e62f607714ce
+msgid "Trying out the Todo Item content-type"
+msgstr ""
+
+#: ../chapter_1.rst:107
+# c63126d936534b05a7d4a3876bac9984
+msgid "Now it's time to reap the rewards of all of your effort. Let's put all of our Todo Items in one particular folder so that we can have collections of items throughout the site. For this tutorial, we will be putting everything in the root of the site so it's easy to debug."
+msgstr ""
+
+#: ../chapter_1.rst:112
+# 4b16103ef1e145aaa1ccc46bfcb3bde8
+msgid "From the root, add a new folder called ``Todo``."
+msgstr ""
+
+#: ../chapter_1.rst:120
+# 3f1796e58efb406cb97c49a363319777
+msgid "Add a new `Todo Item` to the new `Todo` folder."
+msgstr ""
+
+#: ../chapter_1.rst:128
+# 569c8f6fa1a743d898bc059945ebe061
+msgid "Celebrate!"
+msgstr ""
+
+#: ../chapter_1.rst:133
+# 20b2bb7fad704c07898f5afc1a1d0421
+msgid "You may be wondering about earlier, when we asked you to make sure that the `short name` for the Todo Item was called ``title``. The time has come to let you in on a little secret. Calling the short name either ``title`` or ``description`` will automatically add that text to the livesearch menu. WHAT?!? I know! When life gives you lemonade, spike it with vodka and enjoy liberally! You can now search for your Todo Items in Live Search."
+msgstr ""
+
+#: ../chapter_1.rst:143
+# d6ec18e697764837824b7c9e7e9d7f56
+msgid "But wait a minute... This todo item is marked ``private``, and that doesn't really make sense. It's a good thing Plone has an easy solution for that. In the next section, we will go over the basics of that magical, mystical word: `workflow`."
+msgstr ""
+
+#: ../chapter_1.rst:150
+# 9e3684fc0cac4a06b9aba2576be226f6
+msgid "Getting Started with Workflows"
+msgstr ""
+
+#: ../chapter_1.rst:152
+# 621b86c1b3e94d3a9f3dadaf82651ce6
+msgid "So, workflows. What are they? They are a mechanizm to control the flow of a content item through varios states. Most commonly, and by default in Plone, you deal with a `publication` workflow. For example: A writer writes up a News Item and submits it for reviewal. Then the in-house reviewing team goes through the text and publishes the News Item so it is public for the entire world to see."
+msgstr ""
+
+#: ../chapter_1.rst:159
+# fcba2a146eb64018ae291121813b950e
+msgid "The Todo Item we added in the last section is marked as ``private`` because by default all new Plone content types are assigned a complex publication workflow called ``simple_publication_workflow``. I know what you are thinking: simple publication whodie whatie grble gobble??!?! Just like before, let's bypass trying to explain what that means and just fix it. Relax, enjoy, and finish the tutorial!"
+msgstr ""
+
+#: ../chapter_1.rst:166
+# e750e1ce9cf24aba8674990a033c9c04
+msgid "If you aren't interested in workflows, or already know all about this stuff, feel free to skip straight to the next chapter!"
+msgstr ""
+
+#: ../chapter_1.rst:169
+# ca04d6ebfaa34429833a976dcb33f972
+msgid "Todo Items really have 2 states that we are interested in: `open` and `complete`. Let's make that happen."
+msgstr ""
+
+#: ../chapter_1.rst:172
+# cfe0c40d8f774cc0bf42583f910eba03
+msgid "Head over to the ZMI at ``http://localhost:8080/Plone/manage_main``."
+msgstr ""
+
+#: ../chapter_1.rst:173
+# 06ef3f9f139a403bbf7357abdd0f4f00
+msgid "In the ZMI, open the ``portal_workflow`` tool."
+msgstr ""
+
+#: ../chapter_1.rst:178
+# 28b3816dfb164f23abfa47182568aaf1
+msgid "On this page, we see all content-types in our portal `mapped` to a workflow. Our new type, Todo Item, is mapped to ``(Default)``. You can see right below that the default is ``Simple Publication Workflow``. This is just too complex for our little Todo Item."
+msgstr ""
+
+#: ../chapter_1.rst:186
+# 47e7f14ac60b4ab09043af270749cb02
+msgid "So let's create a new one that suites our needs perfectly! Click the ``contents`` tab at the top of the page to get a listing of all the available workflows."
+msgstr ""
+
+#: ../chapter_1.rst:193
+# 92a0e9b07cd14daa869bd16a8c4d7298
+msgid "You can poke around here all you like, but the details of each one of these workflows are better left to another tutorial. When in doubt, you can always come back to these workflows to see examples of how things can be done. Onwards and upwards!"
+msgstr ""
+
+#: ../chapter_1.rst:198
+# e43e15894c554c6fb1317518e48b5fd6
+msgid "Let's create a new workflow for our Todo Items and call it ``todo_item_workflow``. We will make a new workflow by copying and customizing one of the workflows that are already there. Duplicate the ``one_state_workflow``."
+msgstr ""
+
+#: ../chapter_1.rst:206
+# 172a6f9881b4462589ce5bb29d7dd9e5
+msgid "Rename the copied workflow to ``todo_item_workflow``."
+msgstr ""
+
+#: ../chapter_1.rst:214
+# 2195bca583694395b09552a194935817
+msgid "You will be spit back out and the workflow contents page. Click the workflow to start editing."
+msgstr ""
+
+#: ../chapter_1.rst:220
+# 7c046eaa3058442b9ce75e415eaeff43
+msgid "Let's update the name of the workflow so we don't double take later on."
+msgstr ""
+
+#: ../chapter_1.rst:226
+# b7b036599d0f4dc38edaf251727952e0
+msgid "Workflow is something that takes time to get used to if you have never encoutered the concept. The best analogy in our case is to a car. The car engine has two simple states: `on` and `off`. To transition from on to off and vice versa, it needs some action from the driver. The same for our TODO items. They have two states: `open` and `complete`. In order to get them from `Incomplete` to `Complete`, the user needs to click something. Don't understand yet? Relax, sit back, and finish the tutorial."
+msgstr ""
+
+#: ../chapter_1.rst:234
+# 6e227b9a5cc4444eb2fdb8027b67bd61
+msgid "Lets start by adding out base states. We will call them `open` and `complete`. From the edit workflow screen, click on the ``States`` tab."
+msgstr ""
+
+#: ../chapter_1.rst:240
+# 2723b7117e104e2b99746dd77bffacbc
+msgid "Delete the currently listed state."
+msgstr ""
+
+#: ../chapter_1.rst:246
+# dd4b5fb3ae1b4b6a964e7db5e6d354d1
+msgid "Add two states with the ids ``open`` and ``completed``."
+msgstr ""
+
+#: ../chapter_1.rst:254
+# 95d7adc830704bc68c4273695a31e14d
+msgid "Next lets add the transitions. The transitions will take the TODO item from `open` to `completed` and vice versa (in case a user accidentally marks an item as complete. Click on the ``Transitions`` tab."
+msgstr ""
+
+#: ../chapter_1.rst:261
+# b73199f1401f4f8aba837291f79fd67b
+msgid "Add two transitions: `complete` and `reopen`. When a user `completes` a task, it will move into the `completed` state. When a user `reopens` a task, it will go back to the `open` state."
+msgstr ""
+
+#: ../chapter_1.rst:268
+# a834e06dfe33480894ce468e0e59d14b
+msgid "Let's add a few details to these new transitions. Let's start with `complete`. Click on ``complete`` to edit the transition."
+msgstr ""
+
+#: ../chapter_1.rst:274
+# 88ad87a51ca447d2926d8700d518cb71
+msgid "First add a title so you remember later what this does. Description is optional but adding one will help you keep your thoughts clear and remind the `future you` what the `today you` is thinking. The destination state should be set to ``completed``. We also want to make sure that only peopl with mega permissions, or the owner itself, can change the state so we add ``Modify portal content`` to the ``Permissions`` box."
+msgstr ""
+
+#: ../chapter_1.rst:281
+# 94e168c7a1c34996a99b4c0e63e5ff63
+msgid "All this means nothing if we don't give the user a chance to change the state. Next to ``Display in actions box``, we can set the title for what will be displayed in the workflow drop down box of the item (where `Pending`, `Reject`, etc where earlier). Let's call it ``Complete``. Last but not least, we need to add the url that the action points to. I could make this tutorial 100 years long and explain why you have to do this, but accept that it has to be done, relax, and follow this formula:"
+msgstr ""
+
+#: ../chapter_1.rst:293
+# 5dd26543506745b1adf72b87929f8edf
+msgid "where `X` is the id of the transition. So for this case, in the URL box, you will add"
+msgstr ""
+
+#: ../chapter_1.rst:303
+# 888501d8491d4c3783b1de8a79b518c7
+msgid "Double check everything and click ``Save``."
+msgstr ""
+
+#: ../chapter_1.rst:305
+# e43a1f1e863b4e44b27e130d3978e3cc
+msgid "If your brain isn't hurting yet it will be soon. Go back to the transitions listing."
+msgstr ""
+
+#: ../chapter_1.rst:315
+# 22ab4b7e706143deab362444014facc7
+msgid "Let's update the `reopen` transition and update in a similar manner. This time, the destination state is ``open``, and following the formula above, the URL is ``%(content_url)s/content_status_modify?workflow_action=reopen``."
+msgstr ""
+
+#: ../chapter_1.rst:322
+# f25ef29575a942de988713534d905455
+msgid "Now we have 2 states and 2 transitions, but they aren't 100% linked together... yet. Go back to the workflow listing, click the ``States`` tab and then and click on ``completed`` to edit the state."
+msgstr ""
+
+#: ../chapter_1.rst:332
+# c0050f71a4774db9b6278190c23fa651
+msgid "Add a title, since this is what users see in the top right corner of the TODO items, and then check ``reopen`` as a possible transition. This means that when a TODO item is completed, it will only allow the user to reopen it (and not re-complete it, for example). In the same respect, open the open transition, add a title, and mark ``complete`` as a possible transition."
+msgstr ""
+
+#: ../chapter_1.rst:344
+# 5b620fdb011a47bea84ed2cde0a90d4b
+msgid "When we create a new TODO item, we need to tell Plone what the first state is. Go back to the workflow states listing, and make ``open`` the initial state."
+msgstr ""
+
+#: ../chapter_1.rst:351
+# 2992b1cb77364adaa419314d995156af
+msgid "And that's it! Almost... Last but not least, we need to assign our new workflow to our TODO item type. Go back to the main workflow screen."
+msgstr ""
+
+#: ../chapter_1.rst:357
+# 9731b166880e480e89a5fa0ecd856044
+msgid "Instead of mapping to the ``(Default)`` workflow, we are going to map to the id of our new workflow, ``todo_item_workflow``, and then click ``Change``."
+msgstr ""
+
+#: ../chapter_1.rst:360
+# 7e29e67916044eb8aea201b274a130c2
+msgid "If you already have TODO items in your site, you MUST click ``Update Security Settings`` to update the workflow for the items. Instead of going into gross detail about why this is the case, just sit back, relax, finish the tutorial, and remember to click this button any time you make changes (yes! you can continue to change and update your workflows!)."
+msgstr ""
+
+#: ../chapter_1.rst:369
+# 30512be35767458e83520323552f9b1f
+msgid "Could the time have arrived? Time to try it out? YES! Go to your ``Todo`` folder and add a new TODO Item. Validate that the workflow works as expected. By toggling between the states."
+msgstr ""
+
+#: ../chapter_1.rst:376
+# b910e51bb01b4e769d9b85636b3525a2
+msgid "Congrats! You have now passed `Plone Workflow 101`. Next we will transition from developing through the web (TTW) to developing on the filesystem."
+msgstr ""
+

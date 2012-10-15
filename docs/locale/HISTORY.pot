@@ -1,0 +1,58 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012, Caipirinha Sprinters
+# This file is distributed under the same license as the tutorial.todoapp package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: tutorial.todoapp 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-15 15:01\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../HISTORY.rst:2
+# 875e0e8b262b40619524d9479ae17012
+msgid "Changelog"
+msgstr ""
+
+#: ../HISTORY.rst:6
+# aa5b4ca3f7b24e2cb7557fed3026f2ca
+msgid "1.0 (2012-09-11)"
+msgstr ""
+
+#: ../HISTORY.rst:8
+# 08f6d30ae8394b1eb7a8ecebd6f51786
+msgid "Acted as guinea pigs and went through the entire tutorial slowly and thoroughly. [matejc, plamut]"
+msgstr ""
+
+#: ../HISTORY.rst:12
+# 2244f286162442baa3ffe5f92ca1b3eb
+msgid "AJAXifying the @@todo view. [eleddy]"
+msgstr ""
+
+#: ../HISTORY.rst:15
+# 3e8f05fa53d14bf1b3ce5b62fba498a6
+msgid "The @@todo BrowserView for listing Todo Items. [zupo]"
+msgstr ""
+
+#: ../HISTORY.rst:18
+# 65db86e72bfa46e8895f489c83d1cbc4
+msgid "Tests for GenericSetup exports of content-type and workflow. [zupo]"
+msgstr ""
+
+#: ../HISTORY.rst:21
+# a26e7fccf4cf4255ad2e2c2c249e40f5
+msgid "TTW part of the tutorial, loads of screenshots. [eleddy]"
+msgstr ""
+
+#: ../HISTORY.rst:24
+# 715eefce6acc4aef94051134c60329b4
+msgid "Skeleton. [zupo]"
+msgstr ""
+

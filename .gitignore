@@ -20,3 +20,4 @@ src/plone.api
 docs/Makefile
 src/tutorial.todoapp.egg-info
 *.pyc
+*.mo

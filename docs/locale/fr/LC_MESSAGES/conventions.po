@@ -1,0 +1,210 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012, Caipirinha Sprinters
+# This file is distributed under the same license as the tutorial.todoapp package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: tutorial.todoapp 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-15 15:01\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../conventions.rst:5
+# d6d53e5aadc24d62ad0aeaf05fb3432a
+msgid "Conventions"
+msgstr ""
+
+#: ../conventions.rst:8
+# e0d288a72118439c87fd03c2e7900359
+msgid "Line length"
+msgstr ""
+
+#: ../conventions.rst:10
+# f1c03a9872374701a36a1357871371cf
+msgid "All Python code in this package should be PEP8 valid. However, we don't enforce the 80-char line length rule. It is encouraged to have your code formatted in 80-char lines, but somewhere it's just more readable to break this rule for a few characters. Long and descriptive test method names are a good example of this."
+msgstr ""
+
+#: ../conventions.rst:17
+# 936b50f785224994a408d1be7b38c084
+msgid "Configuring your editor to display a line at 80th column helps a lot here and saves time."
+msgstr ""
+
+#: ../conventions.rst:21
+# 1322eae93e8e4f398868e872513cecd1
+msgid "The line length rules also applies to non-python source files, such as documentation .rst files."
+msgstr ""
+
+#: ../conventions.rst:25
+# 827c89b5ad714f92b0e30075f38f9c1c
+msgid "About imports"
+msgstr ""
+
+#: ../conventions.rst:27
+# 4907befb260a4a318629f2ebcadf9541
+msgid "Don't use * to import `everything` from a module."
+msgstr ""
+
+#: ../conventions.rst:28
+# 6dc52027e5884c83a27d0e4a2c1cc30a
+msgid "Don't use commas to import multiple stuff on a single line."
+msgstr ""
+
+#: ../conventions.rst:29
+# c540dfc1eceb4f1d8f8a9d385f7fa1ef
+msgid "Don't use relative paths."
+msgstr ""
+
+#: ../conventions.rst:36
+#: ../conventions.rst:60
+# a79769eafcd34074b6d772eb0033f9c7
+# 147cc45b628249f1b7e23c3c1bb853d7
+msgid "instead of"
+msgstr ""
+
+#: ../conventions.rst:46
+# 10f44b1ea02a48cdb3106960253febf5
+msgid "Sort imports"
+msgstr ""
+
+#: ../conventions.rst:48
+# 7f070f861e2548029f80ac5c455c44be
+msgid "As another imports stylistic guide: Imports of code from other modules should always be alphabetically sorted with no empty lines between imports. The only exception to this rule is to keep one empty line between a group of ``from x import y`` and a group of ``import y`` imports."
+msgstr ""
+
+#: ../conventions.rst:71
+# 4d57c58e64b249c6a89671b032940d2a
+msgid "Commit checklist"
+msgstr ""
+
+#: ../conventions.rst:73
+# cede3f0094174405a398c1fc88ac0ef7
+msgid "Before every commit you should:"
+msgstr ""
+
+#: ../conventions.rst:75
+# 975659977c2049db8257af5b09403f49
+msgid "Run :ref:`unit-tests`."
+msgstr ""
+
+#: ../conventions.rst:76
+# 2cb96386ca2446a590711fba2fddec29
+msgid "Run :ref:`syntax-validation`."
+msgstr ""
+
+#: ../conventions.rst:77
+# 4218bbb8ffdf44749659d8bb17560409
+msgid "Add an entry to :ref:`changelog` (if applicable)."
+msgstr ""
+
+#: ../conventions.rst:78
+# 1dce8a5d3f294553b975e16ddca30658
+msgid "Add/modify :ref:`sphinx-docs` (if applicable)."
+msgstr ""
+
+#: ../conventions.rst:81
+# 05b2ee1f789045f5aebc32562d6453ef
+msgid "All syntax checks and all tests can be run with a single command:"
+msgstr ""
+
+#: ../conventions.rst:90
+# 3210ea5b3faa4cf2a665e4ecc02181d4
+msgid "Unit tests"
+msgstr ""
+
+#: ../conventions.rst:92
+# f09d59eeb84c49d68075f723782fab2f
+msgid "Un-tested code is broken code."
+msgstr ""
+
+#: ../conventions.rst:94
+# 85e7c150e75146d8b502fa377148e1cd
+msgid "For every feature you add to the codebase you must also add tests for it. Also write a test for every bug you fix to ensure it doesn't crop up again in the future."
+msgstr ""
+
+#: ../conventions.rst:98
+# b6b2d8fb51b04b199941cd4df4ee084d
+msgid "You run tests like this:"
+msgstr ""
+
+#: ../conventions.rst:108
+# 4378245a32b5445ca3cb5a3b50fc47f6
+msgid "Syntax validation"
+msgstr ""
+
+#: ../conventions.rst:110
+# 68448627fd0c413aaa32067d4251d36c
+msgid "All Python source code should be `PEP-8` valid and checked for syntax errors. Tools for checking this are `pep8` and `pyflakes`."
+msgstr ""
+
+#: ../conventions.rst:113
+# dd1639b5c4274f3b9f327e3d392b81c3
+msgid "To validate your source code, run the following two commands:"
+msgstr ""
+
+#: ../conventions.rst:122
+# 0a40542a976d466290afec034d2892c1
+msgid "It pays off to invest a little time to make your editor run `pep8` and `pyflakes` on a file every time you save that file. Saves lots of time in the long run."
+msgstr ""
+
+#: ../conventions.rst:130
+# 0dbf0388fa1d40c18c4a9329175cc574
+msgid "Changelog"
+msgstr ""
+
+#: ../conventions.rst:132
+# 712db0dacd924912ba84d0fda87ce097
+msgid "Feature-level changes to code are tracked inside ``docs/HISTORY.txt``. Examples:"
+msgstr ""
+
+#: ../conventions.rst:134
+# 8825cc6e11c9451b9678668f634fbb34
+msgid "added feature X"
+msgstr ""
+
+#: ../conventions.rst:135
+# b86e91173ca84b488509d579bc8e162b
+msgid "removed Y"
+msgstr ""
+
+#: ../conventions.rst:136
+# c3df56fc35884cdea9e06c658fb7fe0e
+msgid "fixed bug Z"
+msgstr ""
+
+#: ../conventions.rst:138
+# 93fd31324c5a4a3bb24a62db80b933a3
+msgid "Add an entry every time you add/remove a feature, fix a bug, etc."
+msgstr ""
+
+#: ../conventions.rst:143
+# 688f001c7cd348c8b90a581279d5ca0c
+msgid "Sphinx documentation"
+msgstr ""
+
+#: ../conventions.rst:145
+# 35196ac7243e437dbfc5697e583c8f02
+msgid "Un-documented code is broken code."
+msgstr ""
+
+#: ../conventions.rst:147
+# c3a09cc34af04ae78fca04f0d4f31340
+msgid "For every feature you add to the codebase you should also add documentation for it to ``docs/``."
+msgstr ""
+
+#: ../conventions.rst:150
+# a472db0d355c4500a1895b2d36ee9a79
+msgid "After adding/modifying documentation, re-build `Sphinx` and check how it is displayed:"
+msgstr ""
+
+#: ../conventions.rst:158
+# f461fe4f4236441d86e141b464aa8ed4
+msgid "Documentation is automatically generated from these source files every time you push your code to GitHub. The post-commit hook is handled by ReadTheDocs and the results are visible at http://tutorialtodoapp.readthedocs.org/en/latest/."
+msgstr ""
+

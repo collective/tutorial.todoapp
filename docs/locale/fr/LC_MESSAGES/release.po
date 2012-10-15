@@ -1,0 +1,113 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012, Caipirinha Sprinters
+# This file is distributed under the same license as the tutorial.todoapp package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: tutorial.todoapp 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-15 15:01\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../release.rst:5
+# 30fa5a449e874b88972fbc550ad3aead
+msgid "Releasing a new version"
+msgstr ""
+
+#: ../release.rst:7
+# f37e80725ba744a9a22108d8efbdcaa0
+msgid "Releasing a new version of `tutorial.todoapp` involves the following steps:"
+msgstr ""
+
+#: ../release.rst:9
+# 8441735711de421eaa468fbcd30ea6ed
+msgid "Create a git tag for the release."
+msgstr ""
+
+#: ../release.rst:10
+# 036d15b6b56243fe99150183672722a1
+msgid "Push the git tag upstream to GitHub."
+msgstr ""
+
+#: ../release.rst:11
+# c6f514ca7f8b46ffbcd18e4396c4eaa6
+msgid "Generate a distribution file for the package."
+msgstr ""
+
+#: ../release.rst:12
+# 91cfb08fd61d47cfa744db1c80f120af
+msgid "Upload the generated package to Python Package Index (PyPI)."
+msgstr ""
+
+#: ../release.rst:16
+# 58e47556fcf64a34b90f0faed48129c5
+msgid "Checklist"
+msgstr ""
+
+#: ../release.rst:18
+# d5c8525f1e2741efb09841012d7a2bd4
+msgid "Before every release make sure that:"
+msgstr ""
+
+#: ../release.rst:20
+# 84cc98650f94481b9d75ae850183519b
+msgid "You have documented your changes in the ``HISTORY.rst`` file."
+msgstr ""
+
+#: ../release.rst:22
+# 9efafd4cec1742a789faccd77d65cf56
+msgid "You have modified the version identifier in ``setup.py`` to reflect the new release."
+msgstr ""
+
+#: ../release.rst:25
+# e708dbb0b3c74521b7c23d589290af21
+msgid "You have confirmed that the package description (generated from ``README.rst`` and others) renders correctly by running ``bin/longtest``."
+msgstr ""
+
+#: ../release.rst:28
+# 52587b9be18a4296833c3eb429006585
+msgid "You have committed all changes to the git repository and pushed them upstream."
+msgstr ""
+
+#: ../release.rst:31
+# 9a6462e0478c46ac98c4bb7f1f357c5e
+msgid "You have the working directory checked out at the revision you wish to release."
+msgstr ""
+
+#: ../release.rst:36
+# 89c3d21e4fa849909c09ce54dbff518c
+msgid "Actions"
+msgstr ""
+
+#: ../release.rst:38
+# 41a1471777074e2e800626344f17df2d
+msgid "For help with releasing we use ``jarn.mkreleaser``. It's listed as a dependency in ``setup.py`` and should already be installed in your local bin:"
+msgstr ""
+
+#: ../release.rst:46
+# 212d2e93470945b18e7198c44f019094
+msgid "In order to push packages to PyPI you need to have the appropriate access rights to the package on PyPI and you need to configure your PyPI credentials in the ``~/.pypirc`` file, e.g.::"
+msgstr ""
+
+#: ../release.rst:60
+# 96dae5631d6e46bc890c17a7abeddd77
+msgid "Example"
+msgstr ""
+
+#: ../release.rst:62
+# 562d40589e264d5f974ae914b7536cf1
+msgid "In the following example we are releasing version 0.1 of `tutorial.todoapp`. The package has been prepared so that ``setup.py`` contains the version ``0.1``, this change has been committed to git and all changes have been pushed upstream to GitHub:"
+msgstr ""
+
+#: ../release.rst:89
+# 974c3578216f4f039a23c0a603a01cd6
+msgid "Please ignore the sdist warning about README file above. PyPI does not depend on it and it's just a bug in setupools (reported and waiting to be fixed)."
+msgstr ""
+
