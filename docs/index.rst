@@ -36,6 +36,19 @@ Information on how to contribute to this tutorial.
     release.rst
     HISTORY.rst
 
+Other
+=======================
+
+Other information regarding this tutorial.
+
+.. toctree::
+    :maxdepth: 2
+
+    contribute
+    add_plone_site
+    tutorial
+    LICENSE
+
 
 Indices and tables
 ==================
