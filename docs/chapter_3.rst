@@ -117,6 +117,7 @@ Celebrate!
    .. image:: images/custom_view.jpg
       :width: 400px
 
+Note changes might not show up after activation, in this case restart plone instance and changes should be visible
 
 Tests
 =====
