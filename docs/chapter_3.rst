@@ -117,6 +117,11 @@ Celebrate!
    .. image:: images/custom_view.jpg
       :width: 400px
 
+Issues
+======
+
+If the de-activate / activate does not work you may need to restart plone instance to see the changes
+
 
 Tests
 =====
