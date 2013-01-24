@@ -16,6 +16,7 @@ Assumptions
 * You have git  properly installed and vaguely know how to use it
 * You are working with Python 2.6 or 2.7, and have already installed setuptools and virtualenv
 * Sorry windows users, but you'll have to translate as usual from n*x to Windows-ese
+* For Ubuntu/Debian users it may be worthwhile to install build-essential (sudo aptitude install build-essential) to make sure you have necesary build tools
 
 ==============
 Tutorial Setup
