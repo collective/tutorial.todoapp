@@ -16,6 +16,7 @@ Assumptions
 * You have git  properly installed and vaguely know how to use it
 * You are working with Python 2.6 or 2.7, and have already installed setuptools and virtualenv
 * Sorry windows users, but you'll have to translate as usual from n*x to Windows-ese
+* For Ubuntu/Debian users it will be usefull to install build-essential package (sudo aptitude install build-essential) this will ensure that you have required packages
 
 ==============
 Tutorial Setup
@@ -29,7 +30,7 @@ Since this is a tutorial on how to be a develop, there will always be a little b
     > ./bin/virtualenv --no-site-packages tutorial.todoapp
     > cd tutorial.todoapp
     > git checkout chapter1
-    > ./bin/python2.6 bootstrap.py --distribute
+    > ./bin/python bootstrap.py --distribute
     > ./bin/buildout
 
 #. Next up, start the plone instance::
