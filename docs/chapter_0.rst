@@ -29,7 +29,7 @@ Since this is a tutorial on how to be a develop, there will always be a little b
     > virtualenv --no-site-packages tutorial.todoapp
     > cd tutorial.todoapp
     > git checkout chapter1
-    > ./bin/python2.6 bootstrap.py --distribute
+    > ./bin/python bootstrap.py --distribute
     > ./bin/buildout
 
 #. Next up, start the plone instance::
