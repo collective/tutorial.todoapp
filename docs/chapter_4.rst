@@ -108,6 +108,7 @@ reloaded!
 
 For extra clarity: if you are not an expert in python, plone, AND javascript, I
 highly recommend integrating bling bling in the following order:
+
     #. Write base view and **passing** test cases
     #. Test views in browser
     #. Make ajax interactive
