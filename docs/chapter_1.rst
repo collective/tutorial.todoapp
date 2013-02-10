@@ -74,7 +74,7 @@ list. This will be a type with one field, that which needs to be done.
       :width: 400px
 
 #. By default, all Plone content-types have `Dublin Core
-   <http://en.wikipedia.org/wiki/Dublin_Core>` metadata enabled (you may know it
+   <http://en.wikipedia.org/wiki/Dublin_Core>`_ metadata enabled (you may know it
    as ``title`` and ``description``. We don’t need this for our über simple Todo
    list item. Uncheck ``Dublin Core metadata`` and then click ``Save``.
 
