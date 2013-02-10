@@ -277,7 +277,7 @@ Todo Items really have 2 states that we are interested in: `open` and
 #. First add a title so you remember later what this does. Description is
    optional but adding one will help you keep your thoughts clear and remind
    the `future you` what the `today you` is thinking. The destination state
-   should be set to ``completed``. We also want to make sure that only peopl
+   should be set to ``completed``. We also want to make sure that only people
    with mega permissions, or the owner itself, can change the state so we add
    ``Modify portal content`` to the ``Permissions`` box.
 
