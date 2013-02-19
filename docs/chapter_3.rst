@@ -127,8 +127,8 @@ Tests
 Cool, so you have verified that your code works through the browser and it's
 time to add tests to make sure your code keeps on working in the future.
 
-First add the following snippet to ``test_setup`` to verify that your Folders
-have the ``todo`` view on the `Display` drop-down menu.
+First add the following snippet to ``test_setup.py`` to verify that your
+Folders have the ``todo`` view on the `Display` drop-down menu.
 
 .. code-block:: python
 
