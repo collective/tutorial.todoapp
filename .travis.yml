@@ -4,7 +4,7 @@ python:
 
 install:
   - $(which echo) -e "[buildout]\nextends = buildout.d/travis.cfg" > buildout.cfg
-  - python bootstrap.py --version 1.6.0
+  - python bootstrap.py
   - bin/buildout
 
 script:
