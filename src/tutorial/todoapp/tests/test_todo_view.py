@@ -57,13 +57,13 @@ class TestView(IntegrationTestCase):
 
         # clickable title
         self.assertIn('href="http://nohost/plone/folder/try-brule"', output)
-        self.assertIn(u'>Try Brul\xe9!</a>', output)
+        self.assertIn(u'>Try Brulé!</a>', output)
 
         # workflow state
         self.assertIn('<td class="todo-visual-status open">', output)
 
         # modification date
-        self.assertIn('todo-modified">Aug 20, 2012 12:00 AM</td>', self.view())
+        self.assertIn('todo-modified">Aug 20, 2012 12:00 AM</td>', output)
 
 
 def test_suite():
