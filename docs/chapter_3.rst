@@ -154,9 +154,9 @@ If you haven't already downloaded it, add a new test module:
 folder and run tests. Feel free to fiddle around with it to see what it does.
 As always, you can use git to get the file.
 
-   .. code-block:: bash
+.. code-block:: bash
 
-      $ git checkout chapter3 src/tutorial/todoapp/tests/test_todo_view.py
+    $ git checkout chapter3 src/tutorial/todoapp/tests/test_todo_view.py
 
 
 Troubleshooting

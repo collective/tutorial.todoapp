@@ -38,7 +38,8 @@ Since this is a tutorial on how to be a develop, there will always be a little b
     > ./bin/instance fg
 
 #. Open up your browser and navigate to ``http://localhost:8080``
-#. Click 'Create a New Plone Site'. The default username and password for this buildout is admin/admin
+#. Click 'Create a New Plone Site'. The default username and password for this
+   buildout is ``admin:admin``.
 
 #. Change the `name` and `id` if you wish, but keep in mind that for this
    tutorial we will assume the name of the site is ``Plone`` and is located at
