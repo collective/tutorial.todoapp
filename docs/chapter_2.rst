@@ -22,8 +22,9 @@ Now, why would you even want to do that? Here's a couple of reasons:
 #. **Tracking of changes**
 
    The most obvious one: when you store the configuration of your content-type
-   and your workflow in a `VCS <http://en.wikipedia.org/wiki/Revision_control>`_ , you can track how they changed over time. It
-   useful to be able to look back a few months and see how your files changed.
+   and your workflow in a `VCS <http://en.wikipedia.org/wiki/Revision_control>`_,
+   you can track how they changed over time. It useful to be able to look back
+   a few months and see how your files changed.
 
 #. **Distribution to other developers**
 
@@ -45,8 +46,8 @@ Now, why would you even want to do that? Here's a couple of reasons:
 Package skeleton
 ================
 
-Let's start by creating a package skeleton. Since writing things up from scratch
-kinda sucks, use this tutorial as your skeleton.
+Let's start by creating a package skeleton. Since writing things up from
+scratch kinda sucks, use this tutorial as your skeleton.
 
 
 Exporting configuration
@@ -72,11 +73,12 @@ look like:
    .. image:: images/dexterity_export.jpg
       :width: 400px
 
-We need to take types.xml and the types folder, and save it in our base product.
-You can use your finder or explorer to drag and drop, or use the command line.
-I'll use command line as an example but feel free to improvise. You want to move
-the files into your default product profile. What's a profile? Don't worry about
-it. Sit back, relax, and finish the tutorial. You will move the files into
+We need to take types.xml and the types folder, and save it in our base
+product. You can use your finder or explorer to drag and drop, or use the
+command line. I'll use command line as an example but feel free to improvise.
+You want to move the files into your default product profile. What's a profile?
+Don't worry about it. Sit back, relax, and finish the tutorial. You will move
+the files into
 
 .. code-block:: bash
 
@@ -106,24 +108,26 @@ content type is working happily. We do that by adding the following lines to
 Exporting todo_item_workflow
 ----------------------------
 
-Exporting a workflow is very similar to exporting a Dexterity type. It just takes
-a little bit more navigating and a trip to the ZMI. To export the workflow,
-navigate to the root of the ZMI by gong to ``http://localhost:8080/Plone/manage_main``.
-From there, head into the portal setup tool:
+Exporting a workflow is very similar to exporting a Dexterity type. It just
+takes a little bit more navigating and a trip to the ZMI. To export the
+workflow, navigate to the root of the ZMI by gong to
+``http://localhost:8080/Plone/manage_main``. From there, head into the
+`portal_setup` tool:
 
    .. image:: images/enter_portal_setup.jpg
       :width: 400px
 
 WARNING: The following User Interface is not recommended for children under 18.
 
-In the portal_setup tool, click on the export tab.
+In the `portal_setup` tool, click on the export tab.
 
    .. image:: images/setup_export.jpg
       :width: 400px
 
 There are a LOT of things that you can export here, but that is for a different
 tutorial. For now, find export item #28 called ``Workflow Tool``, check the box
-to the left. Then scroll all the way to the bottom and ``Export selected steps``.
+to the left. Then scroll all the way to the bottom and
+``Export selected steps``.
 
    .. image:: images/check_workflow.jpg
       :width: 400px
@@ -155,8 +159,8 @@ who do it. If you want your code to be solid and your site to be stable, tests
 are a great way to get there.
 
 The package you have on your filesystem is already configured to give you a
-test-runner so you can immediately go and run it -- obviously you have no tests,
-but at least you try if your test runner works.
+test-runner so you can immediately go and run it -- obviously you have no
+tests, but at least you try if your test runner works.
 
 .. code-block:: bash
 

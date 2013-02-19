@@ -21,14 +21,14 @@ first part, we will make a Todo list without touching any code. It won't be
 fancy, but it will give you a good idea of how things work in Plone.
 
 The way that Plone handles content is a little different than your average
-relational database driven framework, so if you don't understand something right
-away, sit back, relax, and finish the tutorial.
+relational database driven framework, so if you don't understand something
+right away, sit back, relax, and finish the tutorial.
 
 Generally speaking, content-types are just that: types of content. By default,
 in Plone you get the News Item content-type, the Event content-type and so on.
 So if you add a content item that is of Event type, you are using the Event
-content-type. In our case, we will create a new content-type that will represent
-a Todo Item.
+content-type. In our case, we will create a new content-type that will
+represent a Todo Item.
 
 
 Create a New Content Type
@@ -38,15 +38,16 @@ First we need to create a new content type to represent an item on our Todo
 list. This will be a type with one field, that which needs to be done.
 
 #. Navigate to `site setup` as shown below, or just enter
-   ``http://localhost:8080/Plone/@@overview-controlpanel`` in your browser. This
-   is where you can configure Plone for happy fun time.
+   ``http://localhost:8080/Plone/@@overview-controlpanel`` in your browser.
+   This is where you can configure Plone for happy fun time.
 
    .. image:: images/site_setup.jpg
       :width: 400px
 
-#. Now comes the fun part. We want to create our own type `Through-The-Web` aka.
-   `TTW`. This type will be a Todo Item. Let’s click `Dexterity Content Types`
-   (or go directly to ``http://localhost:8080/Plone/@@dexterity-types``).
+#. Now comes the fun part. We want to create our own type `Through-The-Web`
+   aka. `TTW`. This type will be a Todo Item. Let’s click `Dexterity Content
+   Types` (or go directly to
+   ``http://localhost:8080/Plone/@@dexterity-types``).
 
    .. image:: images/plone_configuration_panel.jpg
       :width: 400px
@@ -74,9 +75,9 @@ list. This will be a type with one field, that which needs to be done.
       :width: 400px
 
 #. By default, all Plone content-types have `Dublin Core
-   <http://en.wikipedia.org/wiki/Dublin_Core>`_ metadata enabled (you may know it
-   as ``title`` and ``description``. We don’t need this for our über simple Todo
-   list item. Uncheck ``Dublin Core metadata`` and then click ``Save``.
+   <http://en.wikipedia.org/wiki/Dublin_Core>`_ metadata enabled (you may know
+   it as ``title`` and ``description``. We don’t need this for our über simple
+   Todo list item. Uncheck ``Dublin Core metadata`` and then click ``Save``.
 
    .. image:: images/behaviors_config.jpg
       :width: 400px
@@ -96,9 +97,9 @@ list. This will be a type with one field, that which needs to be done.
    .. image:: images/add_todo_field.jpg
       :width: 400px
 
-#. You will see that a new field has been added to your content type. If you are
-   feeling adventuresome, click on the settings tab next to the field to set
-   other properties, or just see what’s available.
+#. You will see that a new field has been added to your content type. If you
+   are feeling adventuresome, click on the settings tab next to the field to
+   set other properties, or just see what’s available.
 
    .. image:: images/final_todo_fields_config.jpg
       :width: 400px
@@ -134,8 +135,8 @@ root of the site so it's easy to debug.
       :width: 400px
 
    You may be wondering about earlier, when we asked you to make sure that the
-   `short name` for the Todo Item was called ``title``. The time has come to let
-   you in on a little secret. Calling the short name either ``title`` or
+   `short name` for the Todo Item was called ``title``. The time has come to
+   let you in on a little secret. Calling the short name either ``title`` or
    ``description`` will automatically add that text to the livesearch menu.
    WHAT?!? I know! When life gives you lemonade, spike it with vodka and enjoy
    liberally! You can now search for your Todo Items in Live Search.
@@ -144,8 +145,8 @@ root of the site so it's easy to debug.
       :width: 400px
 
 But wait a minute... This todo item is marked ``private``, and that doesn't
-really make sense. It's a good thing Plone has an easy solution for that. In the
-next section, we will go over the basics of that magical, mystical word:
+really make sense. It's a good thing Plone has an easy solution for that. In
+the next section, we will go over the basics of that magical, mystical word:
 `workflow`.
 
 
@@ -180,15 +181,15 @@ Todo Items really have 2 states that we are interested in: `open` and
 
    On this page, we see all content-types in our portal `mapped` to a workflow.
    Our new type, Todo Item, is mapped to ``(Default)``. You can see right below
-   that the default is ``Simple Publication Workflow``. This is just too complex
-   for our little Todo Item.
+   that the default is ``Simple Publication Workflow``. This is just too
+   complex for our little Todo Item.
 
    .. image:: images/default_workflow.jpg
       :width: 400px
 
 #. So let's create a new one that suites our needs perfectly! Click the
-   ``contents`` tab at the top of the page to get a listing of all the available
-   workflows.
+   ``contents`` tab at the top of the page to get a listing of all the
+   available workflows.
 
    .. image:: images/portal_workflow_contents.jpg
       :width: 400px
@@ -261,9 +262,9 @@ Todo Items really have 2 states that we are interested in: `open` and
    .. image:: images/transitions_tab.jpg
       :width: 400px
 
-#. Add two transitions: `complete` and `reopen`. When a user `completes` a task,
-   it will move into the `completed` state. When a user `reopens` a task, it
-   will go back to the `open` state.
+#. Add two transitions: `complete` and `reopen`. When a user `completes` a
+   task, it will move into the `completed` state. When a user `reopens` a task,
+   it will go back to the `open` state.
 
    .. image:: images/add_transitions.jpg
       :width: 400px
@@ -282,12 +283,12 @@ Todo Items really have 2 states that we are interested in: `open` and
    ``Modify portal content`` to the ``Permissions`` box.
 
    All this means nothing if we don't give the user a chance to change the
-   state. Next to ``Display in actions box``, we can set the title for what will
-   be displayed in the workflow drop down box of the item (where `Pending`,
-   `Reject`, etc where earlier). Let's call it ``Complete``. Last but not least,
-   we need to add the url that the action points to. I could make this tutorial
-   100 years long and explain why you have to do this, but accept that it has to
-   be done, relax, and follow this formula:
+   state. Next to ``Display in actions box``, we can set the title for what
+   will be displayed in the workflow drop down box of the item (where
+   `Pending`, `Reject`, etc where earlier). Let's call it ``Complete``. Last
+   but not least, we need to add the URL that the action points to. I could
+   make this tutorial 100 years long and explain why you have to do this, but
+   accept that it has to be done, relax, and follow this formula:
 
    .. code-block:: bash
 
@@ -316,8 +317,8 @@ Todo Items really have 2 states that we are interested in: `open` and
 
 
 #. Let's update the `reopen` transition and update in a similar manner. This
-   time, the destination state is ``open``, and following the formula above, the
-   URL is ``%(content_url)s/content_status_modify?workflow_action=reopen``.
+   time, the destination state is ``open``, and following the formula above,
+   the URL is ``%(content_url)s/content_status_modify?workflow_action=reopen``.
 
    .. image:: images/save_reopen.jpg
       :width: 400px
@@ -360,21 +361,21 @@ Todo Items really have 2 states that we are interested in: `open` and
 #. Instead of mapping to the ``(Default)`` workflow, we are going to map to the
    id of our new workflow, ``todo_item_workflow``, and then click ``Change``.
 
-   If you already have TODO items in your site, you MUST click ``Update Security
-   Settings`` to update the workflow for the items. Instead of going into gross
-   detail about why this is the case, just sit back, relax, finish the tutorial,
-   and remember to click this button any time you make changes (yes! you can
-   continue to change and update your workflows!).
+   If you already have TODO items in your site, you MUST click ``Update
+   Security Settings`` to update the workflow for the items. Instead of going
+   into gross detail about why this is the case, just sit back, relax, finish
+   the tutorial, and remember to click this button any time you make changes
+   (yes! you can continue to change and update your workflows!).
 
    .. image:: images/map_to_workflow.jpg
       :width: 400px
 
 #. Could the time have arrived? Time to try it out? YES! Go to your ``Todo``
-   folder and add a new TODO Item. Validate that the workflow works as expected.
-   By toggling between the states.
+   folder and add a new TODO Item. Validate that the workflow works as
+   expected. By toggling between the states.
 
    .. image:: images/works.jpg
       :width: 400px
 
-Congrats! You have now passed `Plone Workflow 101`. Next we will transition from
-developing through the web (TTW) to developing on the filesystem.
+Congrats! You have now passed `Plone Workflow 101`. Next we will transition
+from developing through the web (TTW) to developing on the filesystem.

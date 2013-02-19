@@ -12,8 +12,8 @@
 Chapter 3: Custom View
 ======================
 
-In this chapter you will learn how to add a custom view -- in our case a listing
-of Todo Items.
+In this chapter you will learn how to add a custom view -- in our case a
+listing of Todo Items.
 
 View class
 ==========
@@ -42,9 +42,9 @@ View template
 =============
 
 Now that we have a class we can also add the template. Go to `tutorial.todoapp
-repo on GitHub <https://github.com/collective/tutorial.todoapp/>`_ and copy over
-code from ``src/tutorial/todoapp/browser/todo.pt`` to your local computer or,
-again, use git.
+repo on GitHub <https://github.com/collective/tutorial.todoapp/>`_ and copy
+over code from ``src/tutorial/todoapp/browser/todo.pt`` to your local computer
+or, again, use git.
 
 .. code-block:: bash
 
@@ -89,8 +89,9 @@ Try it out
 ==========
 
 Because the XML configuration of our product has change, we need to
-reinstall the product. This is accomplished by ``deactivating`` and ``reactivating``
-the product. Navigate to the add-ons manager or go directly to ``http://localhost:8080/Plone/@@overview-controlpanel``.
+reinstall the product. This is accomplished by ``deactivating`` and
+``reactivating`` the product. Navigate to the add-ons manager or go directly
+to ``http://localhost:8080/Plone/@@overview-controlpanel``.
 
    .. image:: images/find_addons.jpg
       :width: 400px
@@ -103,11 +104,11 @@ Deactivate the tutorial.todoapp product, and then reactivate it.
    .. image:: images/reactivate.jpg
       :width: 400px
 
-Note that every time you make a change to the xml files, by exporting or manual edit, you
-must reactivate the product for the changes to take effect!
+Note that every time you make a change to the xml files, by exporting or manual
+edit, you must reactivate the product for the changes to take effect!
 
-Now, we apply the new view to the folder holding our todo items. Navigate to the folder you
-created in chapter 1, and update the display.
+Now, we apply the new view to the folder holding our todo items. Navigate to
+the folder you created in chapter 1, and update the display.
 
    .. image:: images/select_todo_view.jpg
       :width: 400px
@@ -117,7 +118,8 @@ Celebrate!
    .. image:: images/custom_view.jpg
       :width: 400px
 
-If the de-activate / activate does not work you may need to restart plone instance to see the changes
+If the de-activate / activate does not work you may need to restart Plone
+instance to see the changes.
 
 Tests
 =====

@@ -61,8 +61,8 @@ This tells us on which URL the view will be available on. In this case, on
     def render(self):
 
 ``render`` is a special function that must be used. It is where all of the code
-must go when used with grok directives. This is the main block of code that will
-be executed.
+must go when used with grok directives. This is the main block of code that
+will be executed.
 
 .. code-block:: python
 
@@ -83,10 +83,10 @@ when used with certain jQuery calls it is expected to have the header set
 correctly. If you don't set this, it will sometimes work and sometimes not. Get
 used to setting it!
 
-Additionally, we return the result serialized as json by default. For making and
-testing JSON web service calls, keep in mind that they should do exactly one
-thing and no more. This makes it easy to integrate with Javascript and VERY easy
-to test. We'll see later on how easy it is to test this view.
+Additionally, we return the result serialized as json by default. For making
+and testing JSON web service calls, keep in mind that they should do exactly
+one thing and no more. This makes it easy to integrate with Javascript and VERY
+easy to test. We'll see later on how easy it is to test this view.
 
 Furthermore, before taking the plunge to wire up JavaScript, go directly to the
 url and test the change. For example, if you have an item at
@@ -119,8 +119,8 @@ Starting with bling from the start will only bring you pain.
 Custom JavaScript
 =================
 
-Now that we know the view is working, let's add some AJAX handling on the top of
-it. Checkout the Javascript file and a JavaScript registry file into your
+Now that we know the view is working, let's add some AJAX handling on the top
+of it. Checkout the Javascript file and a JavaScript registry file into your
 working directory:
 
 .. code-block:: bash
@@ -128,9 +128,9 @@ working directory:
     git checkout master src/tutorial/todoapp/browser/static/todoapp.js
     git checkout master src/tutorial/todoapp/profiles/default/jsregistry.xml
 
-``jsregistry.xml`` contains all configuration needed to tell Plone how it should
-register and use our JavaScript. It has a lot of options that are pretty self
-explanatory (if you think like a machine).
+``jsregistry.xml`` contains all configuration needed to tell Plone how it
+should register and use our JavaScript. It has a lot of options that are pretty
+self explanatory (if you think like a machine).
 
 .. literalinclude:: ../src/tutorial/todoapp/profiles/default/jsregistry.xml
     :linenos:
@@ -163,8 +163,8 @@ to verify that your JavaScript is registered in Plone.
 
 
 Lastly, add a new test module: ``test_workflow.py``. Download it from GitHub,
-put and it in your ``tests`` folder and run tests. Then fiddle around with it to
-see what it does. As always, you can use git to get the file.
+put and it in your ``tests`` folder and run tests. Then fiddle around with it
+to see what it does. As always, you can use git to get the file.
 
    .. code-block:: bash
 
