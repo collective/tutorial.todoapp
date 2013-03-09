@@ -44,7 +44,7 @@ your own buildout, please feel free to do so.
    ``http://collective-docs.plone.org/en/latest/getstarted/installation.html``::
 
     > git clone git://github.com/collective/tutorial.todoapp.git
-    > ./bin/virtualenv --no-site-packages tutorial.todoapp
+    > virtualenv --no-site-packages tutorial.todoapp
     > cd tutorial.todoapp
     > git checkout chapter1
     > ./bin/python bootstrap.py --distribute
