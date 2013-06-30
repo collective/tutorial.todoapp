@@ -8,10 +8,10 @@ from plone.dexterity.content import Item
 
 import json
 
-# Search for templates in the current directory.
+# Search for templates in the "templates" directory.
 # Hopefully this line won't be needed in the future as I hope that we can tell
-# grok to look in the current dir by default.
-grok.templatedir('.')
+# grok to look there by default.
+grok.templatedir('templates')
 
 
 class Todo(grok.View):
@@ -65,4 +65,4 @@ class WorkflowTransition(grok.View):
         """Return available transitions for an item."""
         workflow_tool = api.portal.get_tool('portal_workflow')
         items = workflow_tool.getTransitionsFor(item)
-        return [item['id'] for item in items]
+        return [i['id'] for i in items]
