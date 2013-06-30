@@ -3,6 +3,8 @@ python:
   - 2.7
 
 install:
+  - mkdir -p buildout-cache/eggs
+  - mkdir -p buildout-cache/downloads
   - $(which echo) -e "[buildout]\nextends = buildout.d/travis.cfg" > buildout.cfg
   - make version=$TRAVIS_PYTHON_VERSION .installed.cfg
 
