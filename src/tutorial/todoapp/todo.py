@@ -22,10 +22,10 @@ class Todo(grok.View):
 
 
 class WorkflowTransition(grok.View):
-    """
-    Change the state of an item. The context is implied by the url.
-    Returns state of the object after the transition, and possible
-    transitions in that state
+    """Change the state of an item.
+
+    The context is implied by the url. Returns state of the object after the
+    transition, and possible transitions in that state.
     """
 
     grok.context(Item)  # type of object on which this View is available
@@ -33,12 +33,15 @@ class WorkflowTransition(grok.View):
     grok.name('update_workflow')  # on what URL will this view be available
 
     def render(self):
+        """Render the @@update_workflow view response."""
+
         # the submitted form variables are stored in the request object
         transition = self.request.form.get('transition', '')
-        results = {'results': None,
-                   'success': False,
-                   'message': ''
-                   }
+        results = {
+            'results': None,
+            'success': False,
+            'message': ''
+        }
 
         if transition:
             try:
@@ -54,15 +57,12 @@ class WorkflowTransition(grok.View):
             }
 
         # set the right header for sending a JSON response
-        self.request.response.setHeader('Content-Type',
-                                        'application/json; charset=utf-8')
+        self.request.response.setHeader(
+            'Content-Type', 'application/json; charset=utf-8')
         return json.dumps(results)
 
     def get_possible_transitions(self, item):
-        """
-        Return the posible transitions for an item. This should
-        eventually get out of this tutorial, since its NASTY.
-        """
+        """Return available transitions for an item."""
         workflow_tool = api.portal.get_tool('portal_workflow')
         items = workflow_tool.getTransitionsFor(item)
         return [item['id'] for item in items]
