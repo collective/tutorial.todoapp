@@ -4,14 +4,11 @@ python:
 
 install:
   - $(which echo) -e "[buildout]\nextends = buildout.d/travis.cfg" > buildout.cfg
-  - python bootstrap.py
-  - bin/buildout
+  - make version=$TRAVIS_PYTHON_VERSION .installed.cfg
 
 script:
-  - ./pre-commit-check.sh
- 
+  - make tests
+
 notifications:
   irc:
     - "irc.freenode.org#sprint"
-  email:
-    - nejc.zupan@gmail.com
