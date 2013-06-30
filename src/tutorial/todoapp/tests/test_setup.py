@@ -27,19 +27,26 @@ class TestInstall(IntegrationTestCase):
 
     # metadata.xml
     def test_dependencies_installed(self):
-        """Test that all dependencies are installed."""
+        """Test that all product dependencies are installed.
+
+        These are add-on that would otherwise need to be installed through
+        the Plone Control Panel. Since they are listed in metadata.xml they
+        will be installed automatically when this product is installed.
+        """
         installer = api.portal.get_tool('portal_quickinstaller')
         self.assertTrue(installer.isProductInstalled('plone.app.dexterity'))
 
     # types/Folder.xml
     def test_folder_available_layouts(self):
-        """Test that our custom display layout (@@todo) is available on folders
-        and that the default ones are also still there.
+        """Test that our custom display layout (@@todo) is available on folder.
+
+        Also make sure that layouts that come with Plone out-of-the-box are
+        also still there.
         """
         layouts = self.portal.folder.getAvailableLayouts()
         layout_ids = [id for id, title in layouts]
 
-        # default layouts
+        # out-of-the-box layouts
         self.assertIn('folder_listing', layout_ids)
         self.assertIn('folder_summary_view', layout_ids)
         self.assertIn('folder_tabular_view', layout_ids)
@@ -49,7 +56,7 @@ class TestInstall(IntegrationTestCase):
         # our custom one
         self.assertIn('todo', layout_ids)
 
-    # types/todo_item.xml
+    # types.xml
     def test_todo_item_installed(self):
         """Test that Todo Item content type is listed in portal_types."""
         types = api.portal.get_tool('portal_types')
@@ -63,7 +70,7 @@ class TestInstall(IntegrationTestCase):
 
     # workflows.xml
     def test_todo_item_workflow(self):
-        """Test if todo_item is present and mapped to Todo Item content type."""
+        """Test if todo_item workflow is to Todo Item content type."""
         workflow = api.portal.get_tool('portal_workflow')
         for portal_type, chain in workflow.listChainOverrides():
             if portal_type in ('todo_item', ):
