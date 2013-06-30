@@ -20,7 +20,7 @@ the tutorial! I'll save the mumbo jumbo definitions for another day. In this
 first part, we will make a Todo list without touching any code. It won't be
 fancy, but it will give you a good idea of how things work in Plone.
 
-The way that Plone handles content is a little different than your average
+The way Plone handles content is a little different than your average
 relational database driven framework, so if you don't understand something
 right away, sit back, relax, and finish the tutorial.
 
@@ -90,9 +90,9 @@ list. This will be a type with one field, that which needs to be done.
       :width: 400px
 
 #. Add a field called ``Todo``, or anything else you want. But! Note that it's
-   very important that the `short name` is ``title``. By using this key short
-   name, we make sure that all Todo Items are searchable from smart search.
-   Update the field as seen below and click ``Add``.
+   very important that the `Short Name` field value is ``title``. By using
+   this key short name, we make sure that all Todo Items are searchable from
+   smart search. Update the field as seen below and click ``Add``.
 
    .. image:: images/add_todo_field.jpg
       :width: 400px
@@ -154,7 +154,7 @@ Getting Started with Workflows
 ==============================
 
 So, workflows. What are they? They are a mechanizm to control the flow of a
-content item through varios states. Most commonly, and by default in Plone,
+content item through various states through time. Most commonly, and by default in Plone,
 you deal with a `publication` workflow. For example: A writer writes up a News
 Item and submits it for reviewal. Then the in-house reviewing team goes through
 the text and publishes the News Item so it is public for the entire world to
