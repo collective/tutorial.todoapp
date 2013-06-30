@@ -3,7 +3,7 @@
 
 from DateTime import DateTime
 from plone import api
-from tutorial.todoapp.tests.base import IntegrationTestCase
+from tutorial.todoapp.testing import IntegrationTestCase
 
 import unittest2 as unittest
 

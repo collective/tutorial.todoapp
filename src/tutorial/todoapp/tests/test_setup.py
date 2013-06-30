@@ -2,7 +2,7 @@
 """Setup/installation tests for this package."""
 
 from plone import api
-from tutorial.todoapp.tests.base import IntegrationTestCase
+from tutorial.todoapp.testing import IntegrationTestCase
 
 import unittest2 as unittest
 

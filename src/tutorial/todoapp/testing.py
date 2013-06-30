@@ -60,6 +60,6 @@ class IntegrationTestCase(unittest.TestCase):
 
 
 class FunctionalTestCase(unittest.TestCase):
-    """Base class for functional tests."""
+    """Base class for functional tests using zope.testbrowser."""
 
     layer = FUNCTIONAL_TESTING

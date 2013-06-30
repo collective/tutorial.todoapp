@@ -2,7 +2,7 @@
 """Test Todo Item content type."""
 
 from plone import api
-from tutorial.todoapp.tests.base import IntegrationTestCase
+from tutorial.todoapp.testing import IntegrationTestCase
 import json
 
 import unittest2 as unittest
