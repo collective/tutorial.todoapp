@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """Setup/installation tests for this package."""
 
-from tutorial.todoapp.tests.base import IntegrationTestCase
 from plone import api
+from tutorial.todoapp.tests.base import IntegrationTestCase
 
 import unittest2 as unittest
 

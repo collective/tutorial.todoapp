@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 """A Folder view that lists Todo Items."""
 
+from Products.ATContentTypes.interface import IATFolder
 from five import grok
 from plone import api
 from plone.dexterity.content import Item
-from Products.ATContentTypes.interface import IATFolder
 
 import json
 
