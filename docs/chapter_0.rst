@@ -8,18 +8,20 @@
 .. index::
    single: Tutorial setup
 
-===========
+=============
 Prerequisites
-===========
+=============
 
-* You have Git  properly installed and vaguely know how to use it.
-* You are working with Python 2.6 or 2.7, and have already installed setuptools
-  and virtualenv.
+* You have Git installed and vaguely know how to use it.
+* You are working with Python 2.6 or 2.7
+* You have already installed (listed names are for Ubuntu/Debian, should be
+  similar for your distribution): `python-setuptools`, `python-virtualenv`,
+  `zlib1g-dev`, `libxslt1-dev` and `libxml2-dev`.
+* For Ubuntu/Debian users it may be worthwhile to install build-essential
+  (sudo apt-get install build-essential) to make sure you have necessary
+  build tools.
 * Sorry Windows users, but you'll have to translate as usual from n*x to
   Windows-ese.
-* For Ubuntu/Debian users it may be worthwhile to install build-essential
-  (sudo aptitude install build-essential) to make sure you have necessary
-  build tools.
 
 ==============
 Tutorial Setup
@@ -71,3 +73,22 @@ skeleton.
       :width: 400px
 
 Woot! Let's go.
+
+
+===============
+Troubleshooting
+===============
+
+Sometimes setting up development environment gives you lemons. There are various
+ways to go around that.
+
+In case you don't have correct Python version or your system Python environment
+is broken (yes, I'm looking to you OSX), `buildout.python` gives you get out of
+jail free card. To install it, see
+`https://github.com/collective/buildout.python/blob/master/docs/INSTALL.txt`_.
+Then use `buildout.python/python-2.7/bin/python bootstrap.py --distribute` step as
+in `Tutorial Setup` section and so on.
+
+If everything fails, it's time to use a virtual machine. See instructions
+at `https://github.com/plone/coredev.vagrant#installation`_ to prepare and try
+again with `Tutorial Setup` section.
