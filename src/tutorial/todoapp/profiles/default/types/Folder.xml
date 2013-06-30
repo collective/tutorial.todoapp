@@ -1,11 +1,6 @@
 <?xml version="1.0"?>
 <object name="Folder">
-    <property name="view_methods">
-        <element value="folder_listing"/>
-        <element value="folder_summary_view"/>
-        <element value="folder_tabular_view"/>
-        <element value="atct_album_view"/>
-        <element value="folder_full_view"/>
+    <property name="view_methods" purge="False">
 
         <!-- Add our @@todo view to the list -->
         <element value="todo"/>
