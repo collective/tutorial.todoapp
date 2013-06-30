@@ -1,8 +1,12 @@
+*.mo
+*.pyc
 .DS_Store
+.Python
 .installed.cfg
 .mr.developer.cfg
 bin
 develop-eggs
+docs/Makefile
 docs/doctrees
 docs/html
 docs/make.bat
@@ -15,9 +19,6 @@ include
 lib
 local
 parts
-var
 src/plone.api
-docs/Makefile
 src/tutorial.todoapp.egg-info
-*.pyc
-*.mo
+var
