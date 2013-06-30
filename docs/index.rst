@@ -27,27 +27,16 @@ The Tutorial
 Developer Documentation
 =======================
 
-Information on how to contribute to this tutorial.
+Information on how to contribute to this tutorial. Note that all code
+should follow `plone.api code conventions
+<http://ploneapi.readthedocs.org/en/latest/contribute/conventions.html>`_.
 
 .. toctree::
     :maxdepth: 2
 
-    conventions.rst
     release.rst
     HISTORY.rst
-
-Other
-=======================
-
-Other information regarding this tutorial.
-
-.. toctree::
-    :maxdepth: 2
-
-    contribute
-    add_plone_site
-    tutorial
-    LICENSE
+    LICENSE.rst
 
 
 Indices and tables

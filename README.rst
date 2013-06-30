@@ -2,7 +2,7 @@
 Plone Todo list application tutorial
 ====================================
 
-:Framework: `Plone 4.2 <http://plone.org>`_
+:Framework: `Plone 4.3 <http://plone.org>`_
 :Bug tracker: https://github.com/collective/tutorial.todoapp/issues
 :Source: https://github.com/collective/tutorial.todoapp
 :Documentation: http://tutorialtodoapp.readthedocs.org/

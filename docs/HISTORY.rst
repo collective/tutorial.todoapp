@@ -4,6 +4,21 @@
 Changelog
 =========
 
+1.1 (2013-05-30)
+----------------
+
+- Instructions for preparing the environment on various OSes.
+  [ielectric, zupo]
+
+- Proof-reading the tutorial text.
+  [ielectric]
+
+- Use latest best practices from bobtemplates.niteoweb.
+  [zupo]
+
+- Use Plone 4.3.
+  [zupo]
+
 
 1.0 (2012-09-11)
 ----------------

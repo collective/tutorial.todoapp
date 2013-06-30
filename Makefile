@@ -9,7 +9,7 @@ all: docs tests
 
 docs: docs/html/index.html
 
-docs/html/index.html: docs/*.rst src/tutorial/todoapp/*.py \
+docs/html/index.html: README.rst docs/*.rst src/tutorial/todoapp/*.py \
 		src/tutorial/todoapp/tests/*.py bin/sphinx-build
 	bin/sphinx-build docs docs/html
 	@touch $@
