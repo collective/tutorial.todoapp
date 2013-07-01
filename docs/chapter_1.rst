@@ -62,14 +62,9 @@ list. This will be a type with one field, that which needs to be done.
    .. image:: images/add_todo_content_type.jpg
       :width: 400px
 
-#. Now you will see that there is a new type to play with. Let’s adjust a few
-   things. Click the name of the new type to edit.
-
-   .. image:: images/edit_todo_item.jpg
-      :width: 400px
-
-#. There are two important things we need to do here: we need to adjust some
-   `behaviors`, and add some `fields`. Let’s look at the behaviors first.
+#. Now you will see that there is a new type to play with. There are two
+   important things we need to do here: we need to adjust some `behaviors`,
+   and add some `fields`. Let’s look at behaviors first.
 
    .. image:: images/todo_item_behaviors.jpg
       :width: 400px
@@ -113,7 +108,7 @@ Todo Items in one particular folder so that we can have collections of items
 throughout the site. For this tutorial, we will be putting everything in the
 root of the site so it's easy to debug.
 
-#. From the root, add a new folder called ``Todo``.
+#. From the root, add a new folder called ``TODO list``.
 
    .. image:: images/add_folder_menu.jpg
       :width: 400px
@@ -167,9 +162,6 @@ simple publication whodie whatie grble gobble??!?! Just like before, let's
 bypass trying to explain what that means and just fix it. Relax, enjoy, and
 finish the tutorial!
 
-If you aren't interested in workflows, or already know all about this stuff,
-feel free to skip straight to the next chapter!
-
 Todo Items really have 2 states that we are interested in: `open` and
 `complete`. Let's make that happen.
 
@@ -215,7 +207,7 @@ Todo Items really have 2 states that we are interested in: `open` and
    .. image:: images/save_rename_workflow.jpg
       :width: 400px
 
-#. You will be spit back out and the workflow contents page. Click the workflow
+#. You will be spit back out to the workflow contents page. Click the workflow
    to start editing.
 
    .. image:: images/edit_todo_workflow.jpg
@@ -231,11 +223,11 @@ Todo Items really have 2 states that we are interested in: `open` and
    encoutered the concept. The best analogy in our case is to a car. The car
    engine has two simple states: `on` and `off`. To transition from on to off
    and vice versa, it needs some action from the driver. The same for our TODO
-   items. They have two states: `open` and `complete`. In order to get them
-   from `Incomplete` to `Complete`, the user needs to click something. Don't
+   items. They have two states: `open` and `completed`. In order to get them
+   from `open` to `completed`, the user needs to click something. Don't
    understand yet? Relax, sit back, and finish the tutorial.
 
-   Lets start by adding out base states. We will call them `open` and
+   Lets start by adding our base states. We will call them `open` and
    `complete`. From the edit workflow screen, click on the ``States`` tab.
 
    .. image:: images/workflow_base_view.jpg
@@ -255,9 +247,9 @@ Todo Items really have 2 states that we are interested in: `open` and
    .. image:: images/add_completed.jpg
       :width: 400px
 
-#. Next lets add the transitions. The transitions will take the TODO item from
-   `open` to `completed` and vice versa (in case a user accidentally marks an
-   item as complete. Click on the ``Transitions`` tab.
+#. Next lets add `transitions`. They will take the TODO item from
+   `open` to `completed` and vice versa (in case a user wants to revert an item
+   back to `open`). Click on the ``Transitions`` tab.
 
    .. image:: images/transitions_tab.jpg
       :width: 400px
@@ -279,13 +271,13 @@ Todo Items really have 2 states that we are interested in: `open` and
    optional but adding one will help you keep your thoughts clear and remind
    the `future you` what the `today you` is thinking. The destination state
    should be set to ``completed``. We also want to make sure that only people
-   with mega permissions, or the owner itself, can change the state so we add
-   ``Modify portal content`` to the ``Permissions`` box.
+   with mega permissions, or the creator of the todo item itself, can change
+   the state so we add ``Modify portal content`` to the ``Permissions`` box.
 
    All this means nothing if we don't give the user a chance to change the
    state. Next to ``Display in actions box``, we can set the title for what
    will be displayed in the workflow drop down box of the item (where
-   `Pending`, `Reject`, etc where earlier). Let's call it ``Complete``. Last
+   `Pending`, `Reject`, etc. where earlier). Let's call it ``Complete``. Last
    but not least, we need to add the URL that the action points to. I could
    make this tutorial 100 years long and explain why you have to do this, but
    accept that it has to be done, relax, and follow this formula:
@@ -324,8 +316,8 @@ Todo Items really have 2 states that we are interested in: `open` and
       :width: 400px
 
 #. Now we have 2 states and 2 transitions, but they aren't 100% linked
-   together... yet. Go back to the workflow listing, click the ``States`` tab
-   and then and click on ``completed`` to edit the state.
+   together ... yet. Go back to the workflow listing, click the ``States`` tab
+   and then click on ``completed`` to edit the state.
 
    .. image:: images/back_to_workflow.jpg
       :width: 400px
@@ -336,8 +328,9 @@ Todo Items really have 2 states that we are interested in: `open` and
 #. Add a title, since this is what users see in the top right corner of the
    TODO items, and then check ``reopen`` as a possible transition. This means
    that when a TODO item is completed, it will only allow the user to reopen it
-   (and not re-complete it, for example). In the same respect, open the open
-   transition, add a title, and mark ``complete`` as a possible transition.
+   (and not re-complete it, for example). In the same respect, open the
+   ``open`` transition, add a title, and mark ``complete`` as a possible
+   transition.
 
    .. image:: images/save_completed.jpg
       :width: 400px

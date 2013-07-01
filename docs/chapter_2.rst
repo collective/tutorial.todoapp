@@ -23,8 +23,8 @@ Now, why would you even want to do that? Here's a couple of reasons:
 
    The most obvious one: when you store the configuration of your content-type
    and your workflow in a `VCS <http://en.wikipedia.org/wiki/Revision_control>`_,
-   you can track how they changed over time. It useful to be able to look back
-   a few months and see how your files changed.
+   you can track how they changed over time. It's useful to be able to look
+   back a few months and see how your files changed.
 
 #. **Distribution to other developers**
 
