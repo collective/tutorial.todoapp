@@ -46,6 +46,11 @@ the context of the Unified Installer by just installing the source skeleton.
     > git clone git://github.com/collective/tutorial.todoapp.git ./
     > make
 
+.. note::
+
+    This will take your system python interpreter. If you wish to use a custom
+    one, run it like `make python=/usr/local/bin/python2.7`
+
 #. Next up, start the Plone instance::
 
     > ./bin/instance fg
@@ -85,7 +90,7 @@ Sometimes setting up development environment gives you lemons. There are various
 ways to go around that.
 
 In case you don't have correct Python version or your system Python environment
-is broken (yes, I'm looking to you OSX), `buildout.python` gives you get out of
+is broken (yes, I'm looking to you OS X), `buildout.python` gives you get out of
 jail free card. To install it, see the
 `install docs <https://github.com/collective/buildout.python/blob/master/docs/INSTALL.txt>`_.
 Then use `buildout.python/python-2.7/bin/python bootstrap.py --distribute` step as
