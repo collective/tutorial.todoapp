@@ -38,9 +38,9 @@ Now, why would you even want to do that? Here's a couple of reasons:
 
    Last, but the most important one, having your configuration exported to a
    filesystem package allows you to write tests for it. When your test runner
-   spins up a Plone site to run tests again, it needs to have the same
+   spins up a Plone site to run tests against, it needs to have the same
    content-type and workflow that you configured TTW. And importing
-   configuration is by far the easiest way to give him that.
+   configuration is by far the easiest way to give the test runner just that.
 
 
 Package skeleton
@@ -66,9 +66,9 @@ no error message so don't be surprised.
    .. image:: images/export_todo.jpg
       :width: 400px
 
-This will start a download to you machine. Navigate to that directory and
-unzip the contents of that directory. Here is an example of what this will
-look like:
+This will start a download to your machine. Navigate to the download directory
+and unzip the contents of the file that was downloaded. Here is an example of
+what it will look like:
 
    .. image:: images/dexterity_export.jpg
       :width: 400px
