@@ -4,7 +4,7 @@
 from Products.ATContentTypes.interface import IATFolder
 from five import grok
 from plone import api
-from plone.dexterity.content import Item
+from plone.dexterity.content import Container
 
 import json
 
@@ -28,7 +28,7 @@ class WorkflowTransition(grok.View):
     transition, and possible transitions in that state.
     """
 
-    grok.context(Item)  # type of object on which this View is available
+    grok.context(Container)  # type of object on which this View is available
     grok.require('zope2.View')  # what permission is needed for access
     grok.name('update_workflow')  # on what URL will this view be available
 

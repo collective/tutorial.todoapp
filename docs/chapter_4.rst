@@ -13,8 +13,8 @@ Chapter 4: Bling-bling
 ======================
 
 As a reward for making it all the way to the end, we will help you add some
-fancy features to your project, otherwise known as bling. Unfortunately, bling
-means having to write JavaScript. Plone comes with jQuery so we can easily
+fancy features to your project, otherwise known as bling and that means having
+to write JavaScript. Fortunately Plone comes with jQuery so we can easily
 integrate.
 
 The final part of this tutorial will allow users to check and un-check items on
@@ -29,25 +29,27 @@ AJAX view
 Before we add front-end bling, we need some code that can handle these requests
 coming in. Let's create a simple view that will update the object in context to
 a new state. Go to GitHub and copy the code for ``WorkflowTransition`` class
-in ``browser/todo.py``. This class represents a view that our AJAX code will
+in ``todo.py``. This class represents a view that our AJAX code will
 call. You can also get the code with git, however note that now we are checking
-out code from master, as Chapter 4 is the last chapter and it's code is in
+out code from master, as Chapter 4 is the last chapter and its code is in
 the master branch.
 
 .. code-block:: bash
 
    $ git checkout master src/tutorial/todoapp/browser/todo.py
 
-Take a look at the ``WorkflowTransition`` class and the comments around the
+Take a look at the ``WorkflowTransition`` class and comments around the
 code. There are a couple of things to point out specific to this setup:
 
 .. code-block:: python
 
-    grok.context(Item)
+    grok.context(Container)
 
-Tells us that this view should be called in the context of a Dexterity item. So
-if you try to go to this view from the portal root or anywhere in the site that
-is not a Dexterity item, Plone will return a 404 - not found error.
+Tells us that this view should be called in the context of a Dexterity
+Container item. So if you try to go to this view from the portal root or
+anywhere in the site that is not a Dexterity item, Plone will return a 404 -
+not found error. By default all Dexterity types that you create TTW are based
+on the Dexterity Container base class.
 
 .. code-block:: python
 
@@ -74,8 +76,8 @@ in ``self.request.form``.
 
 .. code-block:: python
 
-        self.request.response.setHeader('Content-Type',
-                                        'application/json; charset=utf-8')
+        self.request.response.setHeader(
+            'Content-Type', 'application/json; charset=utf-8')
         return json.dumps(results)
 
 When working with JSON, it's not *required* to set the header content type, but
@@ -119,9 +121,9 @@ Starting with bling from the start will only bring you pain.
 Custom JavaScript
 =================
 
-Now that we know the view is working, let's add some AJAX handling on the top
-of it. Checkout the Javascript file and a JavaScript registry file into your
-working directory:
+Now that we know the ``update_workflow`` view is working, let's add some AJAX
+handling on the top of it. Checkout the Javascript file and a JavaScript
+registry file into your working directory:
 
 .. code-block:: bash
 
@@ -153,9 +155,7 @@ to verify that your JavaScript is registered in Plone.
 
    # jsregistry.xml
    def test_js_registered(self):
-       """Test if todoapp.js JavaScript file is registered in
-       portal_javascript.
-       """
+       """Test that todoapp.js file is registered in portal_javascript."""
        resources = self.portal.portal_javascripts.getResources()
        ids = [r.getId() for r in resources]
 
@@ -169,6 +169,14 @@ to see what it does. As always, you can use git to get the file.
    .. code-block:: bash
 
       $ git checkout master src/tutorial/todoapp/tests/test_workflow.py
+
+
+The end
+=======
+
+This concludes the Todo app in Plone tutorial. Congratulations! Now it's time
+to checkout other tutorials and documentation available on `developer.plone.org
+<http://developer.plone.org>`_!
 
 
 Troubleshooting

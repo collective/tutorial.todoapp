@@ -78,9 +78,7 @@ class TestInstall(IntegrationTestCase):
 
     # jsregistry.xml
     def test_js_registered(self):
-        """Test if todoapp.js JavaScript file is registered in
-        portal_javascript.
-        """
+        """Test that todoapp.js file is registered in portal_javascript."""
         resources = self.portal.portal_javascripts.getResources()
         ids = [r.getId() for r in resources]
 
