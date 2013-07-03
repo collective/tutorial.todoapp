@@ -5,9 +5,6 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:grok="http://namespaces.zope.org/grok">
 
-    <!-- Zope2 initialization -->
-    <five:registerPackage package="." initialize=".initialize" />
-
     <!-- Include configuration for dependencies listed in setup.py -->
     <includeDependencies package="." />
 
