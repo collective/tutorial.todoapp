@@ -20,13 +20,13 @@ View class
 
 Let's start by adding the view class. You can go to `tutorial.todoapp repo on
 GitHub <https://github.com/collective/tutorial.todoapp/>`_ and copy over code
-from ``src/tutorial/todoapp/browser/todo.py`` to your local computer or just
+from ``src/tutorial/todoapp/todo.py`` to your local computer or just
 use git:
 
 .. code-block:: bash
 
    $ git branch --track chapter3 origin/chapter3  # tell git what chapter 3 is
-   $ git checkout chapter3 src/tutorial/todoapp/browser/todo.py
+   $ git checkout chapter3 src/tutorial/todoapp/todo.py
 
 We also need to tell Plone to display this view in the `display` drop-down menu
 for Folders so we will later be able to set our view as a default display view
@@ -43,14 +43,14 @@ View template
 
 Now that we have a class we can also add the template. Go to `tutorial.todoapp
 repo on GitHub <https://github.com/collective/tutorial.todoapp/>`_ and copy
-over code from ``src/tutorial/todoapp/browser/todo.pt`` to your local computer
-or, again, use git.
+over code from ``src/tutorial/todoapp/templates/todo.pt`` to your local
+computer or, again, use git.
 
 .. code-block:: bash
 
-    $ git checkout chapter3 src/tutorial/todoapp/browser/todo.pt
+    $ git checkout chapter3 src/tutorial/todoapp/templates/todo.pt
 
-The template uses ZPT syntax, `read more about it here
+The template uses the ZPT syntax, `read more about it here
 <http://wiki.zope.org/ZPT/TutorialPart1>`_.
 
 Static resources
@@ -60,17 +60,17 @@ The template displays different icons for different workflow states of your
 Todo Items. We need to add these icons to your package:
 
 #. Download ``open.png`` and ``completed.png`` from GitHub (they are in
-   ``src/tutorial/todoapp/browser/static``) into a new folder on your local
-   computer: ``src/tutorial/todoapp/browser/static``. You can use again git if
+   ``src/tutorial/todoapp/static``) into a new folder on your local
+   computer: ``src/tutorial/todoapp/static``. You can use git again if
    you don't like manual work.
 
    .. code-block:: bash
 
-      $ git checkout chapter3 src/tutorial/todoapp/browser/static
+      $ git checkout chapter3 src/tutorial/todoapp/static
 
 #. Tell Zope that this ``static`` folder contains static resources (icons,
    CCS files, JavaScript files, etc.) by adding the following lines to
-   ``src/tutorial/todoapp/browser/configure.zcml`` inside the ``<configure``
+   ``src/tutorial/todoapp/configure.zcml`` inside the ``<configure``
    tag:
 
    .. code-block:: xml
@@ -134,13 +134,15 @@ Folders have the ``todo`` view on the `Display` drop-down menu.
 
     # types/Folder.xml
     def test_folder_available_layouts(self):
-        """Test that our custom display layout (@@todo) is available on folders
-        and that the default ones are also still there.
+        """Test that our custom display layout (@@todo) is available on folder.
+
+        Also make sure that layouts that come with Plone out-of-the-box are
+        also still there.
         """
         layouts = self.portal.folder.getAvailableLayouts()
         layout_ids = [id for id, title in layouts]
 
-        # default layouts
+        # out-of-the-box layouts are still there
         self.assertIn('folder_listing', layout_ids)
         self.assertIn('folder_summary_view', layout_ids)
         self.assertIn('folder_tabular_view', layout_ids)

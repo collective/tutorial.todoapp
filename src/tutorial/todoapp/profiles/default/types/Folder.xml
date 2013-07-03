@@ -1,9 +1,7 @@
 <?xml version="1.0"?>
 <object name="Folder">
-    <property name="view_methods" purge="False">
-
-        <!-- Add our @@todo view to the list -->
-        <element value="todo"/>
-
-    </property>
+  <property name="view_methods" purge="False">
+    <!-- Add our @@todo view to the list -->
+    <element value="todo"/>
+  </property>
 </object>

@@ -46,7 +46,7 @@ class TestInstall(IntegrationTestCase):
         layouts = self.portal.folder.getAvailableLayouts()
         layout_ids = [id for id, title in layouts]
 
-        # out-of-the-box layouts
+        # out-of-the-box layouts are still there
         self.assertIn('folder_listing', layout_ids)
         self.assertIn('folder_summary_view', layout_ids)
         self.assertIn('folder_tabular_view', layout_ids)

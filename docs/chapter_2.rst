@@ -182,6 +182,7 @@ end the file should look like this:
 
     <?xml version="1.0"?>
     <object name="portal_workflow" meta_type="Plone Workflow Tool">
+     <object name="todo_item_workflow" meta_type="Workflow"/>
      <bindings>
       <type type_id="todo_item">
        <bound-workflow workflow_id="todo_item_workflow"/>
