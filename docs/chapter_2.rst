@@ -125,7 +125,7 @@ In the `portal_setup` tool, click on the export tab.
       :width: 400px
 
 There are a LOT of things that you can export here, but that is for a different
-tutorial. For now, find export item #28 called ``Workflow Tool``, check the box
+tutorial. For now, find export item #27 called ``Workflow Tool``, check the box
 to the left. Then scroll all the way to the bottom and
 ``Export selected steps``.
 
@@ -148,6 +148,36 @@ Place all of these files in your profile at
 
     tutorial.todoapp/src/tutorial/todoapp/profiles/default
 
+Now, this export exported the entire configuration for all workflows in your
+site. But you are only interested in the ``todo_item_workflow`` configuration
+and you don't want to change configuration for other workflows. So, first,
+remove all other workflow definitions (XML files).
+
+   .. code-block:: bash
+
+    rm tutorial.todoapp/src/tutorial/todoapp/profiles/default/workflows/comment_review_workflow
+    rm tutorial.todoapp/src/tutorial/todoapp/profiles/default/workflows/folder_workflow
+    rm tutorial.todoapp/src/tutorial/todoapp/profiles/default/workflows/intranet_folder_workflow
+    rm tutorial.todoapp/src/tutorial/todoapp/profiles/default/workflows/intranet_workflow
+    rm tutorial.todoapp/src/tutorial/todoapp/profiles/default/workflows/one_state_workflow
+    rm tutorial.todoapp/src/tutorial/todoapp/profiles/default/workflows/plone_workflow
+    rm tutorial.todoapp/src/tutorial/todoapp/profiles/default/workflows/simple_publication_workflow
+    rm tutorial.todoapp/src/tutorial/todoapp/profiles/default/workflows/todo_item_workflow
+
+Secondly, remove all non-todoitem-related stuff from ``workflows.xml``. In the
+end the file should look like this:
+
+   .. code-block:: xml
+
+    <?xml version="1.0"?>
+    <object name="portal_workflow" meta_type="Plone Workflow Tool">
+     <bindings>
+      <type type_id="todo_item">
+       <bound-workflow workflow_id="todo_item_workflow"/>
+      </type>
+     </bindings>
+    </object>
+
 And you are done! Congratulations on the birth of your new product!
 
 
@@ -164,7 +194,7 @@ tests, but at least you try if your test runner works.
 
 .. code-block:: bash
 
-    tutorial.todoapp$ bin/test
+    tutorial.todoapp$ make tests
     Total: 0 tests, 0 failures, 0 errors in 0.000 seconds.
 
 Note: you do *NOT* need to stop your Plone instance in order to run tests. They
@@ -181,13 +211,7 @@ the tests with git:
    $ git branch --track chapter2 origin/chapter2  # tell git what chapter2 is
    $ git checkout chapter2 src/tutorial/todoapp/tests  # get tests
 
-In this folder there will be many new files:
-
-- **base.py**
-
-  This module contains code that bootstraps your test environment: start up
-  Zope, add a Plone site, install your package, etc. Code in here is mostly
-  boilerplate so for now just use it and mind what exactly it does underneath.
+This folder will contain your test files:
 
 - **test_setup.py**
 
@@ -204,12 +228,12 @@ and its comments are in themselves informative and we will rather encourage you
 to go through all tests, try to understand what they do, maybe change something
 and see what happens, etc.
 
-Remember that you run tests with ``bin/test`` and you should get an output that
+Remember that you run tests with ``make tests`` and you should get an output that
 looks somewhat like this:
 
 .. code-block:: bash
 
-    tutorial.todoapp$ bin/test
+    tutorial.todoapp$ make tests
     [...snip...]
     Set up tutorial.todoapp.tests.base.TodoAppLayer:Integration in 0.000 seconds.
     Running:
@@ -222,6 +246,7 @@ looks somewhat like this:
     Tear down plone.testing.z2.Startup in 0.012 seconds.
     Tear down plone.testing.zca.LayerCleanup in 0.004 seconds.
 
+Also, remember that whenever you run ``make`` your tests are gonna be run too.
 
 Troubleshooting
 ===============
