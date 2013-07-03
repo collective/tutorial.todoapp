@@ -84,6 +84,17 @@ the files into
 
     tutorial.todoapp/src/tutorial/todoapp/profiles/default
 
+.. warning::
+
+    There is a bug in Plone 4.3 that makes the import process brake when
+    parsing XMLs that the export tool exports. To make it work we need to
+    remove the `comment` line from ``types.xml``:
+
+    .. code-block:: xml
+
+        <!---*- extra stuff goes here -*--->
+
+
 Anytime you perform some sort of configuration export from Plone to a custom
 product, you will put the XML files in the profiles/default folder. Every time
 you make changes to your types, you should re-export and save into the same
