@@ -51,6 +51,19 @@ the context of the Unified Installer by just installing the source skeleton.
     This will take your system python interpreter. If you wish to use a custom
     one, run it like `make python=/usr/local/bin/python2.7`
 
+.. note::
+
+    Whenever you are stuck with a broken environment and want to start over,
+    run ``make clean`` followed by ``make``. This will remove everything but
+    your source files and your database, and then continue to rebuild the
+    entire environment.
+
+.. note::
+
+    Running ``make`` also generates this documentation for you locally and
+    runs all tests. See ``Makefile`` for other commands you have available,
+    such as ``make docs`` and ``make tests``.
+
 #. Next up, start the Plone instance::
 
     > ./bin/instance fg
