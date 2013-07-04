@@ -25,7 +25,6 @@ class TodoAppLayer(PloneSandboxLayer):
         # Load ZCML
         import tutorial.todoapp
         self.loadZCML(package=tutorial.todoapp)
-        z2.installProduct(app, 'tutorial.todoapp')
 
     def setUpPloneSite(self, portal):
         """Set up Plone."""
