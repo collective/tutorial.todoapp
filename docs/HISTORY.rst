@@ -4,14 +4,14 @@
 Changelog
 =========
 
-1.1 (2013-05-30)
+1.1 (2013-07-04)
 ----------------
 
 - Instructions for preparing the environment on various OSes.
   [ielectric, zupo]
 
 - Proof-reading the tutorial text.
-  [ielectric]
+  [ielectric, zupo]
 
 - Use latest best practices from bobtemplates.niteoweb.
   [zupo]
