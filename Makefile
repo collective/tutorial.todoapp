@@ -1,8 +1,7 @@
 # convenience makefile to boostrap & run buildout
 # use `make options=-v` to run buildout with extra options
 
-version = 2.7
-python = bin/python
+python = python2.7
 options =
 
 all: docs tests
@@ -21,12 +20,12 @@ bin/sphinx-build: .installed.cfg
 .installed.cfg: bin/buildout buildout.cfg buildout.d/*.cfg setup.py
 	bin/buildout $(options)
 
-bin/buildout: $(python) buildout.cfg bootstrap.py
-	$(python) bootstrap.py -d
+bin/buildout: bin/python buildout.cfg bootstrap.py
+	bin/python bootstrap.py -d
 	@touch $@
 
-$(python):
-	virtualenv -p python$(version) --no-site-packages .
+bin/python:
+	virtualenv -p $(python) --no-site-packages .
 	@touch $@
 
 tests: .installed.cfg
