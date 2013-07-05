@@ -42,8 +42,8 @@ the context of the Unified Installer by just installing the source skeleton.
    and Linux machines with pre-installed versions of Python. If you run into
    issues, please see :ref:`troubleshooting`::
 
-    > mkdir tutorial.todoapp
-    > git clone git://github.com/collective/tutorial.todoapp.git ./
+    > git clone git://github.com/collective/tutorial.todoapp.git --branch chapter1
+    > cd tutorial.todoapp
     > make
 
 .. note::
