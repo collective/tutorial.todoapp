@@ -36,7 +36,7 @@ the master branch.
 
 .. code-block:: bash
 
-   $ git checkout master src/tutorial/todoapp/browser/todo.py
+   $ git checkout master src/tutorial/todoapp/todo.py
 
 Take a look at the ``WorkflowTransition`` class and comments around the
 code. There are a couple of things to point out specific to this setup:
@@ -127,7 +127,7 @@ registry file into your working directory:
 
 .. code-block:: bash
 
-    git checkout master src/tutorial/todoapp/browser/static/todoapp.js
+    git checkout master src/tutorial/todoapp/static/todoapp.js
     git checkout master src/tutorial/todoapp/profiles/default/jsregistry.xml
 
 ``jsregistry.xml`` contains all configuration needed to tell Plone how it
