@@ -173,7 +173,6 @@ remove all other workflow definitions (XML files).
     rm tutorial.todoapp/src/tutorial/todoapp/profiles/default/workflows/one_state_workflow
     rm tutorial.todoapp/src/tutorial/todoapp/profiles/default/workflows/plone_workflow
     rm tutorial.todoapp/src/tutorial/todoapp/profiles/default/workflows/simple_publication_workflow
-    rm tutorial.todoapp/src/tutorial/todoapp/profiles/default/workflows/todo_item_workflow
 
 Secondly, remove all non-todoitem-related stuff from ``workflows.xml``. In the
 end the file should look like this:
