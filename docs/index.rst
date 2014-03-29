@@ -8,7 +8,7 @@
    single: Tutorial table of contents
 
 
-.. include:: ../README.rst
+.. include:: README.rst
 
 
 The Tutorial
