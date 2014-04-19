@@ -42,8 +42,8 @@ the context of the Unified Installer by just installing the source skeleton.
    and Linux machines with pre-installed versions of Python. If you run into
    issues, please see :ref:`troubleshooting`::
 
-    > git clone git://github.com/collective/tutorial.todoapp.git --branch chapter1
-    > cd tutorial.todoapp
+    > mkdir tutorial.todoapp
+    > git clone git://github.com/collective/tutorial.todoapp.git ./
     > make
 
 .. note::
@@ -63,6 +63,11 @@ the context of the Unified Installer by just installing the source skeleton.
     Running ``make`` also generates this documentation for you locally and
     runs all tests. See ``Makefile`` for other commands you have available,
     such as ``make docs`` and ``make tests``.
+
+
+#. Before starting the Plone instance, lets activate our virtualenv. For more information on virtualenv check :ref:`virtualenv`::
+
+    > source bin/activate
 
 #. Next up, start the Plone instance::
 
@@ -91,6 +96,16 @@ the context of the Unified Installer by just installing the source skeleton.
       :width: 400px
 
 Woot! Let's go.
+
+.. _virtualenv:
+
+
+
+===========
+Virtualenv
+===========
+
+virtualenv is a tool to create isolated Python environments. `virtualenv documentation <http://www.virtualenv.org/en/latest/>`_. 
 
 .. _troubleshooting:
 
