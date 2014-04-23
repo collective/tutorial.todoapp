@@ -166,13 +166,13 @@ remove all other workflow definitions (XML files).
 
    .. code-block:: bash
 
-    rm tutorial.todoapp/src/tutorial/todoapp/profiles/default/workflows/comment_review_workflow
-    rm tutorial.todoapp/src/tutorial/todoapp/profiles/default/workflows/folder_workflow
-    rm tutorial.todoapp/src/tutorial/todoapp/profiles/default/workflows/intranet_folder_workflow
-    rm tutorial.todoapp/src/tutorial/todoapp/profiles/default/workflows/intranet_workflow
-    rm tutorial.todoapp/src/tutorial/todoapp/profiles/default/workflows/one_state_workflow
-    rm tutorial.todoapp/src/tutorial/todoapp/profiles/default/workflows/plone_workflow
-    rm tutorial.todoapp/src/tutorial/todoapp/profiles/default/workflows/simple_publication_workflow
+    rm -rf tutorial.todoapp/src/tutorial/todoapp/profiles/default/workflows/comment_review_workflow
+    rm -rf tutorial.todoapp/src/tutorial/todoapp/profiles/default/workflows/folder_workflow
+    rm -rf tutorial.todoapp/src/tutorial/todoapp/profiles/default/workflows/intranet_folder_workflow
+    rm -rf tutorial.todoapp/src/tutorial/todoapp/profiles/default/workflows/intranet_workflow
+    rm -rf tutorial.todoapp/src/tutorial/todoapp/profiles/default/workflows/one_state_workflow
+    rm -rf tutorial.todoapp/src/tutorial/todoapp/profiles/default/workflows/plone_workflow
+    rm -rf tutorial.todoapp/src/tutorial/todoapp/profiles/default/workflows/simple_publication_workflow
 
 Secondly, remove all non-todoitem-related stuff from ``workflows.xml``. In the
 end the file should look like this:
