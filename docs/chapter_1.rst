@@ -148,15 +148,15 @@ the next section, we will go over the basics of that magical, mystical word:
 Getting Started with Workflows
 ==============================
 
-So, workflows. What are they? They are a mechanizm to control the flow of a
-content item through various states through time. Most commonly, and by default in Plone,
+So what is a workflow? It is a mechanism to control the flow of a
+content item through various states in time. Most commonly, and by default in Plone,
 you deal with a `publication` workflow. For example: A writer writes up a News
-Item and submits it for reviewal. Then the in-house reviewing team goes through
+Item and submits it for review. Then the in-house reviewing team goes through
 the text and publishes the News Item so it is public for the entire world to
 see.
 
 The Todo Item we added in the last section is marked as ``private`` because by
-default all new Plone content types are assigned a complex publication workflow
+default all new Plone content items are assigned a workflow
 called ``simple_publication_workflow``. I know what you are thinking:
 simple publication whodie whatie grble gobble??!?! Just like before, let's
 bypass trying to explain what that means and just fix it. Relax, enjoy, and
@@ -193,7 +193,7 @@ Todo Items really have 2 states that we are interested in: `open` and
 
 #. Let's create a new workflow for our Todo Items and call it
    ``todo_item_workflow``. We will make a new workflow by copying and
-   customizing one of the workflows that are already there. Duplicate the
+   customising one of the workflows that are already there. Duplicate the
    ``one_state_workflow``.
 
    .. image:: images/copy_workflow.jpg
@@ -220,7 +220,7 @@ Todo Items really have 2 states that we are interested in: `open` and
 
 
 #. Workflow is something that takes time to get used to if you have never
-   encoutered the concept. The best analogy in our case is to a car. The car
+   encountered the concept. The best analogy in our case is to a car. The car
    engine has two simple states: `on` and `off`. To transition from on to off
    and vice versa, it needs some action from the driver. The same for our TODO
    items. They have two states: `open` and `completed`. In order to get them
